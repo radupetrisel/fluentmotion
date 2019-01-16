@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-
-    public CapsuleHand LeftHand;
-    public CapsuleHand RightHand;
+    public HandModelBase RightHand;
     public GameObject Cube;
 
     public void Spawn()
     {
-        Instantiate(Cube, RightHand.GetLeapHand().GetThumb().TipPosition.ToVector3(), Quaternion.identity);
+        Vector3 palmPosition = RightHand.GetLeapHand().PalmPosition.ToVector3();
+        Vector3 palmDirection = RightHand.GetLeapHand().PalmNormal.ToVector3();
+
+        Instantiate(Cube, palmPosition + .03f * palmDirection, Quaternion.identity);
     }
 
 
