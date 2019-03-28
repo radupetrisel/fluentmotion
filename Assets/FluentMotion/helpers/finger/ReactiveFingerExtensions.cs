@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.FluentMotion.helpers.FingerHelpers
+namespace Assets.FluentMotion.helpers.finger
 {
     class ReactiveFingerExtensions
     {

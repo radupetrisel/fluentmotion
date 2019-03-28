@@ -412,6 +412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hand: {fileID: 845693124}
+  ObjectToSpawn: {fileID: 1876345102506344, guid: 5a1fb53528997fe478560ab3120da9cb,
+    type: 2}
+  Camera: {fileID: 2066573173}
 --- !u!1001 &855354760
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
-﻿using Leap;
+﻿using Assets.FluentMotion.hand;
+using Leap;
 using Leap.Unity;
 using System;
 using UniRx;
 
-namespace Assets.FluentMotion.helpers.HandHelpers
+namespace Assets.FluentMotion.helpers.hand
 {
     public static class ReactiveHandExtensions
     {

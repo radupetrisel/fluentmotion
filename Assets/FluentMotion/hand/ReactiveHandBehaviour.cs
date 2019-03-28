@@ -4,7 +4,7 @@ using System;
 using UniRx;
 using UnityEngine;
 
-namespace Assets.FluentMotion
+namespace Assets.FluentMotion.hand
 {
     public abstract class ReactiveHandBehaviour : MonoBehaviour
     {
