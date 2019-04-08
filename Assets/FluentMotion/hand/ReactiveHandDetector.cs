@@ -1,8 +1,6 @@
 ﻿using Leap;
 using Leap.Unity;
 using System;
-using UniRx;
-using UnityEngine;
 
 namespace FluentMotion.hand
 {
