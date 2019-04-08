@@ -4,15 +4,14 @@ using System;
 using UniRx;
 using UnityEngine;
 
-namespace Assets.FluentMotion.hand
+namespace FluentMotion.hand
 {
-    public abstract class ReactiveFingerBehaviour : MonoBehaviour
+    public abstract class ReactiveFingerDetector : ReactiveDetectorBase<Finger>
     {
-        public FingerModel Finger;
-        private Subject<FingerModel> Subject = new Subject<FingerModel>();
+        public FingerModel FingerToTrack;
 
-        public void Update() => Subject.OnNext(Finger);
+        public void Update() => _subject.OnNext(FingerToTrack.GetLeapFinger());
 
-        public IObservable<Finger> ReactiveFinger => Subject.Select(finger => finger.GetLeapFinger());
+        public IObservable<Finger> Finger => _subject;
     }
 }

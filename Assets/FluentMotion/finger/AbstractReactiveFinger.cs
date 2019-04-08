@@ -1,12 +1,6 @@
 ﻿using Leap;
-using Leap.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Assets.FluentMotion.finger
+namespace FluentMotion.finger
 {
     public abstract class AbstractReactiveFinger
     {

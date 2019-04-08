@@ -1,4 +1,4 @@
-﻿namespace Assets.FluentMotion.helpers.finger
+﻿namespace FluentMotion.helpers.finger
 {
     public static class FingerMixins
     {

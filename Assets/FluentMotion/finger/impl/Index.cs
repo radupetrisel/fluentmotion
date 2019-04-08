@@ -1,7 +1,7 @@
 ﻿using Leap;
 using Leap.Unity;
 
-namespace Assets.FluentMotion.finger.impl
+namespace FluentMotion.finger.impl
 {
     class Index : AbstractReactiveFinger
     {
