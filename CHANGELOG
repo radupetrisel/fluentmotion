@@ -1,0 +1,5 @@
+## v1.0.2
+- added CHANGELOG
+- extracted interface IReactiveDetector for extendability
+- extracted base class ReactiveDetectorBase for extendability
+- added DisposedBy extension method using CompositeDisposable
