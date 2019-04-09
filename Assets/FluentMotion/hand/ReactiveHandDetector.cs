@@ -1,6 +1,8 @@
 ﻿using Leap;
 using Leap.Unity;
 using System;
+using UniRx;
+using UnityEngine;
 
 namespace FluentMotion.hand
 {
@@ -8,7 +10,12 @@ namespace FluentMotion.hand
     {
         public HandModelBase HandToTrack;
 
-        public void Update() => _subject.OnNext(HandToTrack.GetLeapHand());
+        public void Update()
+        {
+            if (HandToTrack.GetLeapHand() == null) return;
+
+            _subject.OnNext(HandToTrack.GetLeapHand());
+        }
 
         public IObservable<Hand> Hand => _subject;
     }

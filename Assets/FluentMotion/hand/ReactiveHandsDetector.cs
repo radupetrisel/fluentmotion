@@ -10,12 +10,17 @@ namespace Assets.FluentMotion.hand
         public HandModelBase TrackedHandLeft;
         public HandModelBase TrackedHandRight;
 
-        public void Update() => _subject
-            .OnNext(new ReactiveHands
-            {
-                LeftHand = TrackedHandLeft.GetLeapHand(),
-                RightHand = TrackedHandRight.GetLeapHand()
-            });
+        public void Update()
+        {
+            if (TrackedHandLeft.GetLeapHand() is null || TrackedHandRight.GetLeapHand() is null) return;
+
+            _subject
+                .OnNext(new ReactiveHands
+                {
+                    LeftHand = TrackedHandLeft.GetLeapHand(),
+                    RightHand = TrackedHandRight.GetLeapHand()
+                });
+        }
 
         public IObservable<ReactiveHands> Hands => _subject;
     }

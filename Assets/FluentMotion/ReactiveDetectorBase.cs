@@ -7,6 +7,7 @@ namespace FluentMotion
     {
         protected readonly Subject<T> _subject = new Subject<T>();
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
+
         public CompositeDisposable Disposables => _disposables;
 
         public abstract void Detect();

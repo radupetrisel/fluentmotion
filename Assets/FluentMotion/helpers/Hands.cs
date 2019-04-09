@@ -2,7 +2,7 @@
 
 namespace FluentMotion.helpers
 {
-    public struct ReactiveHands
+    public class ReactiveHands
     {
         public Hand LeftHand;
         public Hand RightHand;
