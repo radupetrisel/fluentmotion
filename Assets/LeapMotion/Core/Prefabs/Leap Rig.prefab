@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 4057968051431532}
   - component: {fileID: 81344774275610192}
   - component: {fileID: 20862101930491778}
-  - component: {fileID: 114292754717913548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,31 +136,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &114292754717913548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339460489974520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abb0e8dd6c809854f8fea5e0976884f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  editTimePose: 2
-  _frameOptimization: 0
-  _physicsExtrapolation: 1
-  _physicsExtrapolationTime: 0.011111111
-  _workerThreadProfiling: 0
-  _deviceOffsetMode: 0
-  _deviceOffsetYAxis: 0
-  _deviceOffsetZAxis: 0.12
-  _deviceTiltXAxis: 5
-  _deviceOrigin: {fileID: 0}
-  _temporalWarpingMode: 3
-  _customWarpAdjustment: 17
-  _updateHandInPrecull: 0
 --- !u!1 &1394407071443026
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c592f16851a620743868a31232613370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leapProvider: {fileID: 114292754717913548}
+  _leapProvider: {fileID: 0}
   ModelPool:
   - GroupName: Capsule Hands
     _handModelManager: {fileID: 0}

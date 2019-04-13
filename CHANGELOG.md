@@ -1,5 +1,7 @@
 ## v1.0.3
 - fixed hand leaving scene bug
+- added Rotate static class to help users with
+rotating objects (method names should change)
 
 ## v1.0.2
 - added CHANGELOG

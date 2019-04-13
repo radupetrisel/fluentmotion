@@ -1,5 +1,8 @@
-﻿using FluentMotion.hand;
-using System;
+﻿using System;
+using FluentMotion.hand;
+using FluentMotion.helpers;
+using Leap;
+using Leap.Unity;
 using UniRx;
 using UnityEngine;
 
@@ -13,13 +16,16 @@ namespace Assets.Demo
         {
             base.Start();
             _cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            _cube.transform.Translate(new Vector4(0, 0.5f, 1.0f, 0.0f));
+            _cube.transform.Translate(Vector3.back * 5);
         }
 
         public override void Detect()
         {
-            Hand.Select(hand => hand.PalmVelocity.Magnitude > 0.1 ? new Vector3(0, - (float)Math.PI / 18.0f * hand.PalmVelocity.Magnitude) : new Vector3(0, 0))
-                .Subscribe(rotation => _cube.transform.Rotate(rotation)).AddTo(HandToTrack);
+            Hand.Where(hand => hand.PalmVelocity.AngleTo(Vector.Right) < Math.PI / 6)
+                .Where(hand => hand.PalmVelocity.Magnitude > 0.01)
+                .Select(hand => Rotation.Right(hand.PalmVelocity.Magnitude.Map(0.01f, 1.0f, 0.1f, 2f)))
+                .Subscribe(rotation => _cube.transform.Rotate(rotation.eulerAngles))
+                .AddTo(HandToTrack);
         }
     }
 }
