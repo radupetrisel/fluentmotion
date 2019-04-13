@@ -14,6 +14,8 @@ namespace Assets.FluentMotion.hand
         {
             if (TrackedHandLeft.GetLeapHand() is null || TrackedHandRight.GetLeapHand() is null) return;
 
+            if (!TrackedHandLeft.IsTracked || !TrackedHandRight.IsTracked) return;
+
             _subject
                 .OnNext(new ReactiveHands
                 {

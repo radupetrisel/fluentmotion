@@ -12,8 +12,10 @@ namespace FluentMotion.hand
 
         public void Update()
         {
-            if (HandToTrack.GetLeapHand() == null) return;
+            if (HandToTrack.GetLeapHand() is null) return;
 
+            if (!HandToTrack.IsTracked) return;
+            
             _subject.OnNext(HandToTrack.GetLeapHand());
         }
 

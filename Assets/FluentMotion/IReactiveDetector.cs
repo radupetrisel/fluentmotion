@@ -2,7 +2,7 @@
 
 namespace FluentMotion
 {
-    public interface IReactiveDetector<T>
+    public interface IReactiveDetector
     {
         CompositeDisposable Disposables { get; }
         void Detect();

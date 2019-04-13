@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace FluentMotion
 {
-    public abstract class ReactiveDetectorBase<T> : MonoBehaviour, IReactiveDetector<T>
+    public abstract class ReactiveDetectorBase<T> : MonoBehaviour, IReactiveDetector
     {
         protected readonly Subject<T> _subject = new Subject<T>();
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
