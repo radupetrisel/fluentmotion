@@ -1,3 +1,6 @@
+## v1.0.3
+- fixed hand leaving scene bug
+
 ## v1.0.2
 - added CHANGELOG
 - extracted interface IReactiveDetector for extendability

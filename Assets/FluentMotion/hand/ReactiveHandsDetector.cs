@@ -2,6 +2,7 @@
 using FluentMotion.helpers;
 using Leap.Unity;
 using System;
+using UniRx;
 
 namespace Assets.FluentMotion.hand
 {
@@ -12,8 +13,6 @@ namespace Assets.FluentMotion.hand
 
         public void Update()
         {
-            if (TrackedHandLeft.GetLeapHand() is null || TrackedHandRight.GetLeapHand() is null) return;
-
             if (!TrackedHandLeft.IsTracked || !TrackedHandRight.IsTracked) return;
 
             _subject

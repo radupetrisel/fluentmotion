@@ -18,7 +18,7 @@ namespace Assets.Demo
 
         public override void Detect()
         {
-            Hand.Select(hand => hand.PalmVelocity.Magnitude > 0.1 ? new Vector3(0, (float)Math.PI / 18.0f * hand.PalmVelocity.Magnitude) : new Vector3(0, 0))
+            Hand.Select(hand => hand.PalmVelocity.Magnitude > 0.1 ? new Vector3(0, - (float)Math.PI / 18.0f * hand.PalmVelocity.Magnitude) : new Vector3(0, 0))
                 .Subscribe(rotation => _cube.transform.Rotate(rotation)).AddTo(HandToTrack);
         }
     }
