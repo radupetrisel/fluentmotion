@@ -1,3 +1,6 @@
+## v1.0.4
+- refactored stuff for performance gains
+
 ## v1.0.3
 - fixed hand leaving scene bug
 - added Rotate static class to help users with
