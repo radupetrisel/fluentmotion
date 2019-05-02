@@ -1,21 +1,25 @@
 ﻿using System;
-using Assets.FluentMotion.hand;
+using FluentMotion.hand;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Assets.Demo
+namespace Demo
 {
     public sealed class PalmsFacingDemo : MonoBehaviour
     {
-        public GameObject GameObject;
-        public ReactiveHands Hands;
+        [FormerlySerializedAs("ObjectToSpan")]
+        public GameObject objectToSpan;
+        
+        [FormerlySerializedAs("Hands")]
+        public ReactiveHands hands;
 
         public void Start()
         {
-            Hands.AsObservable()
+            hands.AsObservable()
                 .Sample(TimeSpan.FromSeconds(0.5))
-                .Where(hands => hands.LeftHand.PalmNormal.Dot(hands.RightHand.PalmNormal) < -.5f)
-                .Subscribe(hands => Instantiate(GameObject, Camera.current.transform.position + Camera.current.transform.forward.normalized * 2, Quaternion.identity));
+                .Where(h => h.LeftHand.PalmNormal.Dot(h.RightHand.PalmNormal) < -.5f)
+                .Subscribe(h => Instantiate(objectToSpan, Camera.current.transform.position + Camera.current.transform.forward.normalized * 2, Quaternion.identity));
         }
     }
 }

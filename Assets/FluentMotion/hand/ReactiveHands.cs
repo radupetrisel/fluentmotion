@@ -1,12 +1,11 @@
-﻿using System;
-using FluentMotion;
-using FluentMotion.helpers;
+﻿using FluentMotion.helpers;
 using Leap;
 using Leap.Unity;
+using System;
 using UniRx;
 using UnityEngine;
 
-namespace Assets.FluentMotion.hand
+namespace FluentMotion.hand
 {
     public sealed class ReactiveHands : MonoBehaviour, IReactiveObject<ReactiveHandsHelper<HandModelBase>, ReactiveHandsHelper<Hand>>
     {
@@ -19,7 +18,7 @@ namespace Assets.FluentMotion.hand
         {
             if (!IsValid(Hands)) return;
 
-            Subject
+            _subject
                 .OnNext(Selector(Hands));
         }
 
@@ -27,12 +26,9 @@ namespace Assets.FluentMotion.hand
             new ReactiveHandsHelper<Hand>
             { LeftHand = reactiveObject.LeftHand.GetLeapHand(), RightHand = reactiveObject.RightHand.GetLeapHand() };
 
-        public Subject<ReactiveHandsHelper<Hand>> Subject => _subject;
-
         public bool IsValid(ReactiveHandsHelper<HandModelBase> reactiveObject) =>
             reactiveObject.LeftHand.IsTracked && reactiveObject.RightHand.IsTracked;
 
-        /// <inheritdoc />
-        public IObservable<ReactiveHandsHelper<Hand>> AsObservable() => Subject;
+        public IObservable<ReactiveHandsHelper<Hand>> AsObservable() => _subject;
     }
 }

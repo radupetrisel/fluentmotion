@@ -5,23 +5,26 @@ using Leap;
 using Leap.Unity;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Assets.Demo
+namespace Demo
 {
     public class PalmSwipeDemo : MonoBehaviour
     {
         private GameObject _cube;
-        public ReactiveHand Hand;
+        
+        [FormerlySerializedAs("Hand")] 
+        public ReactiveHand hand;
 
         public void Start()
         {
             _cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             _cube.transform.Translate(Vector3.back * 5);
 
-            Hand.AsObservable()
-                .Where(hand => hand.PalmVelocity.AngleTo(Vector.Right) < Math.PI / 6)
-                .Where(hand => hand.PalmVelocity.Magnitude > 0.01)
-                .Select(hand => Rotation.Right(hand.PalmVelocity.Magnitude.Map(0.01f, 1.0f, 0.1f, 2f)))
+            hand.AsObservable()
+                .Where(h => h.PalmVelocity.AngleTo(Vector.Right) < Math.PI / 6)
+                .Where(h => h.PalmVelocity.Magnitude > 0.01)
+                .Select(h => Rotation.Right(h.PalmVelocity.Magnitude.Map(0.01f, 1.0f, 0.1f, 2f)))
                 .Subscribe(rotation => _cube.transform.Rotate(rotation.eulerAngles));
         }
     }

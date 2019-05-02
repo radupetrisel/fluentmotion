@@ -1,23 +1,31 @@
-﻿using FluentMotion.finger.impl;
+﻿using System;
+using FluentMotion.extensions;
+using FluentMotion.finger.impl;
 using FluentMotion.hand;
 using FluentMotion.helpers;
+using Leap;
 using Leap.Unity;
-using System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Assets.Demo
+namespace Demo
 {
-    class FingerExtendedDemo : MonoBehaviour
+    public class FingerExtendedDemo : MonoBehaviour
     {
-        public GameObject ObjectToSpawn;
-        public ReactiveHand Hand;
+        [FormerlySerializedAs("ObjectToSpawn")]
+        public GameObject objectToSpawn;
+        
+        [FormerlySerializedAs("Hand")]
+        public ReactiveHand hand;
 
         public void Start()
         {
-            Hand.AsObservable().Sample(TimeSpan.FromSeconds(0.5))
-                .When(Thumb.IsExtended, Index.IsExtended)
-                .Subscribe(hand => Instantiate(ObjectToSpawn, hand.PalmPosition.ToVector4(), Quaternion.identity));
+            hand.AsObservable()
+                .Thumb(It.IsExtended)
+                .Index(It.IsExtended)
+                .Sample(TimeSpan.FromSeconds(.5))
+                .Subscribe(h => Instantiate(objectToSpawn, h.PalmPosition.ToVector4(), Quaternion.identity));
         }
     }
 }

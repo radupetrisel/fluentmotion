@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d48f9ff-bd0d-4d49-b1f0-ce664d494e92" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/extensions/ObservableExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="206" column="8" lean-forward="true" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+              <folding>
+                <marker date="1556810731427" expanded="true" signature="6:161" ph="..." />
+                <marker date="1556810731427" expanded="true" signature="196:11756" ph="{...}" />
+                <marker date="1556810731427" expanded="true" signature="243:11754" ph="{...}" />
+                <marker date="1556810731427" expanded="false" signature="1061:9786" ph="hand" />
+                <marker date="1556810731427" expanded="false" signature="9796:11695" ph="finger" />
+                <marker date="1556810731427" expanded="true" signature="11705:11748" ph="hands" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Mixins.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="92" lean-forward="true" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+              <folding>
+                <marker date="1556810674986" expanded="true" signature="45:279" ph="{...}" />
+                <marker date="1556810674986" expanded="true" signature="78:277" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Plugins/LeapCSharp/Vector.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-112">
+              <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+              <folding>
+                <marker date="1555345881192" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+                <marker date="1555345881192" expanded="true" signature="657:12573" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="678:760" ph="/// Constants used in Leap Motion math functions. ... " />
+                <marker date="1555345881192" expanded="true" signature="793:994" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="998:1777" ph="/// The Vector struct represents a three-component mathematical vector or point ... " />
+                <marker date="1555345881192" expanded="true" signature="1839:12571" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="1900:1971" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2031:2102" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2165:2242" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2305:2382" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2445:2522" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2571:2624" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2683:2718" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2777:2813" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2849:2894" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="2900:3017" ph="/// Creates a new Vector with the specified component values. ... " />
+                <marker date="1555345881192" expanded="true" signature="3078:3139" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="3145:3233" ph="/// Copies the specified Vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="3282:3349" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="3355:3552" ph="/// The distance between the point represented by this Vector ... " />
+                <marker date="1555345881192" expanded="true" signature="3595:3749" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="3755:4251" ph="/// The angle between this vector and the specified vector in radians. ... " />
+                <marker date="1555345881192" expanded="true" signature="4291:4638" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="4394:4424" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="4504:4534" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="4558:4596" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="4644:4873" ph="/// The dot product of this vector with another vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="4909:4976" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="4982:5413" ph="/// The cross product of this vector and the specified vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="5452:5617" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="5623:5761" ph="/// Returns a string containing this vector in a human readable format: (x, y, z). ... " />
+                <marker date="1555345881192" expanded="true" signature="5800:5857" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="5863:5962" ph="/// Compare Vector equality component-wise. ... " />
+                <marker date="1555345881192" expanded="true" signature="5996:6083" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="6129:6187" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="6193:6382" ph="/// Returns true if all of the vector's components are finite.  If any ... " />
+                <marker date="1555345881192" expanded="true" signature="6409:6583" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="6589:6739" ph="/// Index vector components numerically. ... " />
+                <marker date="1555345881192" expanded="true" signature="6774:7180" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="6786:6973" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="6984:7174" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="7247:7521" ph="/// The magnitude, or length, of this vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="7549:7618" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="7624:7739" ph="/// The square of the magnitude, or length, of this vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="7774:7825" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="7831:8291" ph="/// The pitch angle in radians. ... " />
+                <marker date="1555345881192" expanded="true" signature="8315:8369" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="8375:9140" ph="/// The roll angle in radians. ... " />
+                <marker date="1555345881192" expanded="true" signature="9163:9217" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="9223:9714" ph="/// The yaw angle in radians. ... " />
+                <marker date="1555345881192" expanded="true" signature="9736:9790" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="9796:10016" ph="/// A normalized copy of this vector. ... " />
+                <marker date="1555345881192" expanded="true" signature="10046:10296" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="10058:10290" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="10140:10174" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="10302:10369" ph="/// The zero vector: (0, 0, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="10437:10504" ph="/// The ones vector: (1, 1, 1) ... " />
+                <marker date="1555345881192" expanded="true" signature="10572:10646" ph="/// The x-axis unit vector: (1, 0, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="10715:10789" ph="/// The y-axis unit vector: (0, 1, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="10858:10932" ph="/// The z-axis unit vector: (0, 0, 1) ... " />
+                <marker date="1555345881192" expanded="true" signature="11001:11112" ph="/// The unit vector pointing forward along the negative z-axis: (0, 0, -1) ... " />
+                <marker date="1555345881192" expanded="true" signature="11184:11295" ph="/// The unit vector pointing backward along the positive z-axis: (0, 0, 1) ... " />
+                <marker date="1555345881192" expanded="true" signature="11367:11475" ph="/// The unit vector pointing left along the negative x-axis: (-1, 0, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="11544:11652" ph="/// The unit vector pointing right along the positive x-axis: (1, 0, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="11721:11826" ph="/// The unit vector pointing up along the positive y-axis: (0, 1, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="11892:12000" ph="/// The unit vector pointing down along the negative y-axis: (0, -1, 0) ... " />
+                <marker date="1555345881192" expanded="true" signature="12125:12280" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="12320:12567" ph="{...}" />
+                <marker date="1555345881192" expanded="true" signature="12368:12561" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Attachments/AttachmentPointBehaviour.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-270">
+              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+              <folding>
+                <marker date="1555345881244" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+                <marker date="1555345881244" expanded="false" signature="648:763" ph="..." />
+                <marker date="1555345881244" expanded="true" signature="798:7758" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="803:1272" ph="/// Simple container class for storing a reference to the attachment point this ... " />
+                <marker date="1555345881244" expanded="true" signature="1376:7755" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="1383:1567" ph="[...]" />
+                <marker date="1555345881244" expanded="true" signature="1629:1789" ph="[...]" />
+                <marker date="1555345881244" expanded="true" signature="1876:2155" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="1970:2149" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="2178:2287" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="2214:2281" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="2374:2468" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="2524:2928" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="2550:2663" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="3071:7750" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="3227:3387" ph="{...}" />
+                <marker date="1555345881244" expanded="true" signature="3416:7744" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Rotation.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-30">
+              <caret line="6" column="101" selection-start-line="6" selection-start-column="101" selection-end-line="6" selection-end-column="101" />
+              <folding>
+                <marker date="1556741868199" expanded="true" signature="50:714" ph="{...}" />
+                <marker date="1556741868199" expanded="true" signature="85:712" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/hand/HandExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding>
+                <marker date="1556523097275" expanded="false" signature="6:29" ph="..." />
+                <marker date="1556523097275" expanded="true" signature="66:827" ph="{...}" />
+                <marker date="1556523097275" expanded="true" signature="107:825" ph="{...}" />
+                <marker date="1556523097275" expanded="true" signature="198:819" ph="{...}" />
+                <marker date="1556523097275" expanded="true" signature="240:809" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/It.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135">
+              <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+              <folding>
+                <marker date="1556741493953" expanded="true" signature="6:43" ph="..." />
+                <marker date="1556741493953" expanded="true" signature="75:888" ph="{...}" />
+                <marker date="1556741493953" expanded="true" signature="104:886" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/It.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Attachments/AttachmentPointBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Rotation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Attachments/AttachmentHands.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Utils/Infix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DDF1B6B8-983D-46CE-8414-6E6E1EF5A65D/5d/1ae6f185/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/hand/HandExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Demo/PalmsFacingDemo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Demo/PalmSwipeDemo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/extensions/ObservableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Plugins/LeapCSharp/Vector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Demo/FingerExtendedDemo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/IReactiveObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/hand/ReactiveHand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/ReactiveHandsHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Plugins/LeapCSharp/Hand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/finger/impl/Index.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Mixins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FluentMotion/finger/impl/Thumb.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Demo/PalmsFacingDemo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Demo/PalmSwipeDemo.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/helpers/hand/HandExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/ReactiveObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/hand/ReactiveHand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/helpers/ObservableExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/finger/impl/Thumb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Demo/FingerExtendedDemo.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/helpers/It.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/helpers/Rotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/helpers/Mixins.cs" />
+        <option value="$PROJECT_DIR$/Assets/FluentMotion/extensions/ObservableExtensions.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="580" />
+    <option name="y" value="200" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="FluentMotion" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="FluentMotion" type="1045f7f1:UnityExplorerNode" />
+              <item name="helpers" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d48f9ff-bd0d-4d49-b1f0-ce664d494e92" name="Default Changelist" comment="" />
+      <created>1556522347989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556522347989</updated>
+      <workItem from="1556522350080" duration="1329000" />
+      <workItem from="1556638074935" duration="2669000" />
+      <workItem from="1556738403627" duration="3510000" />
+      <workItem from="1556742774810" duration="218000" />
+      <workItem from="1556804649927" duration="6311000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14037000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="580" y="200" width="1400" height="1000" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.48432836" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50039744" side_tool="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Unity" order="14" />
+      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.49960256" weight="0.32973805" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" weight="0.3298887" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/ReactiveHandsHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1555345881110" expanded="true" signature="43:154" ph="{...}" />
+            <marker date="1555345881110" expanded="true" signature="85:152" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/ReactiveObject.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/hand/ReactiveHand.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+          <folding>
+            <marker date="1556638258292" expanded="false" signature="6:141" ph="..." />
+            <marker date="1556638258292" expanded="true" signature="170:1379" ph="{...}" />
+            <marker date="1556638258292" expanded="true" signature="263:1377" ph="{...}" />
+            <marker date="1556638258292" expanded="true" signature="456:508" ph="{...}" />
+            <marker date="1556638258292" expanded="true" signature="538:644" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/ObservableExtensions.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/IReactiveObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <marker date="1555528742851" expanded="false" signature="6:26" ph="..." />
+            <marker date="1555528742851" expanded="true" signature="50:233" ph="{...}" />
+            <marker date="1555528742851" expanded="true" signature="102:231" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/finger/impl/Thumb.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+          <folding>
+            <marker date="1556639323573" expanded="false" signature="6:29" ph="..." />
+            <marker date="1556639323573" expanded="true" signature="65:266" ph="{...}" />
+            <marker date="1556639323573" expanded="true" signature="97:264" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DDF1B6B8-983D-46CE-8414-6E6E1EF5A65D/5d/1ae6f185/Vector3.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="429" column="20" selection-start-line="429" selection-start-column="19" selection-end-line="429" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Utils/Infix.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <marker date="1555345881307" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+            <marker date="1555345881307" expanded="true" signature="689:3790" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="694:860" ph="/// Unity math operations like Vector3.Dot put in extension methods so they can be used ... " />
+            <marker date="1555345881307" expanded="true" signature="889:3787" ph="{...}" />
+            <marker date="1555345881307" expanded="false" signature="900:1299" ph="Float" />
+            <marker date="1555345881307" expanded="true" signature="919:993" ph="/// Infix sugar for Mathf.Clamp01(f). ... " />
+            <marker date="1555345881307" expanded="true" signature="1042:1080" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="1086:1168" ph="/// Infix sugar for Mathf.Clamp(f, min, max). ... " />
+            <marker date="1555345881307" expanded="true" signature="1237:1283" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="1305:3057" ph="Vector3" />
+            <marker date="1555345881307" expanded="true" signature="1330:1527" ph="/// Rightward syntax for applying a Quaternion rotation to this vector; literally ... " />
+            <marker date="1555345881307" expanded="true" signature="1614:1661" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="1667:1932" ph="/// Infix sugar for Vector3.MoveTowards(a, b). ... " />
+            <marker date="1555345881307" expanded="true" signature="2122:2210" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="2216:2291" ph="/// Infix sugar for Vector3.Dot(a, b). ... " />
+            <marker date="1555345881307" expanded="true" signature="2347:2386" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="2392:2469" ph="/// Infix sugar for Vector3.Cross(a, b). ... " />
+            <marker date="1555345881307" expanded="true" signature="2529:2570" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="2576:2653" ph="/// Infix sugar for Vector3.Angle(a, b). ... " />
+            <marker date="1555345881307" expanded="true" signature="2711:2752" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="2758:2841" ph="/// Infix sugar for Vector3.SignedAngle(a, b). ... " />
+            <marker date="1555345881307" expanded="true" signature="2919:3041" ph="{...}" />
+            <marker date="1555345881307" expanded="false" signature="3063:3782" ph="Quaternion" />
+            <marker date="1555345881307" expanded="true" signature="3087:3219" ph="/// Returns (this * Vector3.right), the x-axis of the rotated frame of this ... " />
+            <marker date="1555345881307" expanded="true" signature="3274:3313" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="3319:3440" ph="/// Returns (this * Vector3.up), the y-axis of the rotated frame of this quaternion. ... " />
+            <marker date="1555345881307" expanded="true" signature="3492:3528" ph="{...}" />
+            <marker date="1555345881307" expanded="true" signature="3534:3668" ph="/// Returns (this * Vector3.forward), the z-axis of the rotated frame of this ... " />
+            <marker date="1555345881307" expanded="true" signature="3725:3766" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Demo/PalmsFacingDemo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1556523027953" expanded="false" signature="6:103" ph="..." />
+            <marker date="1556523027953" expanded="true" signature="119:748" ph="{...}" />
+            <marker date="1556523027953" expanded="true" signature="177:746" ph="{...}" />
+            <marker date="1556523027953" expanded="true" signature="384:740" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Demo/FingerExtendedDemo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <marker date="1556738509689" expanded="false" signature="6:224" ph="..." />
+            <marker date="1556738509689" expanded="true" signature="240:796" ph="{...}" />
+            <marker date="1556738509689" expanded="true" signature="294:794" ph="{...}" />
+            <marker date="1556738509689" expanded="true" signature="500:788" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Demo/PalmSwipeDemo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <marker date="1556523060428" expanded="false" signature="6:161" ph="..." />
+            <marker date="1556523060428" expanded="true" signature="177:889" ph="{...}" />
+            <marker date="1556523060428" expanded="true" signature="226:887" ph="{...}" />
+            <marker date="1556523060428" expanded="true" signature="378:881" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/finger/impl/Index.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding>
+            <marker date="1555345881106" expanded="false" signature="6:29" ph="..." />
+            <marker date="1555345881106" expanded="true" signature="65:191" ph="{...}" />
+            <marker date="1555345881106" expanded="true" signature="97:189" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Plugins/LeapCSharp/Hand.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1553">
+          <caret line="314" lean-forward="true" selection-start-line="314" selection-end-line="314" />
+          <folding>
+            <marker date="1555345881186" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+            <marker date="1555345881186" expanded="true" signature="657:10639" ph="{...}" />
+            <marker date="1555345881186" expanded="false" signature="667:710" ph="..." />
+            <marker date="1555345881186" expanded="true" signature="714:1301" ph="/// The Hand class reports the physical characteristics of a detected hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="1358:10637" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="1365:1573" ph="/// Constructs a Hand object. ... " />
+            <marker date="1555345881186" expanded="true" signature="1592:1824" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="1830:2108" ph="/// Constructs a hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="2776:3375" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="3381:3991" ph="/// The Finger object with the specified ID attached to this hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="4025:4180" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="4072:4155" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="4107:4147" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="4186:4431" ph="/// Compare Hand object equality. ... " />
+            <marker date="1555345881186" expanded="true" signature="4467:4531" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="4537:4672" ph="/// A string containing a brief, human readable description of the Hand object. ... " />
+            <marker date="1555345881186" expanded="true" signature="4711:4836" ph="{...}" />
+            <marker date="1555345881186" expanded="true" signature="4868:5479" ph="/// A unique ID assigned to this Hand object, whose value remains the same ... " />
+            <marker date="1555345881186" expanded="true" signature="5504:5716" ph="/// The list of Finger objects detected in this frame that are attached to ... " />
+            <marker date="1555345881186" expanded="true" signature="5755:5847" ph="/// The center position of the palm. ... " />
+            <marker date="1555345881186" expanded="true" signature="5885:5985" ph="/// The rate of change of the palm position. ... " />
+            <marker date="1555345881186" expanded="true" signature="6023:6519" ph="/// The normal vector to the palm. If your hand is flat, this vector will ... " />
+            <marker date="1555345881186" expanded="true" signature="6555:6980" ph="/// The direction from the palm position toward the fingers. ... " />
+            <marker date="1555345881186" expanded="true" signature="7015:7180" ph="/// The transform of the hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="7279:7389" ph="/// The rotation of the hand as a quaternion. ... " />
+            <marker date="1555345881186" expanded="true" signature="7431:7647" ph="/// The strength of a grab hand pose. ... " />
+            <marker date="1555345881186" expanded="true" signature="7684:8125" ph="/// The angle between the fingers and the hand of a grab hand pose. ... " />
+            <marker date="1555345881186" expanded="true" signature="8159:8470" ph="/// The holding strength of a pinch hand pose. ... " />
+            <marker date="1555345881186" expanded="true" signature="8508:8875" ph="/// The distance between the thumb and index finger of a pinch hand pose. ... " />
+            <marker date="1555345881186" expanded="true" signature="8913:9041" ph="/// The estimated width of the palm when the hand is in a flat position. ... " />
+            <marker date="1555345881186" expanded="true" signature="9075:9456" ph="/// The stabilized palm position of this Hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="9504:9605" ph="/// The position of the wrist of this hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="9644:9782" ph="/// The duration of time this Hand has been visible to the Leap Motion Controller. ... " />
+            <marker date="1555345881186" expanded="true" signature="9818:9998" ph="/// How confident we are with a given hand pose. ... " />
+            <marker date="1555345881186" expanded="true" signature="10033:10137" ph="/// Identifies whether this Hand is a left hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="10167:10272" ph="/// Identifies whether this Hand is a right hand. ... " />
+            <marker date="1555345881186" expanded="true" signature="10330:10613" ph="/// The arm to which this hand is attached. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Attachments/AttachmentHands.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="122" column="54" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
+          <folding>
+            <marker date="1555345881243" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+            <marker date="1555345881243" expanded="false" signature="648:806" ph="..." />
+            <marker date="1555345881243" expanded="true" signature="841:8951" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="846:1318" ph="/// Add an GameObject with this script to your scene if you would like to have a ... " />
+            <marker date="1555345881243" expanded="true" signature="1388:8947" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="1570:2003" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="1582:1625" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="1636:1997" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="1678:1989" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="2050:2602" ph="/// Gets or sets the functions used to get the latest Leap.Hand data for the corresponding ... " />
+            <marker date="1555345881243" expanded="true" signature="2760:3258" ph="/// Gets or sets the array of AttachmentHand objects that this component manages. The length of this ... " />
+            <marker date="1555345881243" expanded="true" signature="3414:3477" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="3503:3590" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="3624:3853" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="3873:4880" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4057:4082" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4220:4874" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4280:4789" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4372:4449" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4640:4779" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4699:4767" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4829:4866" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="4922:5274" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="5065:5268" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="5318:7963" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="5732:7957" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="5912:6143" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="6021:6133" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="6153:6399" ph="/* If we are a prefab and there are missing AttachmentHands, we have to return early. ... */" />
+            <marker date="1555345881243" expanded="true" signature="6624:6653" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="6753:7048" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="7286:7582" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8016:8714" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8203:8253" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8253:8637" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8314:8550" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8344:8476" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8675:8708" ph="{...}" />
+            <marker date="1555345881243" expanded="true" signature="8764:8935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Scripts/Attachments/AttachmentPointBehaviour.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding>
+            <marker date="1555345881244" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+            <marker date="1555345881244" expanded="false" signature="648:763" ph="..." />
+            <marker date="1555345881244" expanded="true" signature="798:7758" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="803:1272" ph="/// Simple container class for storing a reference to the attachment point this ... " />
+            <marker date="1555345881244" expanded="true" signature="1376:7755" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="1383:1567" ph="[...]" />
+            <marker date="1555345881244" expanded="true" signature="1629:1789" ph="[...]" />
+            <marker date="1555345881244" expanded="true" signature="1876:2155" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="1970:2149" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="2178:2287" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="2214:2281" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="2374:2468" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="2524:2928" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="2550:2663" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="3071:7750" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="3227:3387" ph="{...}" />
+            <marker date="1555345881244" expanded="true" signature="3416:7744" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Rotation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="6" column="101" selection-start-line="6" selection-start-column="101" selection-end-line="6" selection-end-column="101" />
+          <folding>
+            <marker date="1556741868199" expanded="true" signature="50:714" ph="{...}" />
+            <marker date="1556741868199" expanded="true" signature="85:712" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/hand/HandExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <marker date="1556523097275" expanded="false" signature="6:29" ph="..." />
+            <marker date="1556523097275" expanded="true" signature="66:827" ph="{...}" />
+            <marker date="1556523097275" expanded="true" signature="107:825" ph="{...}" />
+            <marker date="1556523097275" expanded="true" signature="198:819" ph="{...}" />
+            <marker date="1556523097275" expanded="true" signature="240:809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/It.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding>
+            <marker date="1556741493953" expanded="true" signature="6:43" ph="..." />
+            <marker date="1556741493953" expanded="true" signature="75:888" ph="{...}" />
+            <marker date="1556741493953" expanded="true" signature="104:886" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LeapMotion/Core/Plugins/LeapCSharp/Vector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+          <folding>
+            <marker date="1555345881192" expanded="true" signature="0:640" ph="/* Copyright (C) Leap Motion, Inc. 2011-2018. ... */" />
+            <marker date="1555345881192" expanded="true" signature="657:12573" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="678:760" ph="/// Constants used in Leap Motion math functions. ... " />
+            <marker date="1555345881192" expanded="true" signature="793:994" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="998:1777" ph="/// The Vector struct represents a three-component mathematical vector or point ... " />
+            <marker date="1555345881192" expanded="true" signature="1839:12571" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="1900:1971" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2031:2102" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2165:2242" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2305:2382" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2445:2522" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2571:2624" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2683:2718" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2777:2813" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2849:2894" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="2900:3017" ph="/// Creates a new Vector with the specified component values. ... " />
+            <marker date="1555345881192" expanded="true" signature="3078:3139" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="3145:3233" ph="/// Copies the specified Vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="3282:3349" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="3355:3552" ph="/// The distance between the point represented by this Vector ... " />
+            <marker date="1555345881192" expanded="true" signature="3595:3749" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="3755:4251" ph="/// The angle between this vector and the specified vector in radians. ... " />
+            <marker date="1555345881192" expanded="true" signature="4291:4638" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="4394:4424" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="4504:4534" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="4558:4596" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="4644:4873" ph="/// The dot product of this vector with another vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="4909:4976" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="4982:5413" ph="/// The cross product of this vector and the specified vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="5452:5617" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="5623:5761" ph="/// Returns a string containing this vector in a human readable format: (x, y, z). ... " />
+            <marker date="1555345881192" expanded="true" signature="5800:5857" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="5863:5962" ph="/// Compare Vector equality component-wise. ... " />
+            <marker date="1555345881192" expanded="true" signature="5996:6083" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="6129:6187" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="6193:6382" ph="/// Returns true if all of the vector's components are finite.  If any ... " />
+            <marker date="1555345881192" expanded="true" signature="6409:6583" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="6589:6739" ph="/// Index vector components numerically. ... " />
+            <marker date="1555345881192" expanded="true" signature="6774:7180" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="6786:6973" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="6984:7174" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="7247:7521" ph="/// The magnitude, or length, of this vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="7549:7618" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="7624:7739" ph="/// The square of the magnitude, or length, of this vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="7774:7825" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="7831:8291" ph="/// The pitch angle in radians. ... " />
+            <marker date="1555345881192" expanded="true" signature="8315:8369" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="8375:9140" ph="/// The roll angle in radians. ... " />
+            <marker date="1555345881192" expanded="true" signature="9163:9217" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="9223:9714" ph="/// The yaw angle in radians. ... " />
+            <marker date="1555345881192" expanded="true" signature="9736:9790" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="9796:10016" ph="/// A normalized copy of this vector. ... " />
+            <marker date="1555345881192" expanded="true" signature="10046:10296" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="10058:10290" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="10140:10174" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="10302:10369" ph="/// The zero vector: (0, 0, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="10437:10504" ph="/// The ones vector: (1, 1, 1) ... " />
+            <marker date="1555345881192" expanded="true" signature="10572:10646" ph="/// The x-axis unit vector: (1, 0, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="10715:10789" ph="/// The y-axis unit vector: (0, 1, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="10858:10932" ph="/// The z-axis unit vector: (0, 0, 1) ... " />
+            <marker date="1555345881192" expanded="true" signature="11001:11112" ph="/// The unit vector pointing forward along the negative z-axis: (0, 0, -1) ... " />
+            <marker date="1555345881192" expanded="true" signature="11184:11295" ph="/// The unit vector pointing backward along the positive z-axis: (0, 0, 1) ... " />
+            <marker date="1555345881192" expanded="true" signature="11367:11475" ph="/// The unit vector pointing left along the negative x-axis: (-1, 0, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="11544:11652" ph="/// The unit vector pointing right along the positive x-axis: (1, 0, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="11721:11826" ph="/// The unit vector pointing up along the positive y-axis: (0, 1, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="11892:12000" ph="/// The unit vector pointing down along the negative y-axis: (0, -1, 0) ... " />
+            <marker date="1555345881192" expanded="true" signature="12125:12280" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="12320:12567" ph="{...}" />
+            <marker date="1555345881192" expanded="true" signature="12368:12561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/helpers/Mixins.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="92" lean-forward="true" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+          <folding>
+            <marker date="1556810674986" expanded="true" signature="45:279" ph="{...}" />
+            <marker date="1556810674986" expanded="true" signature="78:277" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FluentMotion/extensions/ObservableExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="206" column="8" lean-forward="true" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+          <folding>
+            <marker date="1556810731427" expanded="true" signature="6:161" ph="..." />
+            <marker date="1556810731427" expanded="true" signature="196:11756" ph="{...}" />
+            <marker date="1556810731427" expanded="true" signature="243:11754" ph="{...}" />
+            <marker date="1556810731427" expanded="false" signature="1061:9786" ph="hand" />
+            <marker date="1556810731427" expanded="false" signature="9796:11695" ph="finger" />
+            <marker date="1556810731427" expanded="true" signature="11705:11748" ph="hands" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

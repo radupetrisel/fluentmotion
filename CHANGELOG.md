@@ -1,3 +1,7 @@
+## v1.0.5
+- added extensions methods for IObservable<Hand>
+- added extension methods for IObservable<Finger>
+
 ## v1.0.4
 - refactored stuff for performance gains
 

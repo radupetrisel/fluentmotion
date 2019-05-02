@@ -305,7 +305,7 @@ MonoBehaviour:
   handedness: 0
   _showArm: 1
   _castShadows: 1
-  _material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  _material: {fileID: 2100000, guid: 0ae132d3c08907a4d931b3ed4debc646, type: 2}
   _sphereMesh: {fileID: 4300002, guid: 2f496b1b1bec86743b418551f859020c, type: 3}
   _cylinderResolution: 12
   _jointRadius: 0.008
@@ -320,6 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615195955}
+  - component: {fileID: 615195957}
   - component: {fileID: 615195956}
   m_Layer: 0
   m_Name: Reactive Hand Left
@@ -354,7 +355,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e012f6412e22f4a992b11f362f4dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandToTrack: {fileID: 304700084}
+  Hand: {fileID: 615195957}
+--- !u!114 &615195957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615195954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4909133e2264943ae90b5e30990833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 304700084}
 --- !u!21 &674918758
 Material:
   serializedVersion: 6
@@ -493,7 +507,7 @@ MonoBehaviour:
   handedness: 1
   _showArm: 1
   _castShadows: 1
-  _material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  _material: {fileID: 2100000, guid: 0ae132d3c08907a4d931b3ed4debc646, type: 2}
   _sphereMesh: {fileID: 4300002, guid: 2f496b1b1bec86743b418551f859020c, type: 3}
   _cylinderResolution: 12
   _jointRadius: 0.008
@@ -569,6 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885890409}
+  - component: {fileID: 885890411}
   - component: {fileID: 885890410}
   m_Layer: 0
   m_Name: Reactive Hand Right
@@ -598,14 +613,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885890408}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbe193c187e4f64448fb31c1536ac414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandToTrack: {fileID: 845693124}
   ObjectToSpawn: {fileID: 1876345102506344, guid: 5a1fb53528997fe478560ab3120da9cb,
     type: 3}
+  Hand: {fileID: 885890411}
+--- !u!114 &885890411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885890408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4909133e2264943ae90b5e30990833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 845693124}
 --- !u!4 &1020787834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4076339201267488, guid: edcc5ee563218a84ab541a00a47ea5c8,
@@ -865,6 +893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1193877454}
+  - component: {fileID: 1193877456}
   - component: {fileID: 1193877455}
   m_Layer: 0
   m_Name: ReactiveHands
@@ -901,9 +930,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb738c19d9909c47949a2cb3385b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameObject: {fileID: 1580682090112394, guid: 8998b2da307be7f419e285784a8495a6, type: 3}
+  Hands: {fileID: 1193877456}
+--- !u!114 &1193877456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193877453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba896aac2c7365347ad85798649611bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   TrackedHandLeft: {fileID: 304700084}
   TrackedHandRight: {fileID: 845693124}
-  GameObject: {fileID: 1580682090112394, guid: 8998b2da307be7f419e285784a8495a6, type: 3}
 --- !u!1 &1261835450
 GameObject:
   m_ObjectHideFlags: 0

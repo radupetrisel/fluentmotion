@@ -17,16 +17,13 @@ namespace FluentMotion.finger
         {
             if (!IsValid(Hand)) return;
 
-            Subject.OnNext(Selector(Hand));
+            _subject.OnNext(Selector(Hand));
         }
 
         public Finger Selector(HandModelBase reactiveObject) => reactiveObject.GetLeapHand().GetFinger(FingerType);
-        public Subject<Finger> Subject => _subject;
-
-        /// <inheritdoc />
+        
         public bool IsValid(HandModelBase reactiveObject) => reactiveObject.IsTracked;
 
-        /// <inheritdoc />
-        public IObservable<Finger> AsObservable() => Subject;
+        public IObservable<Finger> AsObservable() => _subject;
     }
 }
