@@ -1,3 +1,8 @@
+## v1.0.6
+- fixed IsMoving* methods to correctly account for
+changes in player position
+- added Player for VR support
+
 ## v1.0.5
 - added extensions methods for IObservable<Hand>
 - added extension methods for IObservable<Finger>
