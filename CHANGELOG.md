@@ -1,3 +1,8 @@
+## v1.0.7
+- added [UsedImplicitly] attribute to observable extensions
+- tested all extension methods (and they are working)
+- updated demo
+
 ## v1.0.6
 - fixed IsMoving* methods to correctly account for
 changes in player position

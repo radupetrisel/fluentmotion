@@ -3,10 +3,12 @@ using UniRx;
 
 namespace FluentMotion
 {
-    public interface IReactiveObject<in T, out U>
+    public interface IReactiveObject { }
+
+    public interface IReactiveObject<in TTrackedObject, out TReactiveObject> : IReactiveObject
     {
-        U Selector(T reactiveObject);
-        bool IsValid(T reactiveObject);
-        IObservable<U> AsObservable();
+        TReactiveObject              Selector(TTrackedObject reactiveObject);
+        bool                         IsValid(TTrackedObject  reactiveObject);
+        IObservable<TReactiveObject> AsObservable();
     }
 }

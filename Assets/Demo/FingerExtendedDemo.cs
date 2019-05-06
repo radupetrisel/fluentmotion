@@ -1,4 +1,5 @@
 ﻿using System;
+using FluentMotion;
 using FluentMotion.extensions;
 using FluentMotion.finger.impl;
 using FluentMotion.hand;
@@ -11,18 +12,13 @@ using UnityEngine.Serialization;
 
 namespace Demo
 {
-    public class FingerExtendedDemo : MonoBehaviour
+    public class FingerExtendedDemo : ReactiveHandBehaviour
     {
-        [FormerlySerializedAs("ObjectToSpawn")]
         public GameObject objectToSpawn;
-        
-        [FormerlySerializedAs("Hand")]
-        public ReactiveHand hand;
 
         public void Start()
         {
-            hand.AsObservable()
-                .Thumb(It.IsExtended)
+            Hand.Thumb(It.IsExtended)
                 .Index(It.IsExtended)
                 .Sample(TimeSpan.FromSeconds(.5))
                 .Subscribe(h => Instantiate(objectToSpawn, h.PalmPosition.ToVector4(), Quaternion.identity));

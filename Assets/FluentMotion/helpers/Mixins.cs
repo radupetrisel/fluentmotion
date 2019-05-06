@@ -6,6 +6,6 @@ namespace FluentMotion.helpers
 {
     public static class Mixins
     {
-        public static bool Equals(this float @this, float other, float epsilon = float.Epsilon) => Math.Abs(@this - other) < epsilon;
+        public static bool IsAlmostEqualTo(this float @this, float other, float epsilon = float.Epsilon) => Math.Abs(@this - other) < epsilon;
     }
 }

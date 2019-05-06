@@ -1,4 +1,5 @@
 ﻿using System;
+using FluentMotion;
 using FluentMotion.extensions;
 using FluentMotion.hand;
 using FluentMotion.helpers;
@@ -11,16 +12,13 @@ using Valve.VR.InteractionSystem;
 
 namespace Demo
 {
-    public class PalmSwipeDemo : MonoBehaviour
+    public class PalmSwipeDemo : ReactiveHandBehaviour
     {
-        [FormerlySerializedAs("Cube")] public GameObject cubes;
-
-        [FormerlySerializedAs("Hand")] public ReactiveHand hand;
+        public GameObject cubes;
 
         public void Start()
         {
-            hand.AsObservable()
-                .IsMovingDown(Player.instance)
+            Hand.IsMovingDown(Player.instance)
                 .Select(h => Rotation.Right(h.PalmVelocity.ToVector3().magnitude.Map(0.1f, 2, 0.1f, 2f)))
                 .Subscribe(rotation =>
                            {

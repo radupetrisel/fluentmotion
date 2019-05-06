@@ -9,7 +9,11 @@
       <e p="Assets" t="Include">
         <e p="Demo" t="Include">
           <e p="FingerExtendedDemo.cs" t="Include" />
-          <e p="PalmsFacingDemo.cs" t="Include" />
+          <e p="IsFistDemo.cs" t="Include" />
+          <e p="IsPinchingDemo.cs" t="Include" />
+          <e p="IsPointingToDemo.cs" t="Include" />
+          <e p="PalmIsFacing.cs" t="Include" />
+          <e p="PalmsAreFacingDemo.cs" t="Include" />
           <e p="PalmSwipeDemo.cs" t="Include" />
         </e>
         <e p="fluentmotion" t="Include">
@@ -19,6 +23,9 @@
           <e p="finger" t="Include">
             <e p="impl" t="Include">
               <e p="Index.cs" t="Include" />
+              <e p="Middle.cs" t="Include" />
+              <e p="Pinky.cs" t="Include" />
+              <e p="Ring.cs" t="Include" />
               <e p="Thumb.cs" t="Include" />
             </e>
             <e p="ReactiveFinger.cs" t="Include" />
@@ -37,6 +44,8 @@
             <e p="Rotation.cs" t="Include" />
           </e>
           <e p="IReactiveObject.cs" t="Include" />
+          <e p="ReactiveBehaviour.cs" t="Include" />
+          <e p="ReactiveHandsBehaviour.cs" t="Include" />
         </e>
         <e p="LeapMotion" t="Include">
           <e p="Core" t="Include">
