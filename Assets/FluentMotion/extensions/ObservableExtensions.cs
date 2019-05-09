@@ -17,27 +17,27 @@ namespace FluentMotion.extensions
     public static class ObservableExtensions
     {
         private const float DotProductTolerance = 0.075f;
-        private const float MinimumSpeed        = 0.1f;
+        private const float MinimumSpeed = 0.1f;
 
         private static bool And(bool a, bool b) => a && b;
-        private static bool Or(bool  a, bool b) => a || b;
+        private static bool Or(bool a, bool b) => a || b;
 
-        private static IObservable<TInput> When<TInput, TResult>(this IObservable<TInput>     @this,
-                                                                 Func<TInput, TResult>        selector,
+        private static IObservable<TInput> When<TInput, TResult>(this IObservable<TInput> @this,
+                                                                 Func<TInput, TResult> selector,
                                                                  params Func<TResult, bool>[] conditions) =>
             @this.Where(elem => conditions
                                .Select(f => f(selector(elem)))
                                .Aggregate(And));
 
         [UsedImplicitly]
-        public static IObservable<T> When<T>(this   IObservable<T>  @this,
+        public static IObservable<T> When<T>(this IObservable<T> @this,
                                              params Func<T, bool>[] conditions) =>
             @this.When(x => x, conditions);
 
         #region hand
 
         [UsedImplicitly]
-        public static IObservable<IList<Finger>> Fingers(this   IObservable<Hand>   @this,
+        public static IObservable<IList<Finger>> Fingers(this IObservable<Hand> @this,
                                                          params Finger.FingerType[] fingerTypes) =>
             @this.Select(hand => fingerTypes
                                 .Select(hand.GetFinger)
@@ -45,62 +45,63 @@ namespace FluentMotion.extensions
 
         [UsedImplicitly]
         public static IObservable<Finger> Finger(this IObservable<Hand> @this,
-                                                  Finger.FingerType      fingerType) =>
-            @this.Select(hand => hand.GetFinger(fingerType));
+                                                 Finger.FingerType fingerType) =>
+            @this.Select(It.GetFinger(fingerType));
 
         [UsedImplicitly]
         public static IObservable<IList<Finger>> Fingers(this IObservable<Hand> @this) =>
             @this.Select(hand => hand.Fingers);
 
         [UsedImplicitly]
-        public static IObservable<Hand> AreExtended(this   IObservable<Hand>   @this,
-                                                   params Finger.FingerType[] fingerTypes) =>
-            @this.When(hand => fingerTypes.Select(hand.GetFinger),
-                       fingers => fingers.All(finger => finger.IsExtended));
+        public static IObservable<Hand> AreExtended(this IObservable<Hand> @this,
+                                                    params Finger.FingerType[] fingerTypes) =>
+            @this.When(hand => fingerTypes.Select(hand.GetFinger), All.AreExtended);
 
         [UsedImplicitly]
-        public static IObservable<Finger> Thumb(this IObservable<Hand> @this) => @this.Select(hand => hand.GetThumb());
+        public static IObservable<Finger> Thumb(this IObservable<Hand> @this) => @this.Select(It.GetThumb);
 
-        public static IObservable<Hand> Thumb(this   IObservable<Hand>    @this,
+        public static IObservable<Hand> Thumb(this IObservable<Hand> @this,
                                               params Func<Finger, bool>[] conditions) =>
-            @this.When(hand => hand.GetThumb(), conditions);
+            @this.When(It.GetThumb, conditions);
 
         [UsedImplicitly]
-        public static IObservable<Finger> Index(this IObservable<Hand> @this) => @this.Select(hand => hand.GetIndex());
+        public static IObservable<Finger> Index(this IObservable<Hand> @this) => @this.Select(It.GetIndex);
 
         [UsedImplicitly]
-        public static IObservable<Hand> Index(this   IObservable<Hand>    @this,
+        public static IObservable<Hand> Index(this IObservable<Hand> @this,
                                               params Func<Finger, bool>[] conditions) =>
-            @this.When(hand => hand.GetIndex(), conditions);
+            @this.When(It.GetIndex, conditions);
 
         [UsedImplicitly]
         public static IObservable<Finger> Middle(this IObservable<Hand> @this) =>
-            @this.Select(hand => hand.GetMiddle());
+            @this.Select(It.GetMiddle);
 
         [UsedImplicitly]
-        public static IObservable<Hand> Middle(this   IObservable<Hand>    @this,
+        public static IObservable<Hand> Middle(this IObservable<Hand> @this,
                                                params Func<Finger, bool>[] conditions) =>
-            @this.When(hand => hand.GetMiddle(), conditions);
+            @this.When(It.GetMiddle, conditions);
 
         [UsedImplicitly]
-        public static IObservable<Finger> Ring(this IObservable<Hand> @this) => @this.Select(hand => hand.GetRing());
+        public static IObservable<Finger> Ring(this IObservable<Hand> @this) =>
+            @this.Select(It.GetRing);
 
         [UsedImplicitly]
-        public static IObservable<Hand> Ring(this   IObservable<Hand>    @this,
+        public static IObservable<Hand> Ring(this IObservable<Hand> @this,
                                              params Func<Finger, bool>[] conditions) =>
-            @this.When(hand => hand.GetRing(), conditions);
+            @this.When(It.GetRing, conditions);
 
         [UsedImplicitly]
-        public static IObservable<Finger> Pinky(this IObservable<Hand> @this) => @this.Select(hand => hand.GetPinky());
+        public static IObservable<Finger> Pinky(this IObservable<Hand> @this) =>
+            @this.Select(It.GetPinky);
 
         [UsedImplicitly]
-        public static IObservable<Hand> Pinky(this   IObservable<Hand>    @this,
+        public static IObservable<Hand> Pinky(this IObservable<Hand> @this,
                                               params Func<Finger, bool>[] conditions) =>
-            @this.When(hand => hand.GetPinky(), conditions);
+            @this.When(It.GetPinky, conditions);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsPinching(this IObservable<Hand> @this) =>
-            @this.Where(hand => hand.IsPinching());
+            @this.Where(It.IsPinching);
 
         /// <summary>
         ///     <para>Check if the hand is pointing to a given <paramref name="target"/>.</para>
@@ -113,42 +114,39 @@ namespace FluentMotion.extensions
         /// <param name="tolerance">A function returning the maximum accepted error of the dot product between the hand's palm's normal and the
         ///     vector between the target's position and the player's position</param>
         [UsedImplicitly]
-        public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(this      IObservable<Hand> @this,
-                                                                       [NotNull] TPlayer           player,
-                                                                       Func<TPlayer, Vector4>      positionSelector,
-                                                                       [NotNull] TTarget           target,
-                                                                       Func<TTarget, Vector4>      targetPositionSelector,
+        public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(this IObservable<Hand> @this,
+                                                                       [NotNull] TPlayer player,
+                                                                       Func<TPlayer, Vector4> positionSelector,
+                                                                       [NotNull] TTarget target,
+                                                                       Func<TTarget, Vector4> targetPositionSelector,
                                                                        Func<float> tolerance) =>
-            @this.Where(hand => hand
-                               .PalmNormal
-                               .ToVector3().normalized
-                               .Dot((targetPositionSelector(target) - positionSelector(player)).normalized)
-                               .IsAlmostEqualTo(1, tolerance()));
+            @this.Where(Palm.IsFacing(Direction.From(player, positionSelector).To(target, targetPositionSelector))
+                            .WithTolerance(tolerance()));
 
-        public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(this      IObservable<Hand> @this,
-                                                                       [NotNull] TPlayer           player,
-                                                                       Func<TPlayer, Vector4>      positionSelector,
-                                                                       [NotNull] TTarget           target,
-                                                                       Func<TTarget, Vector4>      targetPositionSelector,
-                                                                       float                       tolerance = DotProductTolerance) =>
+        public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(this IObservable<Hand> @this,
+                                                                       [NotNull] TPlayer player,
+                                                                       Func<TPlayer, Vector4> positionSelector,
+                                                                       [NotNull] TTarget target,
+                                                                       Func<TTarget, Vector4> targetPositionSelector,
+                                                                       float tolerance = DotProductTolerance) =>
             @this.PalmIsFacing(player, positionSelector, target, targetPositionSelector, () => tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> PalmIsFacing<TTarget>(this      IObservable<Hand> @this,
-                                                              [NotNull] TTarget           target,
-                                                              Func<TTarget, Vector4>      selector,
-                                                              Func<float>                 tolerance) =>
+        public static IObservable<Hand> PalmIsFacing<TTarget>(this IObservable<Hand> @this,
+                                                              [NotNull] TTarget target,
+                                                              Func<TTarget, Vector4> selector,
+                                                              Func<float> tolerance) =>
             @this.PalmIsFacing(Player.instance, player => player.transform.position, target, selector, tolerance);
 
-        public static IObservable<Hand> PalmIsFacing<TTarget>(this      IObservable<Hand> @this,
-                                                              [NotNull] TTarget           target,
-                                                              Func<TTarget, Vector4>      selector,
-                                                              float                       tolerance = DotProductTolerance) =>
+        public static IObservable<Hand> PalmIsFacing<TTarget>(this IObservable<Hand> @this,
+                                                              [NotNull] TTarget target,
+                                                              Func<TTarget, Vector4> selector,
+                                                              float tolerance = DotProductTolerance) =>
             @this.PalmIsFacing(target, selector, () => tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsFist(this IObservable<Hand> @this) =>
-            @this.Where(hand => hand.GetFistStrength().IsAlmostEqualTo(1, 0.2f));
+            @this.Where(It.IsFist);
 
         /// <summary>
         ///     <para>Check if the hand is moving.</para>
@@ -159,8 +157,8 @@ namespace FluentMotion.extensions
         /// <returns><see cref="IObservable{T}"/></returns>
         [UsedImplicitly]
         public static IObservable<Hand> IsMoving(this IObservable<Hand> @this,
-                                                 float                  speed = MinimumSpeed) =>
-            @this.Where(hand => hand.PalmVelocity.ToVector3().magnitude > speed);
+                                                 float speed = MinimumSpeed) =>
+            @this.Where(It.IsMoving().WithSpeed(speed));
 
         /// <summary>
         ///     <para>Check if the hand is moving in a given direction.</para>
@@ -173,22 +171,46 @@ namespace FluentMotion.extensions
         /// <param name="tolerance">The maximum error of the dot product between the hand's direction and the target's position.</param>
         /// <returns><see cref="IObservable{T}"/></returns>
         [UsedImplicitly]
-        public static IObservable<Hand> IsMoving<TReference>(this      IObservable<Hand>         @this,
-                                                             [NotNull] TReference                reference,
+        public static IObservable<Hand> IsMoving<TReference>(this IObservable<Hand> @this,
+                                                             [NotNull] TReference reference,
                                                              [NotNull] Func<TReference, Vector4> to,
-                                                             float                               speed     = MinimumSpeed,
-                                                             float                               tolerance = DotProductTolerance) =>
-            @this.IsMoving(speed).Where(hand => hand.PalmVelocity
-                                                    .ToVector3()
-                                                    .normalized
-                                                    .Dot(to(reference).normalized)
-                                                    .IsAlmostEqualTo(1, tolerance));
+                                                             float speed = MinimumSpeed,
+                                                             float tolerance = DotProductTolerance) =>
+            @this.IsMoving(speed).Where(hand => Direction.Of<Hand>(h => h.PalmVelocity.ToVector3())
+                                                         .Is(reference, to)
+                                                         .WithTolerance(DotProductTolerance)(hand));
+
+        public static IObservable<Hand> IsMoving<TReference>(this IObservable<Hand> @this,
+                                                             [NotNull] TReference reference,
+                                                             SwipeDirection direction,
+                                                             float speed = MinimumSpeed,
+                                                             float tolerance = DotProductTolerance)
+            where TReference : Component
+        {
+            switch (direction)
+            {
+                case SwipeDirection.Left:
+                    return @this.IsMovingLeft(reference, speed, tolerance);
+                case SwipeDirection.Right:
+                    return @this.IsMovingRight(reference, speed, tolerance);
+                case SwipeDirection.Up:
+                    return @this.IsMovingUp(reference, speed, tolerance);
+                case SwipeDirection.Down:
+                    return @this.IsMovingDown(reference, speed, tolerance);
+                case SwipeDirection.Forward:
+                    return @this.IsMovingForward(reference, speed, tolerance);
+                case SwipeDirection.Backward:
+                    return @this.IsMovingBackward(reference, speed, tolerance);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction,"Please specify a valid direction");
+            }
+        }
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingRight(this      IObservable<Hand> @this,
-                                                      [NotNull] Player            player,
-                                                      float                       speed     = MinimumSpeed,
-                                                      float                       tolerance = DotProductTolerance) =>
+        public static IObservable<Hand> IsMovingRight(this IObservable<Hand> @this,
+                                                      [NotNull] Player player,
+                                                      float speed = MinimumSpeed,
+                                                      float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => x.hmdTransform.right, speed, tolerance);
 
         /// <summary>
@@ -202,85 +224,85 @@ namespace FluentMotion.extensions
         /// <typeparam name="TReference">The type of <paramref name="reference"/></typeparam>
         /// <returns><see cref="IObservable{T}"/></returns>
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingRight<TReference>(this      IObservable<Hand> @this,
-                                                                  [NotNull] TReference        reference,
-                                                                  float                       speed     = MinimumSpeed,
-                                                                  float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingRight<TReference>(this IObservable<Hand> @this,
+                                                                  [NotNull] TReference reference,
+                                                                  float speed = MinimumSpeed,
+                                                                  float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => x.transform.right, speed, tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsMovingLeft(this IObservable<Hand> @this,
-                                                     Player                 player,
-                                                     float                  speed     = MinimumSpeed,
-                                                     float                  tolerance = DotProductTolerance) =>
+                                                     Player player,
+                                                     float speed = MinimumSpeed,
+                                                     float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => -x.hmdTransform.right, speed, tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingLeft<TReference>(this      IObservable<Hand> @this,
-                                                                 [NotNull] TReference        reference,
-                                                                 float                       speed     = MinimumSpeed,
-                                                                 float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingLeft<TReference>(this IObservable<Hand> @this,
+                                                                 [NotNull] TReference reference,
+                                                                 float speed = MinimumSpeed,
+                                                                 float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => -x.transform.right, speed, tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsMovingUp(this IObservable<Hand> @this,
-                                                   Player                 player,
-                                                   float                  speed     = MinimumSpeed,
-                                                   float                  tolerance = DotProductTolerance) =>
+                                                   Player player,
+                                                   float speed = MinimumSpeed,
+                                                   float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => x.hmdTransform.up, speed, tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingUp<TReference>(this      IObservable<Hand> @this,
-                                                               [NotNull] TReference        reference,
-                                                               float                       speed     = MinimumSpeed,
-                                                               float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingUp<TReference>(this IObservable<Hand> @this,
+                                                               [NotNull] TReference reference,
+                                                               float speed = MinimumSpeed,
+                                                               float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => x.transform.up, speed, tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsMovingDown(this IObservable<Hand> @this,
-                                                     Player                 player,
-                                                     float                  speed     = MinimumSpeed,
-                                                     float                  tolerance = DotProductTolerance) =>
+                                                     Player player,
+                                                     float speed = MinimumSpeed,
+                                                     float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => -x.hmdTransform.up, speed, tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingDown<TReference>(this      IObservable<Hand> @this,
-                                                                 [NotNull] TReference        reference,
-                                                                 float                       speed     = MinimumSpeed,
-                                                                 float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingDown<TReference>(this IObservable<Hand> @this,
+                                                                 [NotNull] TReference reference,
+                                                                 float speed = MinimumSpeed,
+                                                                 float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => -x.transform.up, speed, tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsMovingForward(this IObservable<Hand> @this,
-                                                        Player                 player,
-                                                        float                  speed     = MinimumSpeed,
-                                                        float                  tolerance = DotProductTolerance) =>
+                                                        Player player,
+                                                        float speed = MinimumSpeed,
+                                                        float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => x.hmdTransform.forward, speed, tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingForward<TReference>(this      IObservable<Hand> @this,
-                                                                    [NotNull] TReference        reference,
-                                                                    float                       speed     = MinimumSpeed,
-                                                                    float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingForward<TReference>(this IObservable<Hand> @this,
+                                                                    [NotNull] TReference reference,
+                                                                    float speed = MinimumSpeed,
+                                                                    float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => x.transform.forward, speed, tolerance);
 
         [UsedImplicitly]
         public static IObservable<Hand> IsMovingBackward(this IObservable<Hand> @this,
-                                                         Player                 player,
-                                                         float                  speed     = MinimumSpeed,
-                                                         float                  tolerance = DotProductTolerance) =>
+                                                         Player player,
+                                                         float speed = MinimumSpeed,
+                                                         float tolerance = DotProductTolerance) =>
             @this.IsMoving(player, x => -x.hmdTransform.forward, speed, tolerance);
 
         [UsedImplicitly]
-        public static IObservable<Hand> IsMovingBackward<TReference>(this      IObservable<Hand> @this,
-                                                                     [NotNull] TReference        reference,
-                                                                     float                       speed     = MinimumSpeed,
-                                                                     float                       tolerance = DotProductTolerance)
+        public static IObservable<Hand> IsMovingBackward<TReference>(this IObservable<Hand> @this,
+                                                                     [NotNull] TReference reference,
+                                                                     float speed = MinimumSpeed,
+                                                                     float tolerance = DotProductTolerance)
             where TReference : Component =>
             @this.IsMoving(reference, x => -x.transform.forward, speed, tolerance);
 
@@ -289,21 +311,21 @@ namespace FluentMotion.extensions
         #region finger
 
         public static IObservable<Finger> IsExtended(this IObservable<Finger> @this) =>
-            @this.Where(finger => finger.IsExtended);
+            @this.Where(It.IsExtended);
 
         public static IObservable<Finger> IsPointingTo<TPlayer, TTarget>(this IObservable<Finger> @this,
-                                                                         TPlayer                  player,
-                                                                         Func<TPlayer, Vector4>   positionSelector,
-                                                                         [NotNull] TTarget        target,
-                                                                         Func<TTarget, Vector4>   targetPositionSelector,
-                                                                         float                    tolerance = DotProductTolerance) =>
-            @this.Where(finger => finger.Direction.ToVector3().normalized.Dot((targetPositionSelector(target) - positionSelector(player)).normalized)
-                                        .IsAlmostEqualTo(1, tolerance));
+                                                                         TPlayer player,
+                                                                         Func<TPlayer, Vector4> positionSelector,
+                                                                         [NotNull] TTarget target,
+                                                                         Func<TTarget, Vector4> targetPositionSelector,
+                                                                         float tolerance = DotProductTolerance) =>
+            @this.Where(It.IsPointingTo(Direction.From(player, positionSelector).To(target, targetPositionSelector))
+                          .WithTolerance(tolerance));
 
-        public static IObservable<Finger> IsPointingTo<TTarget>(this      IObservable<Finger> @this,
-                                                                [NotNull] TTarget             target,
-                                                                Func<TTarget, Vector4>        selector,
-                                                                float                         tolerance = DotProductTolerance) =>
+        public static IObservable<Finger> IsPointingTo<TTarget>(this IObservable<Finger> @this,
+                                                                [NotNull] TTarget target,
+                                                                Func<TTarget, Vector4> selector,
+                                                                float tolerance = DotProductTolerance) =>
             @this.IsPointingTo(Player.instance, player => player.transform.position, target, selector, tolerance);
 
         #endregion
@@ -312,71 +334,72 @@ namespace FluentMotion.extensions
 
         [UsedImplicitly]
         public static IObservable<TResult> Select<TResult>(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                           Func<Hand, Hand, TResult>                   selector) =>
+                                                           Func<Hand, Hand, TResult> selector) =>
             @this.Select(hands => selector(hands.LeftHand, hands.RightHand));
 
         [UsedImplicitly]
         public static IObservable<ReactiveHandsHelper<Hand>> Where(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                   Func<Hand, Hand, bool>                      predicate) =>
+                                                                   Func<Hand, Hand, bool> predicate) =>
             @this.Where(hands => predicate(hands.LeftHand, hands.RightHand));
 
-        [UsedImplicitly]
-        public static IObservable<ReactiveHandsHelper<Hand>> AreFacing<TLeftTarget, TRightTarget>(
-            this      IObservable<ReactiveHandsHelper<Hand>> @this,
-            [NotNull] TLeftTarget                            leftTarget,
-            Func<TLeftTarget, Vector4>                       selectorLeft,
-            [NotNull] TRightTarget                           rightTarget,
-            Func<TRightTarget, Vector4>                      selectorRight,
-            float                                            tolerance = DotProductTolerance) =>
-            @this.Where((left, right) => left.Direction.ToVector3().Dot(selectorLeft(leftTarget)).IsAlmostEqualTo(1, tolerance) &&
-                                         right.Direction.ToVector3().Dot(selectorRight(rightTarget)).IsAlmostEqualTo(1, tolerance));
-
         public static IDisposable Subscribe(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                            Action<Hand, Hand>                          action) =>
+                                            Action<Hand, Hand> action) =>
             @this.Subscribe(hands => action(hands.LeftHand, hands.RightHand));
-        
-        [UsedImplicitly]
-        public static IObservable<ReactiveHandsHelper<Hand>> AreFacing<TTarget>(this      IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                                [NotNull] TTarget                                target,
-                                                                                Func<TTarget, Vector4>                           selector,
-                                                                                float tolerance =
-                                                                                    DotProductTolerance) =>
-            @this.AreFacing(target, selector, target, selector, tolerance);
-
 
         [UsedImplicitly]
-        public static IObservable<ReactiveHandsHelper<Hand>> AreFacing(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                       float                                       tolerance = DotProductTolerance) =>
-            @this.Where((left, right) =>
-                            left.Direction.ToVector3().normalized.Dot(right.Direction.ToVector3().normalized).IsAlmostEqualTo(1, tolerance));
+        public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing<TLeftTarget, TRightTarget>(
+            this IObservable<ReactiveHandsHelper<Hand>> @this,
+            [NotNull] TLeftTarget leftTarget,
+            Func<TLeftTarget, Vector4> selectorLeft,
+            [NotNull] TRightTarget rightTarget,
+            Func<TRightTarget, Vector4> selectorRight,
+            float tolerance = DotProductTolerance) =>
+            @this.Where((left, right) => Direction.Of<Hand>(hand => hand.PalmNormal.ToVector3())
+                                                  .Is(leftTarget, selectorLeft).WithTolerance(tolerance)(left) &&
+                                         Direction.Of<Hand>(hand => hand.PalmNormal.ToVector3())
+                                                  .Is(rightTarget, selectorRight).WithTolerance(tolerance)(right));
+
+        [UsedImplicitly]
+        public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing<TTarget>(this IObservable<ReactiveHandsHelper<Hand>> @this,
+                                                                                     [NotNull] TTarget target,
+                                                                                     Func<TTarget, Vector4> selector,
+                                                                                     float tolerance =
+                                                                                         DotProductTolerance) =>
+            @this.PalmsAreFacing(target, selector, target, selector, tolerance);
+
+        [UsedImplicitly]
+        public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing(this IObservable<ReactiveHandsHelper<Hand>> @this,
+                                                                            float tolerance =
+                                                                                DotProductTolerance) =>
+            @this.Where((left, right) => Direction.Of<Hand>(hand => hand.PalmNormal.ToVector3())
+                                                  .Is(right, hand => -hand.PalmNormal.ToVector3())
+                                                  .WithTolerance(tolerance)(left));
 
         [UsedImplicitly]
         public static IObservable<ReactiveHandsHelper<Hand>> AreMakingFists(this IObservable<ReactiveHandsHelper<Hand>> @this) =>
-            @this.Where((left, right) =>
-                            left.GetFistStrength().IsAlmostEqualTo(1, float.Epsilon) && right.GetFistStrength().IsAlmostEqualTo(1));
+            @this.Where((left, right) => It.IsFist(left) && It.IsFist(right));
 
         public static IObservable<ReactiveHandsHelper<Hand>> AreMoving(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                       Func<float>                                 speed) =>
-            @this.Where((left, right) => left.PalmVelocity.ToVector3().magnitude >= speed() && right.PalmVelocity.ToVector3().magnitude >= speed());
+                                                                       Func<float> speed) =>
+            @this.Where((left, right) => It.IsMoving().WithSpeed(speed())(left) && It.IsMoving().WithSpeed(speed())(right));
 
         public static IObservable<ReactiveHandsHelper<Hand>> AreMoving(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                       float                                       speed = MinimumSpeed) =>
+                                                                       float speed = MinimumSpeed) =>
             @this.AreMoving(() => speed);
 
         public static IObservable<ReactiveHandsHelper<Hand>> AreMoving<TReference>(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                                   TReference                                  reference,
-                                                                                   Func<TReference, Vector4>                   selector,
-                                                                                   Func<float>                                 speed,
-                                                                                   Func<float>                                 tolerance) =>
-            @this.AreMoving(speed).Where((left, right) =>
-                                             left.PalmVelocity.Normalized.ToVector3().Dot(selector(reference).normalized)
-                                                 .IsAlmostEqualTo(1, tolerance())
-                                             && right.PalmVelocity.Normalized.ToVector3().Dot(selector(reference).normalized)
-                                                     .IsAlmostEqualTo(1, tolerance()));
+                                                                                   TReference reference,
+                                                                                   Func<TReference, Vector4> selector,
+                                                                                   Func<float> speed,
+                                                                                   Func<float> tolerance) =>
+            @this.AreMoving(speed).Where((left, right) => Direction.Of<Hand>(hand => hand.PalmVelocity.ToVector3())
+                                                                   .Is(reference, selector).WithTolerance(tolerance())(left) &&
+                                                          Direction.Of<Hand>(hand => hand.PalmVelocity.ToVector3())
+                                                                   .Is(reference, selector).WithTolerance(tolerance())(right));
 
         public static IObservable<ReactiveHandsHelper<Hand>> AreMoving<TReference>(this IObservable<ReactiveHandsHelper<Hand>> @this,
-                                                                                   TReference                                  reference,
-                                                                                   Func<TReference, Vector4>                   selector,
+                                                                                   TReference reference,
+                                                                                   Func<TReference, Vector4> selector,
                                                                                    float speed =
                                                                                        MinimumSpeed,
                                                                                    float tolerance =

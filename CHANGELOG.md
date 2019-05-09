@@ -1,3 +1,10 @@
+## v1.0.8
+- added Direction class
+- added extension methods variants for It
+- refactored extension methods to use It & co.
+- added detectors
+- created basic detectors for common use cases
+
 ## v1.0.7
 - added [UsedImplicitly] attribute to observable extensions
 - tested all extension methods (and they are working)

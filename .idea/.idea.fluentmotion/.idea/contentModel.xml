@@ -8,17 +8,23 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Demo" t="Include">
-          <e p="FingerExtendedDemo.cs" t="Include" />
-          <e p="IsFistDemo.cs" t="Include" />
-          <e p="IsPinchingDemo.cs" t="Include" />
-          <e p="IsPointingToDemo.cs" t="Include" />
-          <e p="PalmIsFacing.cs" t="Include" />
-          <e p="PalmsAreFacingDemo.cs" t="Include" />
-          <e p="PalmSwipeDemo.cs" t="Include" />
+          <e p="CubeSpawner" t="Include">
+            <e p="CubeSpawner.cs" t="Include" />
+          </e>
         </e>
         <e p="fluentmotion" t="Include">
+          <e p="Detectors" t="Include">
+            <e p="FingerIsExtendedDetector.cs" t="Include" />
+            <e p="FingerIsPointingDetector.cs" t="Include" />
+            <e p="HandIsFistDetector.cs" t="Include" />
+            <e p="HandIsPinchingDetector.cs" t="Include" />
+            <e p="PalmIsFacingDetector.cs" t="Include" />
+            <e p="PalmsAreFacingDetector.cs" t="Include" />
+            <e p="PalmSwipeDetector.cs" t="Include" />
+          </e>
           <e p="extensions" t="Include">
             <e p="ObservableExtensions.cs" t="Include" />
+            <e p="SwipeDirection.cs" t="Include" />
           </e>
           <e p="finger" t="Include">
             <e p="impl" t="Include">
@@ -35,16 +41,23 @@
             <e p="ReactiveHands.cs" t="Include" />
           </e>
           <e p="helpers" t="Include">
+            <e p="All.cs" t="Include" />
+            <e p="Direction.cs" t="Include" />
             <e p="hand" t="Include">
               <e p="HandExtensions.cs" t="Include" />
             </e>
             <e p="It.cs" t="Include" />
             <e p="Mixins.cs" t="Include" />
+            <e p="Palm.cs" t="Include" />
             <e p="ReactiveHandsHelper.cs" t="Include" />
             <e p="Rotation.cs" t="Include" />
           </e>
+          <e p="IReactiveBehaviour.cs" t="Include" />
           <e p="IReactiveObject.cs" t="Include" />
-          <e p="ReactiveBehaviour.cs" t="Include" />
+          <e p="ReactiveBehaviourBase.cs" t="Include" />
+          <e p="ReactiveComponent.cs" t="Include" />
+          <e p="ReactiveFingerBehaviour.cs" t="Include" />
+          <e p="ReactiveHandBehaviour.cs" t="Include" />
           <e p="ReactiveHandsBehaviour.cs" t="Include" />
         </e>
         <e p="LeapMotion" t="Include">

@@ -45,6 +45,7 @@ namespace Leap.Unity {
       }
       set {
         graphicsEnabled = value;
+        graphicsEnabled = value;
       }
     }
 

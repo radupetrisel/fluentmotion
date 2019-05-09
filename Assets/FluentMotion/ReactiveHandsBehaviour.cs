@@ -6,8 +6,12 @@ using UnityEngine;
 
 namespace FluentMotion
 {
-    public class ReactiveHandsBehaviour : MonoBehaviour
+    public abstract class ReactiveHandsBehaviour : ReactiveBehaviourBase<ReactiveHandsHelper<Hand>>
     {
         protected IObservable<ReactiveHandsHelper<Hand>> Hands => gameObject.GetComponent<ReactiveHands>().AsObservable();
+        
+        public ReactiveHandsComponent callback;
+
+        public override IReactiveComponent<ReactiveHandsHelper<Hand>> Callback => callback;
     }
 }
