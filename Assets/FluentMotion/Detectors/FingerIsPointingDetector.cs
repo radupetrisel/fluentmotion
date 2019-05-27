@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FluentMotion.detectors
 {
-    public class FingerIsPointingDetector : ReactiveFingerBehaviour
+    public abstract class FingerIsPointingDetector : ReactiveFingerDetector
     {
         public GameObject target;
 
@@ -13,7 +13,8 @@ namespace FluentMotion.detectors
             Finger
                .IsPointingTo(target, t => t.transform.position)
                .Sample(TimeSpan)
-               .Subscribe(Callback.OnDetect);
+               .ObserveOn(Scheduler.MainThread)
+               .Subscribe(finger => OnDetect(finger, Parameters));
         }
     }
 }

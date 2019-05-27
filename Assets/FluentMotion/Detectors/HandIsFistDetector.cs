@@ -3,13 +3,14 @@ using UniRx;
 
 namespace FluentMotion.detectors
 {
-    public class HandIsFistDetector : ReactiveHandBehaviour
+    public abstract class HandIsFistDetector : ReactiveHandDetector
     {
         private void Start()
         {
             Hand.IsFist()
                 .Sample(TimeSpan)
-                .Subscribe(Callback.OnDetect);
+                .ObserveOn(Scheduler.MainThread)
+                .Subscribe(hand => OnDetect(hand, Parameters));
         }
     }
 }

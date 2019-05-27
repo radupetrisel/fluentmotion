@@ -7,9 +7,11 @@ using UnityEngine;
 
 namespace FluentMotion.finger.impl
 {
-    public class Middle
+    public static class Middle
     {
         public static bool IsExtended(Hand hand) => hand.GetMiddle().IsExtended;
+
+        public static bool IsNotExtended(Hand hand) => !IsExtended(hand);
 
         public static Func<Hand, bool> IsPointingTo<TTarget>(TTarget target)
             where TTarget : Component => hand => hand.GetMiddle()

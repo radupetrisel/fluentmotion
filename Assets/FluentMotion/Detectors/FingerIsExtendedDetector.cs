@@ -1,14 +1,17 @@
+using FluentMotion.extensions;
 using UniRx;
 
 namespace FluentMotion.detectors
 {
-    public class FingerIsExtendedDetector : ReactiveFingerBehaviour
+    public abstract class FingerIsExtendedDetector : ReactiveFingerDetector
     {
-        private void Start()
-        { 
-            Finger           
-                .Sample(TimeSpan)
-                .Subscribe(Callback.OnDetect);
+        public void Start()
+        {
+            Finger
+               .IsExtended()
+               .Sample(TimeSpan)
+               .ObserveOn(Scheduler.MainThread)
+               .Subscribe(finger => OnDetect(finger, Parameters));
         }
     }
 }

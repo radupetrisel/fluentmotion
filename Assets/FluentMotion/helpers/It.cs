@@ -16,7 +16,8 @@ namespace FluentMotion.helpers
         private const float LeapTolerance = 0.2f;
 
         public static bool IsExtended(Finger finger) => finger.IsExtended;
-
+        public static bool IsNotExtended(Finger finger) => !finger.IsExtended;
+        
         public static Finger GetThumb(Hand  hand) => hand.GetThumb();
         public static Finger GetIndex(Hand  hand) => hand.GetIndex();
         public static Finger GetMiddle(Hand hand) => hand.GetMiddle();

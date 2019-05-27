@@ -1,10 +1,11 @@
 using FluentMotion.extensions;
+using Leap;
 using UniRx;
 using UnityEngine;
 
 namespace FluentMotion.detectors
 {
-    public class PalmIsFacingDetector : ReactiveHandBehaviour
+    public abstract class PalmIsFacingDetector : ReactiveHandDetector
     {
         public GameObject target;
         
@@ -12,7 +13,8 @@ namespace FluentMotion.detectors
         {
             Hand.PalmIsFacing(target, t => t.transform.position)
                 .Sample(TimeSpan)
-                .Subscribe(Callback.OnDetect);
+                .ObserveOn(Scheduler.MainThread)
+                .Subscribe(hand => OnDetect(hand, Parameters));
         }
     }
 }

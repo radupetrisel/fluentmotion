@@ -58,7 +58,6 @@ namespace FluentMotion.helpers
         public DirectionOf(Func<TReference, Vector4> of)
         {
             _of = of;
-            Debug.Log("new");
         }
 
         [UsedImplicitly]

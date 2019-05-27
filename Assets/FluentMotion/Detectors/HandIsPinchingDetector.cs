@@ -3,13 +3,14 @@ using UniRx;
 
 namespace FluentMotion.detectors
 {
-    public class HandIsPinchingDetector : ReactiveHandBehaviour
+    public abstract class HandIsPinchingDetector : ReactiveHandDetector
     {
         private void Start()
         {
             Hand.IsPinching()
                 .Sample(TimeSpan)
-                .Subscribe(Callback.OnDetect);
+                .ObserveOn(Scheduler.MainThread)
+                .Subscribe(hand => OnDetect(hand, Parameters));
         }
     }
 }

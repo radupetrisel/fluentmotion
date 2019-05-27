@@ -3,13 +3,15 @@ using UniRx;
 
 namespace FluentMotion.detectors
 {
-    public class PalmsAreFacingDetector : ReactiveHandsBehaviour
+    public abstract class PalmsAreFacingDetector : ReactiveHandsDetector
     {
         private void Start()
         {
             Hands.PalmsAreFacing()
                  .Sample(TimeSpan)
-                 .Subscribe(Callback.OnDetect);
+                 .ObserveOn(Scheduler.MainThread)
+                 .Subscribe(hands => OnDetect(hands, Parameters));
+            
         }
     }
 }
