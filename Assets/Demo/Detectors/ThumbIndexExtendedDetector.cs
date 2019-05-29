@@ -19,7 +19,7 @@ namespace Demo.Detectors
                      Ring.IsNotExtended,
                      Pinky.IsNotExtended
                      )
-                .Subscribe(hand => OnDetect(hand));
+                .Subscribe(hand => OnDetect(hand, GestureType.ThumbIndexExtended));
         }
 
         public override void OnDetect(Hand input, params object[] others)

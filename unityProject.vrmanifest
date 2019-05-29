@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.sample_project.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\fluentmotion\\actions.json",
+      "action_manifest_path": "C:\\Users\\radup\\fluentmotion\\actions.json",
       "strings": {
         "en_us": {
           "name": "sample_project [Testing]"
