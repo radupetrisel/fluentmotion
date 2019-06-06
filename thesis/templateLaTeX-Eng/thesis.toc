@@ -2,27 +2,31 @@
 \contentsline {section}{\numberline {1.1}Virtual reality}{1}% 
 \contentsline {subsection}{\numberline {1.1.1}History}{1}% 
 \contentsline {subsection}{\numberline {1.1.2}Modern technology}{2}% 
-\contentsline {section}{\numberline {1.2}LeapMotion}{2}% 
-\contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{3}% 
-\contentsline {section}{\numberline {2.1}Title}{3}% 
-\contentsline {section}{\numberline {2.2}Other title}{3}% 
-\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{4}% 
-\contentsline {section}{\numberline {3.1}Title}{4}% 
-\contentsline {section}{\numberline {3.2}Other title}{4}% 
-\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{5}% 
-\contentsline {section}{\numberline {4.1}Title}{5}% 
-\contentsline {section}{\numberline {4.2}Other title}{5}% 
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{6}% 
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{7}% 
-\contentsline {section}{\numberline {6.1}Title}{7}% 
-\contentsline {section}{\numberline {6.2}Other title}{7}% 
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{8}% 
-\contentsline {section}{\numberline {7.1}Title}{8}% 
-\contentsline {section}{\numberline {7.2}Other title}{8}% 
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{9}% 
-\contentsline {section}{\numberline {8.1}Title}{9}% 
-\contentsline {section}{\numberline {8.2}Other title}{9}% 
-\contentsline {chapter}{Bibliography}{10}% 
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{11}% 
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{12}% 
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{13}% 
+\contentsline {section}{\numberline {1.2}Leap Motion}{2}% 
+\contentsline {subsection}{\numberline {1.2.1}Hardware}{3}% 
+\contentsline {subsection}{\numberline {1.2.2}Sofware}{3}% 
+\contentsline {section}{\numberline {1.3}Reactive Extensions}{4}% 
+\contentsline {subsection}{\numberline {1.3.1}Why use observables?}{4}% 
+\contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{5}% 
+\contentsline {section}{\numberline {2.1}Title}{5}% 
+\contentsline {section}{\numberline {2.2}Other title}{5}% 
+\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{6}% 
+\contentsline {section}{\numberline {3.1}Title}{6}% 
+\contentsline {section}{\numberline {3.2}Other title}{6}% 
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{7}% 
+\contentsline {section}{\numberline {4.1}Title}{7}% 
+\contentsline {section}{\numberline {4.2}Other title}{7}% 
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{8}% 
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{9}% 
+\contentsline {section}{\numberline {6.1}Title}{9}% 
+\contentsline {section}{\numberline {6.2}Other title}{9}% 
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{10}% 
+\contentsline {section}{\numberline {7.1}Title}{10}% 
+\contentsline {section}{\numberline {7.2}Other title}{10}% 
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{11}% 
+\contentsline {section}{\numberline {8.1}Title}{11}% 
+\contentsline {section}{\numberline {8.2}Other title}{11}% 
+\contentsline {chapter}{Bibliography}{12}% 
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{13}% 
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{14}% 
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{15}% 

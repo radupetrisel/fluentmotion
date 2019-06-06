@@ -218,7 +218,7 @@ The 1990s saw the first commercially extensive release of consumer headsets, not
 
 The modern, consumer version of headsets started developing in the early 2010s. In 2013, Valve Corporation found and freely shared the breakthrough of low-persistence screens that make it possible today to show VR content lag-free and smear-free. 
 
-\begin{wrapfigure}{r}{0.25\textwidth}
+\begin{wrapfigure}[16]{r}{0.25\textwidth}
   \includegraphics[width=1.1\linewidth]{img/Sony_morpheus.jpg}
   \caption{Project Morpheus (PlayStation VR) at gamescom in 2015}
   \label{fig:morpheus}
@@ -232,9 +232,9 @@ Present virtual reality headset displays rely on smartphone technologies includi
 
 Special input devices are required for interaction with the virtual world, such as hand controllers, haptic gloves, 3D mouse and optical tracking sensors. Both haptic gloves and hand controllers provide force feedback (in the form of vibration), with haptic gloves providing also feedback in the form of response force (like when picking a rubber duck).
 
-\section{LeapMotion}
+\section{Leap Motion}
 
-The Leap Motion controller is a tiny peripheral USB device intended to be facing upwards on a physical desktop, but can also be mounted on a VR headset.
+The \textit{Leap Motion Controller} is a tiny peripheral USB device intended to be facing upwards on a physical desktop, but can also be mounted on a VR headset.
 
 \begin{figure}[h]
   \centering
@@ -251,7 +251,66 @@ The Leap Motion controller is a tiny peripheral USB device intended to be facing
   \caption{The LeapMotion system}
 \end{figure}
 
+\subsection{Hardware}
 
+The \textit{Leap Motion Controller} is really quite straightforward from a hardware view. Two cameras and three infrared LEDs are the core of the device. These track infrared light with a wavelength of 850 nanometers, which is outside the visible light spectrum. \cite{LeapArticle}
+
+The unit has a big interaction room of 0.22 m\textsuperscript{3} thanks to its wide-angle glasses, which takes the form of an inverted pyramid – the intersection of the areas of perspective of the binocular cameras (see figure \ref{fig:leap_interaction}). The viewing range of the device is 60cm to 80cm, depending on the version of the firmware used.
+
+This raw data is then stored in the device's local memory and then sent via USB to the \textit{Leap Motion tracking software}. As the cameras work with near-infrared light, the data is in the form of grayscale stereo images, as shown in figure \ref{fig:leap_raw}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/Leap_raw.jpg}
+  \caption{Leap Motion raw data}
+  \label{fig:leap_raw}
+\end{figure}
+
+\subsection{Sofware}
+
+It's time for some heavy mathematical lifting once the picture information is streamed to the computer. The \textit{Leap Motion Controller} does not produce depth maps despite common misconceptions - instead it applies sophisticated algorithms to the raw sensor information.
+
+\begin{wrapfigure}[8]{l}{0.4\textwidth}
+  \includegraphics[width=0.37\textwidth]{img/Leap_capsule_hands.png}
+  \caption{Capsule hands}
+  \label{fig:leap_capsule}
+\end{wrapfigure}
+
+The Leap Motion Service first compensates background objects (e.g. head) and lightning, and then extracts from the data the relevant information - arms, hands and fingers.
+
+Though a transport layer, the results(frames) are fed to the \textit{Leap Motion Control Panel} or to native and web clients. These orgaize the data into an object-orietented structure.
+
+\section{Reactive Extensions}
+
+ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences. \cite{RX_intro}
+
+It extends the observer pattern to support data and/or event sequences and provides operators that help you compose sequences declaratively while abstracting issues such as low-level threading, synchronization, thread security, concurrent data structures, and non-blocking I/O.
+
+Table \ref{table:rx} shows how observables integrate in the programming world.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{c | c | c}
+    & single items & multiple items \\
+    \hline
+    synchronous & T GetData & IEnumerable<T> GetData \\
+    asynchronous & Awaitable<T> GetData & Observable<T> GetData
+  \end{tabular}
+  \caption{Observable position in multiple items and asynchronous world}
+  \label{table:rx}
+\end{table}
+
+\subsection{Why use observables?}
+ReactiveX observables are intended to be \textbf{\textit{composable, flexible}}and \textbf{\textit{less opitionated}}. These provide a huge advantage over structures like Java \textit{Futures} or C\# \textit{Awaitables}, because it removes the need for ambiguous nesting of callbacks.
+
+RX Observables also offer three methods for of flow control - \textit{OnNext}, \textit{OnError} and \textit{OnCompleted} - which give the programmer very much liberty.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{img/RX_iterable_vs_observable.PNG}
+  \caption{Iterable vs Observable}
+  \label{fig:rx_obs_it}
+\end{figure}
 
 \chapter{Project Objectives and Specifications}
 

@@ -30,4 +30,16 @@
 \bibitem{TheatreAndItsDouble}
 A.~Artaud, \emph{The Threatre and its Double}, 1938.
 
+\bibitem{LeapArticle}
+\BIBentryALTinterwordspacing
+A.~Colgan, ``How does the leap motion controller work?'' 2014. [Online].
+  Available:
+  \url{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{RX_intro}
+\BIBentryALTinterwordspacing
+2019. [Online]. Available: \url{\url{http://reactivex.io/intro.html}}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
