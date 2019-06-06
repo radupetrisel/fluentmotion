@@ -17,6 +17,8 @@
 %\usepackage{algorithmic}
 \usepackage{color}
 \usepackage{color}
+\usepackage{wrapfig}
+\usepackage{subcaption}
 
 % \mastersthesis
 \diplomathesis
@@ -214,31 +216,42 @@ The precise roots of virtual reality are challenged, partially because of how ha
 
 The 1990s saw the first commercially extensive release of consumer headsets, notably \textit{Sega VR} (1991) and \textit{Sega VR-1} (1994) launched by Sega, and \textit{Nintendo's Virtual Boy} (1995). The 2000s were a period of comparative indifference from the public and investment towards VR techniques available on the market. Google launched \textit{Street View} in 2007, a service that offers panoramic views of a growing amount of global locations such as highways, indoor houses and rural regions, which also integrates a stereoscopic 3D mode as of 2010.
 
+The modern, consumer version of headsets started developing in the early 2010s. In 2013, Valve Corporation found and freely shared the breakthrough of low-persistence screens that make it possible today to show VR content lag-free and smear-free. 
 
+\begin{wrapfigure}{r}{0.25\textwidth}
+  \includegraphics[width=1.1\linewidth]{img/Sony_morpheus.jpg}
+  \caption{Project Morpheus (PlayStation VR) at gamescom in 2015}
+  \label{fig:morpheus}
+\end{wrapfigure}
 
-\begin{table}[ht]
-\caption{Nonlinear Model Results}
-\centering                          % tabel centrat 
-\begin{tabular}{|c|c|c|c|}          % 4 coloane centrate 
-\hline\hline                        % linie orizontala dubla
-Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex]   % inserare tabel
-%heading
-\hline                              % linie orizontal simpla
-1 & 50 & 837 & 970 \\               % corpul tabelului 
-2 & 47 & 877 & 230 \\
-3 & 31 & 25 & 415 \\[1ex]           % [1ex] adds vertical space
-\hline                              
-\end{tabular}
-  % titlul tabelului
-\label{table:nonlin}                % \label{table:nonlin} introduce eticheta folosita pentru referirea tabelului in text; referirea in text se va face cu \ref{table:nonlin}
-\end{table}
+This discovery was quickly adopted by the other companies on the market, with Sony announcing \textit{Project Morpheus} in 2014 and Google announcing \textit{Cardboard} in 2015. In 2016, HTC released and shipped the first units of \textit{Vive SteamVR}, the first major commercial headset for average users.
 
-\begin{figure}[ht]
-    \centering
-\includegraphics[]{img/test.jpg}
-    \caption{The figure`s name}
-    \label{fig:imag}
+\subsection{Modern technology}
+
+Present virtual reality headset displays rely on smartphone technologies including: gyroscopes and motion sensors for head, hand and body position monitoring, tiny high definition stereoscopic displays and small, lightweight and powerful computer processors.
+
+Special input devices are required for interaction with the virtual world, such as hand controllers, haptic gloves, 3D mouse and optical tracking sensors. Both haptic gloves and hand controllers provide force feedback (in the form of vibration), with haptic gloves providing also feedback in the form of response force (like when picking a rubber duck).
+
+\section{LeapMotion}
+
+The Leap Motion controller is a tiny peripheral USB device intended to be facing upwards on a physical desktop, but can also be mounted on a VR headset.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\linewidth]{img/Leap_motion.jpg}
+    \caption{The LeapMotion controller}
+    \label{fig:leap_controller}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\linewidth]{img/Leap_interaction.png}
+    \caption{The interaction area}
+    \label{fig:leap_interaction}
+  \end{subfigure}
+  \caption{The LeapMotion system}
 \end{figure}
+
+
 
 \chapter{Project Objectives and Specifications}
 

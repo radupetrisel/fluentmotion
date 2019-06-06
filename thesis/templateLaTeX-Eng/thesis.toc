@@ -1,6 +1,8 @@
 \contentsline {chapter}{Chapter{} \numberline {1}Introduction - Project Context}{1}% 
 \contentsline {section}{\numberline {1.1}Virtual reality}{1}% 
 \contentsline {subsection}{\numberline {1.1.1}History}{1}% 
+\contentsline {subsection}{\numberline {1.1.2}Modern technology}{2}% 
+\contentsline {section}{\numberline {1.2}LeapMotion}{2}% 
 \contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{3}% 
 \contentsline {section}{\numberline {2.1}Title}{3}% 
 \contentsline {section}{\numberline {2.2}Other title}{3}% 

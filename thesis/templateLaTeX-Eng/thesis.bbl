@@ -30,24 +30,4 @@
 \bibitem{TheatreAndItsDouble}
 A.~Artaud, \emph{The Threatre and its Double}, 1938.
 
-\bibitem{BellucciLZ04}
-E.~Bellucci, A.~Lodder, and J.~Zeleznikow, ``Integrating artificial
-  intelligence, argumentation and game theory to develop an online dispute
-  resolution environment.'' in \emph{16th International Conference on Tools
-  with Artificial Intelligence}, 2004, pp. 749--754.
-
-\bibitem{AntoniouSBDB07}
-G.~Antoniou, T.~Skylogiannis, A.~Bikakis, M.~Doerr, and N.~Bassiliades,
-  ``Dr-brokering: A semantic brokering system.'' \emph{Knowledge-Based
-  Systems}, vol.~20, no.~1, pp. 61--72, 2007.
-
-\bibitem{russell1995artificial}
-S.~J. Russell, P.~Norvig, J.~F. Canny, J.~M. Malik, and D.~D. Edwards,
-  \emph{Artificial intelligence: a modern approach}.\hskip 1em plus 0.5em minus
-  0.4em\relax Prentice hall Englewood Cliffs, 1995, vol.~2.
-
-\bibitem{strunk}
-W.~Strunk, Jr. and E.~B. White, \emph{The Elements of Style}, 3rd~ed.\hskip 1em
-  plus 0.5em minus 0.4em\relax Macmillan, 1979.
-
 \end{thebibliography}

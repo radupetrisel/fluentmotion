@@ -1,14 +1,14 @@
-PWD d:\thesis\templateLaTeX-Eng
+PWD d:\fluentmotion\thesis\templateLaTeX-Eng
 INPUT C:\Users\rpetrisel\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\thesis\templateLaTeX-Eng\thesis.tex
-OUTPUT d:\thesis\templateLaTeX-Eng\thesis.log
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.tex
+OUTPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.log
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT d:\thesis\templateLaTeX-Eng\cs.sty
-INPUT d:\thesis\templateLaTeX-Eng\cs.sty
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\cs.sty
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\cs.sty
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
@@ -87,11 +87,19 @@ INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\co
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT d:\thesis\templateLaTeX-Eng\thesis.aux
-INPUT d:\thesis\templateLaTeX-Eng\thesis.aux
-INPUT d:\thesis\templateLaTeX-Eng\apendix.aux
-INPUT d:\thesis\templateLaTeX-Eng\apendix.aux
-OUTPUT d:\thesis\templateLaTeX-Eng\thesis.aux
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
+OUTPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
@@ -140,12 +148,12 @@ INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\um
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-OUTPUT d:\thesis\templateLaTeX-Eng\thesis.pdf
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+OUTPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aebx12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aebx12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
@@ -154,8 +162,8 @@ INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\c
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aeti12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aer12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
@@ -163,28 +171,23 @@ INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\c
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aeti12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsl12.tfm
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\tucn.jpg
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aer17.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aebx12.tfm
-INPUT d:\thesis\templateLaTeX-Eng\thesis.toc
-INPUT d:\thesis\templateLaTeX-Eng\thesis.toc
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.toc
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.toc
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aebx12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbxti10.tfm
-OUTPUT d:\thesis\templateLaTeX-Eng\thesis.toc
+OUTPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.toc
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aer17.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aebx12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aer12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aebx12.tfm
-INPUT d:\thesis\templateLaTeX-Eng\img\test.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\test.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\test.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\test.jpg
-INPUT d:\thesis\templateLaTeX-Eng\img\test.jpg
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aebx12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
@@ -197,26 +200,50 @@ INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\c
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Sony_morpheus.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Sony_morpheus.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Sony_morpheus.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Sony_morpheus.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Sony_morpheus.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_motion.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_motion.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_motion.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_motion.jpg
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_motion.jpg
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aer10.tfm
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_interaction.png
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_interaction.png
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_interaction.png
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_interaction.png
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\img\Leap_interaction.png
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aesl12.tfm
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aer10.vf
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmu10.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd
-INPUT d:\thesis\templateLaTeX-Eng\thesis.bbl
-INPUT d:\thesis\templateLaTeX-Eng\thesis.bbl
-OUTPUT d:\thesis\templateLaTeX-Eng\apendix.aux
-INPUT d:\thesis\templateLaTeX-Eng\apendix.tex
-INPUT d:\thesis\templateLaTeX-Eng\apendix.tex
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl
+OUTPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aett.fd
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aett.fd
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ae\aett12.tfm
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\ae\aett12.vf
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
-INPUT d:\thesis\templateLaTeX-Eng\thesis.aux
-INPUT d:\thesis\templateLaTeX-Eng\apendix.aux
-INPUT d:\thesis\templateLaTeX-Eng\apendix.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
+INPUT d:\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
