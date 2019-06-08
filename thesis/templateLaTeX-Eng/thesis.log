@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.6)  6 JUN 2019 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  8 JUN 2019 21:13
 entering extended mode
-**d:/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
-(d:/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
+**c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
+(c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
 LaTeX2e <2018-12-01>
-("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\report.cls"
 Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
-("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
 File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -20,53 +20,53 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (d:/fluentmotion\thesis\templateLaTeX-Eng\cs.sty
+) (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\cs.sty
 \hour=\count89
 \minute=\count90
 \dow=\count91
 \leap=\count92
 \x=\count93
 \y=\count94
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\times.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\latexsym.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\latexsym.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen105
-)) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen106
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count95
@@ -106,15 +106,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xy.sty" ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xy.tex" Bootstrap'ing: catcodes, docmode, ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xyrecat.tex") ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xyidioms.tex")
+)) ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xy.sty" ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xy.tex" Bootstrap'ing: catcodes, docmode, ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xyrecat.tex") ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xyidioms.tex")
 
  Xy-pic version 3.8.9 <2013/10/06>
  Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
@@ -165,11 +165,11 @@ Loading kernel: messages; fonts; allocations: state,
 \connectobjectbox@@=\box31
  objects,
 \styletoks@=\toks23
- decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;  Xy-pic loaded) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+ decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;  Xy-pic loaded) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package: xy 2013/10/06 Xy-pic version 3.8.9
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xymatrix.tex"  Xy-pic option: Matrix feature v.3.14
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xymatrix.tex"  Xy-pic option: Matrix feature v.3.14
 \Row=\count111
 \Col=\count112
 \queue@=\toks24
@@ -177,61 +177,61 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 \qcount@=\count113
 \qcount@@=\count114
 \matrixsize@=\count115
- loaded) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xyarrow.tex"  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xypic\xypdf.tex"  Xy-pic option: PDF driver v.1.7 loaded)) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+ loaded) ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xyarrow.tex"  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) ("C:\Program Files\MiKTeX 2.9\tex/generic/xypic\xypdf.tex"  Xy-pic option: PDF driver v.1.7 loaded)) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\ae.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/ae\ae.sty"
 Package: ae 2001/02/12 1.3 Almost European Computer Modern
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\t1aer.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\aecompl.sty"
+))) ("C:\Program Files\MiKTeX 2.9\tex/latex/ae\aecompl.sty"
 Package: aecompl 1998/07/23 0.9 T1 Complements for AE fonts (D. Roegel)
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algorithm.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/algorithms\algorithm.sty"
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count116
 \float@exts=\toks26
 \float@box=\box32
 \@float@everytoks=\toks27
 \@floatcapt=\box33
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks28
 \c@algorithm=\count117
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen142
 \WF@size=\dimen143
 \c@WF@wrappedlines=\count118
 \WF@box=\box34
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen144
@@ -249,54 +249,89 @@ Package caption Info: wrapfig package is loaded.
 )
 \c@subfigure=\count121
 \c@subtable=\count122
-) (d:/fluentmotion\thesis\templateLaTeX-Eng\thesis.aux (d:/fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen151
+\ar@mcellbox=\box35
+\extrarowheight=\dimen152
+\NC@list=\toks30
+\extratabsurround=\skip46
+\backup@length=\skip47
+\ar@cellbox=\box36
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+\everycr=\toks31
+\minrowclearance=\skip48
+)
+LaTeX Info: Redefining \color on input line 709.
+\rownum=\count123
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
+
+LaTeX Warning: Label `table:problem_statement' multiply defined.
+
+(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count123
-\scratchdimen=\dimen151
-\scratchbox=\box35
-\nofMPsegments=\count124
-\nofMParguments=\count125
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count126
-\MPscratchDim=\dimen152
-\MPnumerator=\count127
-\makeMPintoPDFobject=\count128
-\everyMPtoPDFconversion=\toks31
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+\scratchcounter=\count124
+\scratchdimen=\dimen153
+\scratchbox=\box37
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen154
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks33
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+))) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)))) ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
+)))) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -308,44 +343,44 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 45.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
+LaTeX Font Info:    Try loading font information for U+lasy on input line 47.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
- ("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 45.
+Package xypdf Info: Line width: 0.47998pt on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 <img/tucn.jpg, id=1, 497.6994pt x 101.6598pt>
 File: img/tucn.jpg Graphic file (type jpg)
 <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg  used on input line 59.
+Package pdftex.def Info: img/tucn.jpg  used on input line 63.
 (pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
  [1
 
-{C:/Users/rpetrisel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <d:/fluentmotion/thesis/templateLaTeX-Eng/img/tucn.jpg>]
+{C:/Users/radup/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/tucn.jpg>]
 File: img/tucn.jpg Graphic file (type jpg)
 <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg  used on input line 84.
+Package pdftex.def Info: img/tucn.jpg  used on input line 88.
 (pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
 
-Overfull \hbox (25.93462pt too wide) in paragraph at lines 92--97
+Overfull \hbox (25.93462pt too wide) in paragraph at lines 96--101
 [][] 
  []
 
 [2] [3]
 File: img/tucn.jpg Graphic file (type jpg)
 <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg  used on input line 142.
+Package pdftex.def Info: img/tucn.jpg  used on input line 146.
 (pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
- [4] (d:/fluentmotion\thesis\templateLaTeX-Eng\thesis.toc [5
+ [4] (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.toc [5
 
 ])
 \tf@toc=\write4
@@ -359,142 +394,214 @@ Chapter 1.
 <img/Sony_morpheus.jpg, id=28, 170.6375pt x 227.85126pt>
 File: img/Sony_morpheus.jpg Graphic file (type jpg)
 <use img/Sony_morpheus.jpg>
-Package pdftex.def Info: img/Sony_morpheus.jpg  used on input line 222.
+Package pdftex.def Info: img/Sony_morpheus.jpg  used on input line 215.
 (pdftex.def)             Requested size: 126.2257pt x 168.55165pt.
 
-Overfull \hbox (11.4757pt too wide) in paragraph at lines 222--223
+Overfull \hbox (11.4757pt too wide) in paragraph at lines 215--216
 [][] 
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 223--223
+Underfull \hbox (badness 2285) in paragraph at lines 216--216
 []\T1/aer/m/n/12 Figure 1.1: |Project
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--223
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 \T1/aer/m/n/12 Mor-pheus (PlaySta-
  []
 
-<img/Leap_motion.jpg, id=29, 1284.8pt x 857.2025pt>
+<img/GestRecog_child.jpg, id=29, 219.82124pt x 143.53625pt>
+File: img/GestRecog_child.jpg Graphic file (type jpg)
+<use img/GestRecog_child.jpg>
+Package pdftex.def Info: img/GestRecog_child.jpg  used on input line 231.
+(pdftex.def)             Requested size: 206.5486pt x 134.8737pt.
+
+Underfull \hbox (badness 1168) in paragraph at lines 238--239
+\T1/aer/m/n/12 hend hu-man body lan-guage, es-tab-lish-ing a
+ []
+
+[2 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Sony_morpheus.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/GestRecog_child.jpg>]
+Overfull \hbox (0.32422pt too wide) in paragraph at lines 243--244
+[]\T1/aer/m/n/12 Examples of Re-ac-tive Pro-gram-ming in-clude hard-ware de-scrip-tion lan-guages (HDLs),
+ []
+
+[3]
+Chapter 2.
+
+Underfull \hbox (badness 2237) in paragraph at lines 272--273
+[]\T1/aer/m/n/12 adhere to the re-ac-tive pro-gram-ming
+ []
+
+[4
+
+]
+Underfull \hbox (badness 2237) in paragraph at lines 305--306
+[]\T1/aer/m/n/12 adhere to the re-ac-tive pro-gram-ming
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 323--323
+[]|\T1/aer/m/n/12 Person who cre-ates and
+ []
+
+[5]
+Overfull \hbox (3.19064pt too wide) in paragraph at lines 376--376
+[]|\T1/aer/m/n/12 Priority| 
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 378--378
+[]|\T1/aer/m/n/12 Leap Mo-tion de-fault
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/aer/m/n/12 lan-guage im-per-a-tive
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 380--380
+[]|\T1/aer/m/n/12 Leap Mo-tion de-fault
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T1/aer/m/n/12 lan-guage im-pertive
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 382--382
+[]|\T1/aer/m/n/12 Leap Mo-tion de-fualt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+\T1/aer/m/n/12 lan-guage im-per-a-tive
+ []
+
+
+Overfull \hbox (21.08464pt too wide) in paragraph at lines 374--385
+ [][] 
+ []
+
+<img/Product_arch.png, id=43, 185.19188pt x 173.89969pt>
+File: img/Product_arch.png Graphic file (type png)
+<use img/Product_arch.png>
+Package pdftex.def Info: img/Product_arch.png  used on input line 393.
+(pdftex.def)             Requested size: 137.7014pt x 129.30731pt.
+[6] [7 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Product_arch.png>] [8] [9]
+Chapter 3.
+<img/Gesture_navy.jpg, id=59, 589.20125pt x 570.13pt>
+File: img/Gesture_navy.jpg Graphic file (type jpg)
+<use img/Gesture_navy.jpg>
+Package pdftex.def Info: img/Gesture_navy.jpg  used on input line 519.
+(pdftex.def)             Requested size: 165.23634pt x 159.88759pt.
+<img/Leap_motion.jpg, id=60, 1284.8pt x 857.2025pt>
 File: img/Leap_motion.jpg Graphic file (type jpg)
 <use img/Leap_motion.jpg>
-Package pdftex.def Info: img/Leap_motion.jpg  used on input line 242.
+Package pdftex.def Info: img/Leap_motion.jpg  used on input line 535.
 (pdftex.def)             Requested size: 206.5486pt x 137.79611pt.
-<img/Leap_interaction.png, id=30, 1027.84pt x 682.55pt>
+<img/Leap_interaction.png, id=61, 1027.84pt x 682.55pt>
 File: img/Leap_interaction.png Graphic file (type png)
 <use img/Leap_interaction.png>
-Package pdftex.def Info: img/Leap_interaction.png  used on input line 247.
+Package pdftex.def Info: img/Leap_interaction.png  used on input line 540.
 (pdftex.def)             Requested size: 206.5486pt x 137.1533pt.
-[2 <d:/fluentmotion/thesis/templateLaTeX-Eng/img/Sony_morpheus.jpg> <d:/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_motion.jpg> <d:/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_interaction.png>]
-<img/Leap_raw.jpg, id=37, 650.43pt x 277.035pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10
+
+ <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Gesture_navy.jpg>]
+<img/Leap_raw.jpg, id=65, 650.43pt x 277.035pt>
 File: img/Leap_raw.jpg Graphic file (type jpg)
 <use img/Leap_raw.jpg>
-Package pdftex.def Info: img/Leap_raw.jpg  used on input line 264.
+Package pdftex.def Info: img/Leap_raw.jpg  used on input line 557.
 (pdftex.def)             Requested size: 413.0972pt x 175.95331pt.
 
-Overfull \hbox (4.06825pt too wide) in paragraph at lines 271--272
+Overfull \hbox (4.06825pt too wide) in paragraph at lines 564--565
 []\T1/aer/m/n/12 It's time for some heavy math-e-mat-i-cal lift-ing once the pic-ture in-for-ma-tion is streamed
  []
 
-<img/Leap_capsule_hands.png, id=38, 321.2pt x 220.825pt>
+<img/Leap_capsule_hands.png, id=66, 321.2pt x 220.825pt>
 File: img/Leap_capsule_hands.png Graphic file (type png)
 <use img/Leap_capsule_hands.png>
-Package pdftex.def Info: img/Leap_capsule_hands.png  used on input line 274.
+Package pdftex.def Info: img/Leap_capsule_hands.png  used on input line 567.
 (pdftex.def)             Requested size: 169.82776pt x 116.76038pt.
-[3 <d:/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_raw.jpg> <d:/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_capsule_hands.png>]
-<img/RX_iterable_vs_observable.PNG, id=45, 553.31718pt x 175.40532pt>
+[11 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_motion.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_interaction.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_raw.jpg>]
+<img/RX_iterable_vs_observable.PNG, id=73, 553.31718pt x 175.40532pt>
 File: img/RX_iterable_vs_observable.PNG Graphic file (type png)
 <use img/RX_iterable_vs_observable.PNG>
-Package pdftex.def Info: img/RX_iterable_vs_observable.PNG  used on input line 310.
+Package pdftex.def Info: img/RX_iterable_vs_observable.PNG  used on input line 603.
 (pdftex.def)             Requested size: 459.0pt x 145.50607pt.
- [4 <d:/fluentmotion/thesis/templateLaTeX-Eng/img/RX_iterable_vs_observable.PNG>]
-Chapter 2.
-[5
-
-]
-Chapter 3.
-
-LaTeX Warning: Citation `BellucciLZ04' on page 6 undefined on input line 335.
 
 
-LaTeX Warning: Citation `AntoniouSBDB07' on page 6 undefined on input line 335.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `russell1995artificial' on page 6 undefined on input line 336.
-
-
-LaTeX Warning: Citation `AntoniouSBDB07' on page 6 undefined on input line 338.
-
-
-LaTeX Warning: Citation `strunk' on page 6 undefined on input line 341.
-
-[6
-
-]
+[12 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_capsule_hands.png>] [13 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/RX_iterable_vs_observable.PNG>]
 Chapter 4.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 356.
-("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\omsaer.fd"
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 636.
+("C:\Program Files\MiKTeX 2.9\tex/latex/ae\omsaer.fd"
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 356.
- [7
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 636.
+ [14
 
 ]
 Chapter 5.
-[8
+[15
 
 ]
 Chapter 6.
-[9
+[16
 
 ]
 Chapter 7.
-[10
+[17
 
 ]
 Chapter 8.
-(d:/fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [11
+(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [18
 
-]) [12
+]) [19
 
 ]
 \openout2 = `apendix.aux'.
 
- (d:/fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
+ (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
 Appendix A.
 LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
-("C:\Users\rpetrisel\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\t1aett.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [13
+) [20
 
 
 ]
 Appendix B.
-[14
+[21
 
 ]
 Appendix C.
-) [15
+) [22
 
-] (d:/fluentmotion\thesis\templateLaTeX-Eng\thesis.aux (d:/fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
+] (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5552 strings out of 492895
- 79931 string characters out of 3121868
- 162773 words of memory out of 3000000
- 9282 multiletter control sequences out of 15000+200000
+ 6108 strings out of 492895
+ 83469 string characters out of 3133479
+ 176610 words of memory out of 3000000
+ 9822 multiletter control sequences out of 15000+200000
  41707 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,886b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/rpetrisel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on d:/fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (21 pages, 473272 bytes).
+ 42i,12n,40p,898b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (28 pages, 533509 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

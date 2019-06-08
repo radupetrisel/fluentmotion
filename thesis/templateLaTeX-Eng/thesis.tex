@@ -19,6 +19,8 @@
 \usepackage{color}
 \usepackage{wrapfig}
 \usepackage{subcaption}
+\usepackage{array}
+\usepackage[table]{xcolor}
 
 % \mastersthesis
 \diplomathesis
@@ -32,7 +34,7 @@
 \renewcommand{\thesisauthor}{Radu PETRIŞEL}    %% Your name.
 \renewcommand{\thesismonth}{June}     %% Your month of graduation.
 \renewcommand{\thesisyear}{2019}      %% Your year of graduation.
-\renewcommand{\thesistitle}{GESTURE DETECTION IN VIRTUAL REALITY USING LEAPMOTION} 
+\renewcommand{\thesistitle}{REACTIVE PROGRAMMING BASED GESTURE DETECTION IN VIRTUAL REALITY USING LEAPMOTION} 
 \renewcommand{\thesissupervisor}{Assist. Prof. Dr. Eng. Adrian SABOU}
 \newcommand{\department}{\bf FACULTY OF AUTOMATION AND COMPUTER SCIENCE\\
 COMPUTER SCIENCE DEPARTMENT}
@@ -52,6 +54,8 @@ COMPUTER SCIENCE DEPARTMENT}
 %\thesistitle                    %% Generate the title page.
 %\authordeclarationpage                %% Generate the declaration page.
 
+\setcounter{secnumdepth}{3}
+
 \pagenumbering{Roman}
 \setcounter{page}{1}
 
@@ -67,7 +71,7 @@ COMPUTER SCIENCE DEPARTMENT}
 \vspace{1.5cm}
 
 \thesis
-\vspace{6cm}
+\vspace{5.75cm}
 
 Graduate: {\bf \thesisauthor{}} 
 
@@ -185,17 +189,6 @@ Data \hspace{8cm} Nume, Prenume
 
 \newpage
 
-
-%\listoftables
-%\listoffigures
-
-%\clearpage 
-%\newpage
-
-%\begin{comment}
-%\include{guideline} 
-%\end{comment}
-
 \tableofcontents
 \newpage
 
@@ -231,6 +224,306 @@ This discovery was quickly adopted by the other companies on the market, with So
 Present virtual reality headset displays rely on smartphone technologies including: gyroscopes and motion sensors for head, hand and body position monitoring, tiny high definition stereoscopic displays and small, lightweight and powerful computer processors.
 
 Special input devices are required for interaction with the virtual world, such as hand controllers, haptic gloves, 3D mouse and optical tracking sensors. Both haptic gloves and hand controllers provide force feedback (in the form of vibration), with haptic gloves providing also feedback in the form of response force (like when picking a rubber duck).
+
+\section{Gesture recognition}
+
+\begin{wrapfigure}[14]{l}{0.45\linewidth}
+  \includegraphics[width=\linewidth]{img/GestRecog_child.jpg}
+  \caption{A child being recognized by a simple gesture detection algorithm}
+  \label{fig:child}
+\end{wrapfigure}
+
+Gesture recognition is an active research field with the objective of comprehending human gestures through mathematical models. Gestures can come from any posture or position of the body, but they typically come from the hand. Without actually touching them, users can use simple motions to command or communicate with machines.
+
+Gesture recognition may be seen as a means for machines to commence to comprehend human body language, establishing a stronger link between computers and individuals than conventional text user interfaces or even GUIs (graphical user interfaces), which still restrict most inputs to the keyboard and/or mouse and communicate naturally with no mechanical instruments.
+
+\section{Reactive programming}
+Reactive programming is a declarative programming paradigm concerned with asynchronous data streams and the propagation of change. With this paradigm it is feasible to easily express static (e.g. lists) or dynamic (e.g. events) information streams and to also indicate that an implied dependency remains within the related implementation model, which promotes the automatic propagation of the altered information stream.
+
+Examples of Reactive Programming include hardware description languages (HDLs), such as VHDL or Verilog, in which changes are modeled as they propagate through a circuit. As a manner to optimize the development of dynamic user interfaces and virtually-real-time system animation, reactive programming has been suggested.
+
+\chapter{Project Objectives and Specifications}
+
+\section{Introduction}
+The purpose of this chapter is to collect, analyze and define high-level needs and features of the Unity asset named Fluent Motion. It focuses on the capabilities needed by the stakeholders and the target users, and why these needs exist. The details of how the Fluent Motion fulfills these needs are detailed in the use-case and supplementary specifications.
+
+\section{Positioning}
+\subsection{Problem statement}
+
+As Virtual Reality (VR) is becoming more accessible to the average person, more problems arise with the means of interacting with the VR world. A solution to this issue is the Leap Motion hand tracking device, which offers a natural means of human-VR interaction. The problem with Leap Motion is its non-friendly Application Programmer Interface (API). 
+
+\newcolumntype{g}{>{\columncolor{lightgray}} m{0.45\linewidth}}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| g | m{0.45\linewidth} |}
+    \hline
+    \textbf{The problem of} & Leap Motion’s unfriendly API \\
+    \hline
+    \textbf{affects} & developers in the VR field who use Leap Motion \\
+    \hline
+    \textbf{the impact of which is} & a limited number of applications using Leap Motion \\
+    \hline
+    \textbf{a successful solution would be} & 
+      easy to use
+
+      fluent (in terms of code readability)
+
+      adhere to the reactive programming paradigm
+
+      available on Unity's asset store
+      \\
+    \hline
+  \end{tabular}
+  \label{table:problem_statement}
+\end{table}
+
+\subsection{Product Position Statement}
+Fluent Motion comes as a union between three technologies – Virtual Reality, Leap Motion and ReactiveX.
+
+So far, Virtual Reality and Leap Motion already are integrated (by means of LeapMotion’s API), but ReactiveX can offer a more fluent way of expressing what an application using the first two mentioned technologies together. 
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| g | m{0.45\linewidth} |}
+    \hline
+    \textbf{For} & Virtual Reality developers \\
+    \hline
+    \textbf{who} & use Leap Motion \\
+    \hline
+    \textbf{Fluent Motion} & is an extension of Leap Motion using ReactiveX \\
+    \hline
+    \textbf{that} & offers a fluent API for Leap Motion \\
+    \hline
+    \textbf{unlike} & the default API \\
+    \hline
+    \textbf{Fluent Motion will} &
+      be easy to use    
+      
+      be fluent (in terms of code readability)
+
+      adhere to the reactive programming paradigm \\
+    \hline
+  \end{tabular}
+  \label{table:problem_statement}
+\end{table}
+
+\section{Stakeholder and User Descriptions}
+
+\subsection{Stakeholder summary}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.3\linewidth} | m{0.3\linewidth} | m{0.3\linewidth} |}
+    \hline
+    \rowcolor{lightgray} Name & Description & Responsibilities \\
+    \hline
+    \textbf{Developer (VR)} & Person who wants to create Virtual Reality applications & Use Fluent Motion \\
+    \hline
+    \textbf{Developer (Fluent Motion)} & Person who creates and maintains Fluent Motion & Create, improve and offer technical support for Fluent Motion \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{User summary}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.22\linewidth} | m{0.22\linewidth} | m{0.22\linewidth} | m{0.22\linewidth} |}
+    \hline
+    \rowcolor{lightgray} Name & Description & Responsibilities & Stakeholder \\
+    \hline
+    \textbf{Developer (VR)} & Person who wants to create VR applications & Use Fluent Motion & \textit{Developer (VR)} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{User environment}
+
+\subsubsection{Users}
+The API will be used by developer teams of any size.
+
+\subsubsection{Infrastructure}
+The infrastructure needed by Fluent Leap is an aggregation of the hardware requirements of the combined systems and technologies, i.e.:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.2\linewidth} | m{0.7\linewidth} |}
+    \hline
+    Operating system & \textbf{Windows 7 SP1}, \textbf{Windows 8.1} or later, \textbf{Windows 10} \\
+    \hline
+    Middleware & \textbf{SteamVR} platform \\
+    \hline
+    Additional 
+    
+    hardware & \textbf{Leap Motion} hand tracking device
+
+    a VR headset (at the time of writing, \textbf{Occulust Rift}, \textbf{HTC Vive} or \textbf{Valve Index}) \\
+    \hline
+    Miscellaneous & \textbf{.NET Framework 4.6} or newer
+
+    \textbf{Unity} 5.6 or later \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Summary of key stakeholder or user needs}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.18\linewidth} | m{0.08\linewidth} | m{0.18\linewidth} | m{0.26\linewidth} | m{0.21\linewidth} | }
+    \hline
+    \rowcolor{lightgray} Need & Priority & Concerns & Current solution & Proposed solution \\
+    \hline
+    \textbf{VR API} & 0 & Developer & Leap Motion default API, using \textbf{ANSI C} language imperative style & Fluent Motion, using \textbf{C\#} language and ReactiveX \\
+    \hline
+    \textbf{Desktop API} & 1 & Developer & Leap Motion default API, using \textbf{ANSI C} language impertive style & Fluent Motion, using \textbf{C\#} language and ReactiveX \\
+    \hline
+    \textbf{Usability} & 0 & Developer & Leap Motion defualt API, using \textbf{ANSI C} language imperative style & Fluent Motion, using \textbf{C\#} language and ReactiveX \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Alternatives and competetion}
+External competition is represented by the current API offered by LeapMotion.
+
+\section{Product overview}
+\begin{wrapfigure}[10]{r}{0.3\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{img/Product_arch.png}
+  \caption{Fluent Motion architectural diagram}
+  \label{fig:arch}
+\end{wrapfigure}
+
+The API should provide all the functionality already provided by Leap Motion's default API, but in a higher-level language.
+
+\subsection{Product perspective}
+This product will extend existing features from Leap Motion, making them more readable and developer friendly.
+
+\subsection{Assumption and dependencies}
+For developers:
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.2\linewidth} | m{0.7\linewidth} |}
+    \hline
+    Operating system & \textbf{Windows 7 SP1}, \textbf{Windows 8.1} or later, \textbf{Windows 10} \\
+    \hline
+    Middleware & \textbf{SteamVR} platform \\
+    \hline
+    Additional 
+    
+    hardware & \textbf{Leap Motion} hand tracking device
+
+    a VR headset (at the time of writing, \textbf{Occulust Rift}, \textbf{HTC Vive} or \textbf{Valve Index}) \\
+    \hline
+    Miscellaneous & \textbf{.NET Framework 4.6} or newer
+
+    \textbf{Unity} 5.6 or later \\
+    \hline
+  \end{tabular}
+\end{table}
+
+For end products that reference Fluent Motion:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| m{0.2\linewidth} | m{0.35\linewidth} | m{0.35\linewidth} |}
+    \hline
+    \rowcolor{lightgray} & Minimum & Recommended \\
+    \hline
+    \textbf{CPU} & Intel Core i3-8100 & Intel i5-4590 or AMD FX 8350 equivalent \\
+    \hline
+    \textbf{GPU} & Nvidia GeForce GTX 1060 3GB or AMD Radeon RX 570 & Nvidia GeForce GTX 970 or AMD Radeon R9 290 equivalent \\
+    \hline
+    \textbf{Memory} & 8GB & 16GB \\
+    \hline
+    \textbf{Output} & HDMI 1.4, DisplayPort 1.2 & DisplayPort 1.2 \\
+    \hline
+    \textbf{Input} & 2x USB 3.1 gen 1 (Type-A) & 2x USB 3.1 gen 2 (Type-A) \\
+    \hline    
+  \end{tabular}
+\end{table}
+
+\section{Product features}
+\begin{enumerate}
+  \item \textbf{Hands module}
+
+    The module that will allow the developer to use the two hands objects from the scene in order to detect gestures or motions, and assign callbacks when certain criteria regarding the hands are met.\\
+    This module is available in both Virtual Reality and Desktop modes.
+
+  \item \textbf{Fingers module}
+
+    The module that will allow the developer to use the fingers (individually or in groups) in the scene for detecting gestures or motions, and assign callbacks when certain criteria regarding the fingers are met.\\
+    This module is available in both Virtual Reality and Desktop modes.
+
+  \item \textbf{Virtual Reality module}
+
+    The module that will allow the user to develop Virtual Reality applications.   This module will act as a dependency to other modules. \\
+    It isn’t mutually exclusive with the Desktop Module, BUT at least one of the two must be present.
+
+  \item \textbf{Desktop module}
+
+    The module that will allow the user to develop applications using Leap Motion in desktop mode.\\
+    This module will act as dependency to other modules. It isn’t mutually exclusive with the Virtual Reality Module, BUT at least one of the two must be present.
+  
+  \item \textbf{Gesture definition module}
+    
+    The module that allows the user to define new gestures besides already existing ones.\\
+    This module depends on either Virtual Reality module or Desktop module, and on either Hands module, Fingers module or both.
+
+  \item \textbf{Gestures module}
+
+    This module will provide defitions to some basic gestures (like finger pointing to some object, hand swipe, etc.).
+    This module depends on either Virtual Reality module or Desktop module, and on either Hands module and Fingers module.
+
+  \item \textbf{Demo}
+
+    This module will provide some demonstrative code for new users to acquaint themselves with the basic flows and code syntax of Fluent Motion.
+  
+\end{enumerate}
+
+\section{Other product requirements}
+
+\begin{enumerate}
+  \item \textbf{High readability}
+    
+    The main purpose of the API is to be fluently read, i.e. the code should sound almost like natural language when read by other developers.
+
+  \item \textbf{Open source}
+  
+    The project will be open source and anyone will be able to contribute to it.
+
+  \item \textbf{Performance}
+
+    Virtual Reality applications shouldn’t fall bellow 80 frames per second (FPS), and, as such, the API shouldn’t introduce a high processing time per frame to to fall below that threshold.
+
+  \item \textbf{Scalability}
+    
+    The API should support detecting up to 10 distinct gestures per application and interacting with at least 20 objects (excluding hand to hand interactions).
+
+  \item \textbf{Maintainability}
+
+    The VR world is still young and technologies evolve fast, so the API should be highly maintainable to keep its edge.
+
+  \item \textbf{Extendibility}
+    
+    The API should be easily extendable by any backer on Git.
+
+\end{enumerate}
+
+\chapter{Bibliographic research}
+
+\section{Gestures}
+
+\begin{wrapfigure}[20]{l}{0.4\textwidth}
+  \includegraphics[width=0.9\linewidth]{img/Gesture_navy.jpg}
+  \caption{Military air marshallers use hand and body gestures to direct flight operations aboard aircraft carriers}
+  \label{fig:air_marshallers}
+\end{wrapfigure}
+
+A gesture is a type of non-verbal communication in which real physical movements transmit specific messages, both in place or in combination with speech. Gestures include movement of the hands, face, or other parts of the body. Gestures differ from physical non-verbal communication that does not communicate specific messages, such as purely expressive displays, proxemics, or displays of joint attention. \cite{Gestures}
+
+Gestures can be of two types: \textit{informative (passive)} or \textit{communicative (active)}. 
 
 \section{Leap Motion}
 
@@ -270,7 +563,7 @@ This raw data is then stored in the device's local memory and then sent via USB 
 
 It's time for some heavy mathematical lifting once the picture information is streamed to the computer. The \textit{Leap Motion Controller} does not produce depth maps despite common misconceptions - instead it applies sophisticated algorithms to the raw sensor information.
 
-\begin{wrapfigure}[8]{l}{0.4\textwidth}
+\begin{wrapfigure}[9]{l}{0.4\textwidth}
   \includegraphics[width=0.37\textwidth]{img/Leap_capsule_hands.png}
   \caption{Capsule hands}
   \label{fig:leap_capsule}
@@ -312,33 +605,20 @@ RX Observables also offer three methods for of flow control - \textit{OnNext}, \
   \label{fig:rx_obs_it}
 \end{figure}
 
-\chapter{Project Objectives and Specifications}
 
+% Bibliographic research has as an objective the establishment of the references for the project, within the project domain/thematic. While writing this chapter (in general the whole document), the author will consider the knowledge accumulated from several dedicated disciplines in the second semester, 4$^{th}$ year (Project Elaboration Methodology, etc.), and other disciplines that are relevant to the project theme.
 
-Describe the proper theme (as a research/design proposal, clearly formulated, with clear objectives, and some explanatory figures).
+% Represents about 15\% of the paper.
 
-Stretches over about 10\% of the paper.
+% Each reference must be cited within the document text, see example below (depending on the project theme, the presentation of a method/application can vary).
 
-\section{Title}
-\section{Other title}
+% This section includes citations for conferences or workshop~\cite{BellucciLZ04}, journals~\cite{AntoniouSBDB07}, 
+% and books~\cite{russell1995artificial}. 
 
-\chapter{Bibliographic research}
+% In paper~\cite{AntoniouSBDB07} the authors present a detection system for moving obstacles based on stereovision and ego motion estimation. 
+% The method is ... {\it discus the algorithms, data structures, functionality, specific aspects related to the project theme, etc.}... Discussion: {\it pros and cons}.
 
-
-Bibliographic research has as an objective the establishment of the references for the project, within the project domain/thematic. While writing this chapter (in general the whole document), the author will consider the knowledge accumulated from several dedicated disciplines in the second semester, 4$^{th}$ year (Project Elaboration Methodology, etc.), and other disciplines that are relevant to the project theme.
-
-Represents about 15\% of the paper.
-
-Each reference must be cited within the document text, see example below (depending on the project theme, the presentation of a method/application can vary).
-
-
-This section includes citations for conferences or workshop~\cite{BellucciLZ04}, journals~\cite{AntoniouSBDB07}, 
-and books~\cite{russell1995artificial}. 
-
-In paper~\cite{AntoniouSBDB07} the authors present a detection system for moving obstacles based on stereovision and ego motion estimation. 
-The method is ... {\it discus the algorithms, data structures, functionality, specific aspects related to the project theme, etc.}... Discussion: {\it pros and cons}.
-
-In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-theme algorithm} is presented, with the following features ...
+% In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-theme algorithm} is presented, with the following features ...
 
 
 \section{Title}

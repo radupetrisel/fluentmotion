@@ -2,10 +2,6 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: IEEEtran.bst
 A level-1 auxiliary file: apendix.aux
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "BellucciLZ04"
-Warning--I didn't find a database entry for "AntoniouSBDB07"
-Warning--I didn't find a database entry for "russell1995artificial"
-Warning--I didn't find a database entry for "strunk"
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -13,4 +9,4 @@ Warning--empty title in Virtual
 Warning--missing publisher in TheatreAndItsDouble
 
 Done.
-(There were 6 warnings)
+(There were 2 warnings)
