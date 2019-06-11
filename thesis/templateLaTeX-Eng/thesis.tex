@@ -31,7 +31,7 @@
 % \oneandhalfspace
 % \doublespace
 
-\renewcommand{\thesisauthor}{Radu PETRIŞEL}    %% Your name.
+\renewcommand{\thesisauthor}{Radu PETRI\c{S}EL}    %% Your name.
 \renewcommand{\thesismonth}{June}     %% Your month of graduation.
 \renewcommand{\thesisyear}{2019}      %% Your year of graduation.
 \renewcommand{\thesistitle}{REACTIVE PROGRAMMING BASED GESTURE DETECTION IN VIRTUAL REALITY USING LEAPMOTION} 
@@ -159,13 +159,7 @@ autenticitatea lucr\u{a}rii de licen\c{t}\u{a}}
 
 
 
-Subsemnatul(a) \\
-\uline{14.8cm}, 
-legitimat(\u{a}) cu \uline{4cm} seria \uline{3cm} nr. \uline{4cm}\\
-CNP \uline{9cm}, autorul lucr\u{a}rii \uline{2.8cm}\\
-\uline{16cm}\\
-\uline{16cm}\\
-elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de licen\c{t}\u{a} la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \uline{7cm} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \uline{4cm} a anului universitar \uline{3cm}, declar pe proprie r\u{a}spundere, c\u{a} aceast\u{a} lucrare este rezultatul propriei activit\u{a}\c{t}i intelectuale, pe baza cercet\u{a}rilor mele \c{s}i pe baza informa\c{t}iilor ob\c{t}inute din surse care au fost citate, \^{\i}n textul lucr\u{a}rii \c{s}i \^{\i}n bibliografie.
+Subsemnatul(a) \textbf{RADU PETRI\c{S}EL} legitimat(\u{a}) cu \textbf{C.I.} seria \textbf{CJ} nr. \textbf{315937} CNP \textbf{1960920125844}, autorul lucr\u{a}rii \textbf{\thesistitle{}} elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de licen\c{t}\u{a} la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \textbf{CALCULATOARE, ENGLEZA} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \textbf{IULIE} a anului universitar \textbf{2018-2019}, declar pe proprie r\u{a}spundere, c\u{a} aceast\u{a} lucrare este rezultatul propriei activit\u{a}\c{t}i intelectuale, pe baza cercet\u{a}rilor mele \c{s}i pe baza informa\c{t}iilor ob\c{t}inute din surse care au fost citate, \^{\i}n textul lucr\u{a}rii \c{s}i \^{\i}n bibliografie.
 
 Declar, c\u{a} aceast\u{a} lucrare nu con\c{t}ine por\c{t}iuni plagiate, iar sursele bibliografice au fost folosite cu 
 respectarea legisla\c{t}iei rom\^{a}ne \c{s}i a conven\c{t}iilor interna\c{t}ionale privind drepturile de autor.
@@ -180,7 +174,7 @@ Data \hspace{8cm} Nume, Prenume
 
 \vspace{0.5cm}
 
-\uline{3cm} \hspace{5cm} \uline{5cm}
+\uline{3cm} \hspace{5cm} \textbf{RADU PETRI\c{S}EL}
 
 \vspace{0.5cm}
 \hspace{9.4cm}Semn\u{a}tura
@@ -515,7 +509,7 @@ For end products that reference Fluent Motion:
 
 \section{Gestures}
 
-\begin{wrapfigure}[20]{l}{0.4\textwidth}
+\begin{wrapfigure}[18]{r}{0.4\textwidth}
   \includegraphics[width=0.9\linewidth]{img/Gesture_navy.jpg}
   \caption{Military air marshallers use hand and body gestures to direct flight operations aboard aircraft carriers}
   \label{fig:air_marshallers}
@@ -523,7 +517,41 @@ For end products that reference Fluent Motion:
 
 A gesture is a type of non-verbal communication in which real physical movements transmit specific messages, both in place or in combination with speech. Gestures include movement of the hands, face, or other parts of the body. Gestures differ from physical non-verbal communication that does not communicate specific messages, such as purely expressive displays, proxemics, or displays of joint attention. \cite{Gestures}
 
-Gestures can be of two types: \textit{informative (passive)} or \textit{communicative (active)}. 
+Gestures can be of two types: \textit{informative (passive)} or \textit{communicative (active)}. \textit{Informative gestures} are passive gestures that provide details about the speaker as a person and not about what the speaker is attempting to communicate, while \textit{communicative gestures} are deliberately and meaningfully made by a individual as a means of heightening or altering speech generated in the larynx (or with hands in the situation of sign languages) although he or she may not be actively conscious of the fact that they produce communicative gestures.
+
+Within the realm of communicative gestures, the first distinction to be made is between gestures made with the hands and arms, and gestures made with other parts of the body, such as head or shoulders. From now on, we shall focus only on manual gestures.
+
+\subsection{Manual gestures}
+Manual gestures are split into four categories:
+
+\begin{enumerate}
+  \item \textbf{Symbolic (emblematic)} \\
+    These are standard, culture-specific gestures which can be used as a substitute for words (like waving your hand to say "hello" or "googbye"). In distinct cultural contexts, a single emblematic gesture can have a very distinct meaning, varying from complimentary to extremely offensive.  Symbolic gestures are iconic gestures that are widely recognized, fixed, and have conventionalized meanings. \cite{Krauss}
+
+  \item \textbf{Deictic (indexical)} \\
+    Deictic gestures may happen concurrently or in place of vocal expression. Deictic gestures are gestures consisting of indicative motions or pointing movements. They often replace words and pronouns like "this", "there" or "that".
+
+  \item \textbf{Motor (beat)} \\
+    In verbal speech, motor or beat gestures typically consist of brief, rhythmic, repetitive motions strongly linked to sentence construction. Beat gestures do not happen separately of verbal expression, unlike symbolic and deictic gestures. Some individuals wave their hands, for instance, as they talk to highlight a word or sentence. These gestures are closely coordinated with speech.
+
+  \item \textbf{Lexical (iconic)} \\
+    Other spontaneous gestures used in speech known as iconic gestures are more content-filled, and the significance of the co-occurring voice may echo, or be elaborated. They portray elements of pictures, behavior, individuals, or items in space. For instance, a gesture depicting the throwing act may be synchronous with the saying, "He threw the ball right into the window.".
+\end{enumerate}
+
+\section{Gesture recognition}
+Gesture recognition is an active research field with the objective of comprehending human gestures through mathematical models. Gestures can come from any posture or position of the body, but they typically come from the hands. Without actually touching them, users can use simple motions to command or communicate with machines.
+
+Gesture recognition may be seen as a means for machines to commence to comprehend human body language, establishing a stronger link between computers and individuals than conventional text user interfaces or even GUIs (graphical user interfaces), which still restrict  most inputs to the keyboard and/or mouse and communicate naturally with no mechanical instruments.
+
+There are two gesture types in the human-computer interaction context:
+
+\begin{enumerate}
+  \item \textbf{Offline gestures} \\
+    These gestures are processed after the object is interacted with by the user (e.g. activate a menu gesture).
+
+  \item \textbf{Online gesture} \\
+    Direct manipulation gestures, like scaling or moving an object.
+\end{enumerate}
 
 \section{Leap Motion}
 
@@ -606,25 +634,6 @@ RX Observables also offer three methods for of flow control - \textit{OnNext}, \
 \end{figure}
 
 
-% Bibliographic research has as an objective the establishment of the references for the project, within the project domain/thematic. While writing this chapter (in general the whole document), the author will consider the knowledge accumulated from several dedicated disciplines in the second semester, 4$^{th}$ year (Project Elaboration Methodology, etc.), and other disciplines that are relevant to the project theme.
-
-% Represents about 15\% of the paper.
-
-% Each reference must be cited within the document text, see example below (depending on the project theme, the presentation of a method/application can vary).
-
-% This section includes citations for conferences or workshop~\cite{BellucciLZ04}, journals~\cite{AntoniouSBDB07}, 
-% and books~\cite{russell1995artificial}. 
-
-% In paper~\cite{AntoniouSBDB07} the authors present a detection system for moving obstacles based on stereovision and ego motion estimation. 
-% The method is ... {\it discus the algorithms, data structures, functionality, specific aspects related to the project theme, etc.}... Discussion: {\it pros and cons}.
-
-% In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-theme algorithm} is presented, with the following features ...
-
-
-\section{Title}
-\section{Other title}
-
-
 \chapter{Analysis and Theoretical Foundation}
 \label{ch:analysis}
 
@@ -644,10 +653,6 @@ Here you write about your solution from a theory standpoint - i.e. you explain i
 
 YOU DO NOT copy/paste info on technologies from various sources and others alike, which do not pertain to your project.
 }
-
-\section{Title}
-\section{Other title}
-
 
 \chapter{Detailed Design and Implementation}
 
