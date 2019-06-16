@@ -876,37 +876,123 @@ RX Observables also offer three methods for of flow control - \textit{OnNext}, \
 \end{table}
 
 \chapter{Analysis and Theoretical Foundation}
-\label{ch:analysis}
 
-Together with the next chapter takes about 60\% of the whole paper
+\section{Conceptual architecture}
 
-The purpose of this chapter is to explain the operating principles of the implemented application.
-Here you write about your solution from a theory standpoint - i.e. you explain it and you demonstrate its theoretical properties/value, e.g.:
-\begin{itemize}
- \item used or proposed algorithms
- \item used protocols
- \item abstract models
- \item logic explanations/arguments concerning the chosen solution
- \item logic and functional structure of the application, etc.
-\end{itemize}
+This section describes in detail the proposed conceptual architecture of the system presented in the previous chapters.
 
-{\color{red} YOU DO NOT write about implementation.
+\begin{enumerate}
+  \item The system should be an extension of the Leap Motion Unity Asset, so it uses Leap hand models as input. \label{req:leap}
+  \item The application should adhere to the Reactive Programming paradigm, which implies using the \textit{Observer} and \textit{Observable} interfaces. \label{req:rx}
+  \item The system should be available in the Untiy Game Engine requires that some (or all) its components extend \textit{MonoBehaviour} abstract class. \label{req:unity}
+  \item The system must allow the developer using it to define custom gestures, but it must also present some basic gestures that can be used out of the box. \label{req:custom}
+\end{enumerate}  
 
-YOU DO NOT copy/paste info on technologies from various sources and others alike, which do not pertain to your project.
-}
+\subsection{Leap hand model}
+The Leap hand model components represents the actual Leap Hands given in Leap Motion's Unity SDK. With the current model used by Leap Motion, only gestures that imply moving hands and fingers can be detected (not arms and bones). Finger gestures cannot be defined independent of the hand the finger is attached to, so there is no value added by extending the finger models with reactive models.
+
+This component refers to three concepts from Leap Motion's Unity SDK - left hand, right hand and hands (as a pair). All finger related gestures should be defined against hands so as to add more value to the system and increase usability and flexibility.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/Thesis_conceptual_arch.png}
+  \caption{Conceptual architecture of \textit{Fluent Motion}}
+  \label{fig:arch}
+\end{figure}
+
+\subsection{Reactive hand model}
+The Reactive hand model is the bottommost layer of the system. It can be seen as a data access layer from classical layered architectures or even as a services layer. This component's purpose is to map the Leap Hand models to a ReactiveX publish-subscribe model. It is trivial to deduce, together with requirement \ref{req:rx} that this component should implement the \textit{Observable (publisher)} interface. In order to achieve high cohesion, the component should also be responsible of notifying \textit{observers (subscribers)} when the state of the underlying Leap hand model changes.
+
+This component should also be integrated with Unity (as of requirement \ref{req:unity}). In order to make it usable in the game editor interface, it must extend the \textit{MonoBehaviour} abstract class from Unity.
+
+\subsection{MonoBehaviour}
+MonoBehaviour is the base class from which every Unity script derives \cite{MonoBeh}. It provides seven overridable functions for creating applications.
+
+\begin{enumerate}
+  \item \textbf{Start} \\
+    Start is called on the frame when a script is enabled just before any of the Update methods are called the first time. Start is called exactly once in the script's lifetime.
+    
+  \item \textbf{Update} \\
+    If the MonoBehaviour is enabled, \textit{Update} is called every frame. It is the most commonly used function for game scripting.
+    
+  \item \textbf{FixedUpdate} \\
+    \textit{FixedUpdate} is a framerate independent function used for physics calculations (collisions, object gravity). The rate at which it is called is dependent on the Physics system.
+    
+  \item \textbf{LateUpdate}
+    \textit{LateUpdate} is called after all \textit{Update} functions in order to order script exection.
+
+  \item \textbf{OnGUI} \\
+    \textit{OnGUI} is called when a new event is received from the GUI or when a new render of UI elements is required. This function can be called multiple times per frame.
+
+  \item \textbf{OnDisable} \\
+    This function is called when the MonoBehaviour is disabled or destroyed.
+
+  \item \textbf{OnEnable}
+    This function is called when the MonoBehaviour is enabled and becomes active.
+
+\end{enumerate}
+
+\subsection{Reactive Gesture detector}
+This component should contain most of the logic needed for creating detectors, wihtout reducing extendability. As per requirement \ref{req:unity}, it should be usable in the game editor and, as such, should extend the \textit{MonoBehaviour} abstract class. Trivially, it is easy to observe that the component should be the \textit{observer} which subscribes to \textit{Reactive hand model}'s \textit{publish} method.
+
+\subsubsection{Simple Reactive Gesture detector}
+This component will be present in the \textit{Fluent Motion} asset and provide implementations of basic gestures, such as swiping, finger pointing to some object, etc. It must present the same interface as any other detector, simple or custom.
+
+\subsubsection{Custom Reactive Gesture detector}
+While not actually present in the \textit{Fluent Motion} asset at the time of releasing, this component represents the custom gestures that developers can add when using the asset. It must present the same interface as any other detector, simple or custom.
+
+\section{Create Gesture detector}
+
+\subsection{Brief description}
+
+The purpose of this section is to capture the flow of events that an actor must follow in order to manage the creation of a gesture detector in a custom scenario.
+
+\subsection{Primary actor}
+
+Developer using FluentMotion
+
+\subsection{Stakeholders and interests}
+
+Developer using FluentMotion – interested in detecting a new gesture in order to do an action based on that gesture.
+
+\subsection{Flow of events}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\linewidth]{img/UC_create.png}
+  \caption{Create gesture detector flow}
+  \label{fig:uc_create}
+\end{figure}
+
+\begin{enumerate}
+  \item \textbf{Basic flow} \\
+    \begin{enumerate}
+      \item \textbf{Use case start} - this use case starts when the actor wants to add a new gesture to his/her application.
+      \item The actor sets the object to be tracked for this gesture (Hand(s)/Finger(s)).
+      \item The actor sets the criteria for detecting this part of the gesture.
+      \item The actor adds a flow to be called when the gesture was detected successfully.
+      \item \textbf{Use-Case End} - the actor ends the creation operation 2.1.4.
+    \end{enumerate}
+  \item \textbf{Alternate flows} \\
+    This flow can occur at step 2.1.2 i.e. the actor wants to add another step to the gesture. When this happens, go to step 2.1.1.
+\end{enumerate}
+
+\subsection{Preconditions}
+
+\begin{enumerate}
+  \item The actor has a Unity project with the FluentMotion asset referenced
+  \item The new gesture conforms to the Reactive Gesture Detector component's interface.
+\end{enumerate}
+
+\subsection{Postconditions}
+
+\begin{enumerate}
+  \item The new gesture should not influence other gestures’ behavior.
+  \item The new gesture should not add too much overhead such that the rendering process and detection can happen in real time.
+  \item When the gesture is successfully detected, its associated callback is correctly invoked as described in its own flow.
+\end{enumerate}
 
 \chapter{Detailed Design and Implementation}
-
-Together with the previous chapter takes about 60\% of the paper.
-
-The purpose of this chapter is to document the developed application such a way that it can be maintained and developed later. A reader should be able (from what you have written here) to identify the main functions of the application.
-
-The chapter should contain (but not limited to):
-\begin{itemize}
- \item a general application sketch/scheme,
-\item a description of every component implemented, at module level,
-\item class diagrams, important classes and methods from key classes.
-\end{itemize}
 
 \chapter{Testing and Validation}
 
