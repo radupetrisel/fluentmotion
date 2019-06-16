@@ -103,6 +103,18 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
@@ -313,12 +325,19 @@ INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\ThumbsUpDtector.P
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\ThumbsUpDtector.PNG
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\ThumbsUpDtector.PNG
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\ThumbsUpDtector.PNG
+INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_filter.JPG
+INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_filter.JPG
+INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_filter.JPG
+INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_filter.JPG
+INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_filter.JPG
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\ae\aett12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\ae\aett10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\ae\aebxti10.tfm
-INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_iterable_vs_observable.PNG
-INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_iterable_vs_observable.PNG
-INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_iterable_vs_observable.PNG
-INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_iterable_vs_observable.PNG
-INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\img\RX_iterable_vs_observable.PNG
+INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\public\ae\aett10.vf
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\public\ae\aebxti10.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbxsl10.tfm
@@ -327,9 +346,6 @@ INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl
 OUTPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\ae\aett12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\public\ae\aett12.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
 INPUT c:\Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux
@@ -353,5 +369,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb

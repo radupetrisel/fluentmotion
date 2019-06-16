@@ -61,9 +61,4 @@ L.~M. Inc., ``Leapmotion developer - using the tracking api,'' 2019. [Online].
   \url{https://developer-archive.leapmotion.com/documentation/python/devguide/Leap\_Guides2.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{RX_intro}
-\BIBentryALTinterwordspacing
-2019. [Online]. Available: \url{http://reactivex.io/intro.html}
-\BIBentrySTDinterwordspacing
-
 \end{thebibliography}

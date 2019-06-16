@@ -21,6 +21,56 @@
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage[table]{xcolor}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{listings}
+
+\definecolor{bluekeywords}{rgb}{0,0,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
+\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{types}{rgb}{0.17,0.57,0.68}
+
+\lstloadlanguages{
+  csh
+}
+
+\lstset{language=csh,
+captionpos=b,
+%numbers=left, %Nummerierung
+%numberstyle=\tiny, % kleine Zeilennummern
+frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+showspaces=false,
+showtabs=false,
+breaklines=true,
+showstringspaces=false,
+breakatwhitespace=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+morekeywords={  abstract, event, new, struct,
+                as, explicit, null, switch,
+                base, extern, object, this,
+                bool, false, operator, throw,
+                break, finally, out, true,
+                byte, fixed, override, try,
+                case, float, params, typeof,
+                catch, for, private, uint,
+                char, foreach, protected, ulong,
+                checked, goto, public, unchecked,
+                class, if, readonly, unsafe,
+                const, implicit, ref, ushort,
+                continue, in, return, using,
+                decimal, int, sbyte, virtual,
+                default, interface, sealed, volatile,
+                delegate, internal, short, void,
+                do, is, sizeof, while,
+                double, lock, stackalloc,
+                else, long, static,
+                enum, namespace, string},
+keywordstyle=\color{bluekeywords},
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily\small,
+}
 
 % \mastersthesis
 \diplomathesis
@@ -770,37 +820,60 @@ Examples of Reactive Programming include hardware description languages (HDLs), 
 
 \subsection{Reactive Extensions}
 
-ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences. \cite{RX_intro}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/RX_filter.JPG}
+  \caption{Example of a RX operator}
+  \label{fig:rx_filter}
+\end{figure}
+  
+ReactiveX is a powerful library for asynchronous and event-based programming. It is an implementation of the observer pattern meant for event-driven programming. It also extends the observer pattern with operators that allow the user to compose sequences declaratively without worrying about low-level concerts (such as mutlithreading and the problems that come with it).
 
-It extends the observer pattern to support data and/or event sequences and provides operators that help you compose sequences declaratively while abstracting issues such as low-level threading, synchronization, thread security, concurrent data structures, and non-blocking I/O.
+Figure \ref{fig:rx_filter} shows how an operator works on an observable. In the example, the operator is \textit{filter}. \textit{Filter} takes as input a predicate, a function that maps a value to a boolean (true or false). So, from the source observable [2, 30, 22, 5, 60, 1], by filtering the elemnts greater than 10, we are left with only [30, 22, 60]. Note that the elements are emitted in the same order that they were in the source, almost instantly. The vertical line at the end represents the end of the observable stream. One can attach a callback to that, called \textit{OnComplete}.
 
-Table \ref{table:rx} shows how observables integrate in the programming world.
+The main data structure used by ReactiveX is \textit{Observables}. As stated on their intro page:
+
+\begin{quote}
+  You can think of the Observable class as a “push” equivalent to Iterable, which is a “pull.” With an Iterable, the consumer pulls values from the producer and the thread blocks until those values arrive. By contrast, with an Observable the producer pushes values to the consumer whenever values are available. This approach is more flexible, because values can arrive synchronously or asynchronously. (ReactiveX intro)
+\end{quote}
+
+Code snippets \ref{alg:iterable} and \ref{alg:observable} show the resemblance between the iterable and observable. One might say that the only difference is the call to \textit{subscribe} instead of \textit{forEach}. While, indeed, both of the code snippets produce the same result, the real difference is the data flow.
+
+In the \textit{forEach} example, the thread is blocked until 15 elements arrive from the \textit{getDataFromNetwork} call (first 10 are skipped, then only 5 are processed by the \textit{map}).
+
+In the \textit{subscribe} example, the only delay in the thread's execution is the creation of the observable stream, after which other instructions are executed. When data arrives from the \textit{getDataFromNetwork}, the thread which created the observable is interrupted and data is processed.
+
+\begin{lstlisting}[caption=Iterable, label=alg:iterable]
+  GetDataFromLocalMemory()
+    .Skip(10)
+    .Take(5)
+    .Select(s -> $"{s} transformed")
+    .ForEach(s -> Console.WriteLine($"next -> {s}"));
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Observable, label=alg:observable]
+  GetDataFromNetwork()
+    .Skip(10)
+    .Take(5)
+    .Select(s -> $"{s} transformed")
+    .ForEach(s -> Console.WriteLine($"onNext -> {s}"));
+\end{lstlisting}
+
+ReactiveX observables are intended to be \textbf{\textit{composable, flexible}}and \textbf{\textit{less opitionated}}. These provide a huge advantage over structures like Java \textit{Futures} or C\# \textit{Awaitables}, because it removes the need for ambiguous nesting of callbacks.
+
+RX Observables also offer three methods for of flow control - \textit{OnNext}, \textit{OnError} and \textit{OnCompleted} - which give the programmer a high degree liberty. Table \ref{table:rx} shows how observables integrate in the programming world, at the crossroads of asynchronous multiple items data streams.
 
 \begin{table}[h]
   \centering
   \begin{tabular}{c | c | c}
     & single items & multiple items \\
     \hline
-    synchronous & T GetData & IEnumerable<T> GetData \\
-    asynchronous & Awaitable<T> GetData & Observable<T> GetData
+    synchronous & \textit{T} GetData & IEnumerable<\textit{T}> GetData \\
+    asynchronous & Awaitable<\textit{T}> GetData & Observable<\textit{T}> GetData
   \end{tabular}
   \caption{Observable position in multiple items and asynchronous world}
   \label{table:rx}
 \end{table}
-
-\subsection{Why use observables?}
-ReactiveX observables are intended to be \textbf{\textit{composable, flexible}}and \textbf{\textit{less opitionated}}. These provide a huge advantage over structures like Java \textit{Futures} or C\# \textit{Awaitables}, because it removes the need for ambiguous nesting of callbacks.
-
-RX Observables also offer three methods for of flow control - \textit{OnNext}, \textit{OnError} and \textit{OnCompleted} - which give the programmer very much liberty.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{img/RX_iterable_vs_observable.PNG}
-  \caption{Iterable vs Observable}
-  \label{fig:rx_obs_it}
-\end{figure}
-
-
 
 \chapter{Analysis and Theoretical Foundation}
 \label{ch:analysis}
