@@ -231,11 +231,6 @@ Gesture recognition is an active research field with the objective of comprehend
 
 Gesture recognition may be seen as a means for machines to commence to comprehend human body language, establishing a stronger link between computers and individuals than conventional text user interfaces or even GUIs (graphical user interfaces), which still restrict most inputs to the keyboard and/or mouse and communicate naturally with no mechanical instruments.
 
-\section{Reactive programming}
-Reactive programming is a declarative programming paradigm concerned with asynchronous data streams and the propagation of change. With this paradigm it is feasible to easily express static (e.g. lists) or dynamic (e.g. events) information streams and to also indicate that an implied dependency remains within the related implementation model, which promotes the automatic propagation of the altered information stream.
-
-Examples of Reactive Programming include hardware description languages (HDLs), such as VHDL or Verilog, in which changes are modeled as they propagate through a circuit. As a manner to optimize the development of dynamic user interfaces and virtually-real-time system animation, reactive programming has been suggested.
-
 \chapter{Project Objectives and Specifications}
 
 \section{Introduction}
@@ -507,9 +502,61 @@ For end products that reference Fluent Motion:
 
 \chapter{Bibliographic research}
 
+\section{Virtual reality}
+
+Virtual Reality (VR) is the usage of computer technology to produce a world that is simulated. Unlike conventional user interfaces, VR positions the user in an environment in which they are immersed and able to interact with 3D worlds rather than watching a screen in front of them. The computer is converted into a arbiter for this alternative reality by simulating as many senses as applicable, such as sight, hearing, touch or even scent.
+
+The head-mounted display (HMD) is by far the most instantly recognizable element of Virtual Reality. Human creatures have always been visual animals, and display technology is often the greatest gap between immersive systems of Virtual Reality and conventional GUIs.
+
+The future of wearable devices is unraveling but still uncertain with a multitude of evolving wired (tethered) and wireless (untethered) options. Concepts like the HTC Vive Pro Eye, Oculus Quest and Playstation VR are leading the way, but competitors such as Google, Apple, Samsung and others mighty also shock the sector with fresh amounts of immersion and usability.
+
+Virtual Reality has a variety of uses in a multitude of domains, such as:
+
+\begin{enumerate}
+  \item \textbf{Education and training} \\
+    VR is used to provide a virtual world for trainees to improve their abilities without the risk of failure in the real world. Applications such as flight simulators, surgery training and spacewalk training have been used for decades in strongly technologised countries.
+
+  \item \textbf{Engineering and robotics} \\
+    The use of 3D computer-aided design (CAD) data was limited by 2D monitors and paper printouts until the mid-to-late 1990s, when video projectors, 3D tracking, and computer technology enabled a renaissance in the use of 3D CAD data in virtual reality environments. Innovative VR engineering systems allow engineers to visualize virtual prototypes before any physical models are available.
+
+  \item \textbf{Entertainment} \\
+    During the early to mid 1990s, several vanilla commercial virtual reality headsets have been released for gaming, such as the \textit{Virtual Boy} developed by Nintendo or \textit{VFX1 Headgear} developed by Forte Technologies. Films produced for VR permit the audience to view a 360-degree environment. This can involve the use of VR cameras to produce films and series that are interactive in VR. VR may help people attend concerts without effectively being there.
+
+  \item \textbf{Healthcare and clinical therapies} \\
+    A 2017 report by Goldman Sachs investigated healthcare applications of VR and AR. \cite{VRAR}. Some companies are adapting VR for fitness by using gamification concepts to encourage exercise. Since the 2000s, virtual reality has been used for rehabilitation. Despite countless research, there is a lack of excellent quality proof of its effectiveness compared to other techniques of rehabilitation without advanced and costly facilities for Parkinson's disease therapy. \cite{Parkinsons}
+
+  \item \textbf{Heritage and archaeology} \\
+    Virtual reality allows highly accurate recreation of historic locations so that artistic renderings can be published in different media. The initial sites are very often unavailable to the public or difficult to portray due mainly to the bad condition of their conservation. Using this technology, virtual replicas of grottoes, environment, ancient cities and monuments, sculptures and archaeological components can be developed.
+
+  \item \textbf{Occupational safety} \\
+    VR simulates real workplaces for occupational safety and health purposes. Perspective, viewing angle, and acoustic and tactile characteristics alter depending on where the individual is standing and how they move relative to the setting. VR enables all phases of a product life cycle, from design, through use, up to disposal, to be simulated, analyzed and optimized. 
+\end{enumerate}
+
+All of the above mentioned domains are part of the day-to-day life of some people already. For them, interacting with the virtual reality they are put in should feel free and natural. In a real life situation, they would use their hands to perform the actions they are performing in virtual reality during those "training" periods. So the question arises: how do they perform their everyday tasks in virtual reality?
+
+If somebody were to ask that question to the two big players in the VR game (namely, HTC and Occulus), the answer will be the same from them all - handheld controllers (depicted in figure \ref{mfig:vive_occulus}). They are very versatile and offer various means of interaction, but they lack one simple feature - feeling natural. Take, for instance, a surgeon training in VR to perform a new kind of surgery that he hadn't performed before. By using the controllers, he has a handicap that would not be present in a real life situation. As such, his training does not quite copy the real thing.
+
+So, how would one improve the issue of VR interaction? As of now, there are two possibilities - \textit{haptic gloves} or \textit{hand-tracking devices}. Haptic gloves are special devices that users put on their hands, which track their hands' motions and send them to the computer to process. Haptic gloves offer the advantage of sending back haptic feedback (pressure and force). Hand tracking devices use cameras and complex algorithms to track the users' hands. The advantage of hand-tracking devices is that the hands can move unrestricted and without needing additional hardware. Both hand tracking devices and haptic gloves have a common denominator - \textbf{gestures}.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\linewidth]{img/Vive_controllers.jpg}
+    \caption{HTC Vive controllers}
+    \label{fig:vive_controllers}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\linewidth]{img/Oculus_controllers.jpg}
+    \caption{Oculus Rift controllers}
+    \label{fig:leap_interaction}
+  \end{subfigure}
+  \caption{The two types of VR controllers available on the market}
+  \label{mfig:vive_occulus}
+\end{figure}
+
 \section{Gestures}
 
-\begin{wrapfigure}[18]{r}{0.4\textwidth}
+\begin{wrapfigure}[17]{r}{0.4\textwidth}
   \includegraphics[width=0.9\linewidth]{img/Gesture_navy.jpg}
   \caption{Military air marshallers use hand and body gestures to direct flight operations aboard aircraft carriers}
   \label{fig:air_marshallers}
@@ -553,6 +600,60 @@ There are two gesture types in the human-computer interaction context:
     Direct manipulation gestures, like scaling or moving an object.
 \end{enumerate}
 
+\subsection{Algorithms}
+The strategy to translating a gesture could be performed in distinct ways based on the category of input data. Most of the methods, however, are based on important pointers in a 3D reference system. The gesture can be identified with considerable precision depending on the relative movement of all these, depending on the quality of both the input and the strategy of the algorithm.
+
+Gesture detectiona algorithms can be split in three major categories, based on the hand models they are using:
+
+\begin{enumerate}
+  \item \textbf{3D model-based algorithms} \\
+    The 3D model approach can use volumetric or skeletal models, or even a combination of the two. Volumetric methods were used extensively in the field of computer animation and computer vision. The advantage of this strategy is the simplicity of the parameters for all these objects. This technique's disadvantage is that it is very computational-intensive, and technologies still need to be developed for real-time interpretation.
+
+  \item \textbf{Skeletal-based algorithms} \\
+    Instead of using intensive 3D model processing and working with several parameters, one could just make use of a simplified version of the parameters, like the joint angle along with the dimensions of the section. The advantage of this method is that the algorithms are faster (thus requiring less resources) and the templated patterns can be persisted in a database and used for later matching. The drawback is that, because of the reduced parameters, the algorithms do not perform as acurately as 3D model-based algorithms.
+
+  \item \textbf{Appearance-based models} \\
+    These algorithms no longer use a body's 3D representation since they obtain the parameters from the videos and images directly using a template database. One of the approaches of gesture detection using appearance-based models uses image sequences as gesture templates (either using the images directly or features extracted from the images).
+\end{enumerate}
+
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}{0.45\linewidth}
+      \includegraphics[width=\linewidth]{img/Algorithms_hand_original.png}
+      \caption{Original hand}  
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+      \includegraphics[width=\linewidth]{img/Algorithms_hand_3d.png}
+      \caption{3D representation}  
+    \end{subfigure} \\
+    \begin{subfigure}{0.45\linewidth}
+      \includegraphics[width=\linewidth]{img/Algorithms_hand_skeletal.png}
+      \caption{Skeletal representation}  
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+      \includegraphics[width=\linewidth]{img/Algorithms_hand_2d.png}
+      \caption{2D representation (appearance)}  
+    \end{subfigure}  
+  \caption{The different digital representations of a hand}
+  \label{mfig:hands}
+\end{figure}
+
+\subsection{Input devices}
+While there is a big quantity of studies conducted in gesture recognition focusing on image/video, there is a certain variation among applications within the instruments and implementations used.
+
+\begin{enumerate}
+  \item \textbf{Wired gloves} \\
+    Using magnetic or inertial monitoring devices, wired gloves can provide information to the computer about the hands' position and rotation. In addition, some gloves can sense the curling of fingers with a high degree of precision (5-10 degrees) or even provide the user with haptic feedback, which is a model of touch sensation.
+  \item \textbf{Depth-aware cameras} \\
+    Using dedicated cameras like structured light or time-of-flight cameras, one may create a depth map of what one sees through the camera in a limited range and use this information to approximate a 3D model of what one sees. Due to their limited range capacities, these can be efficient in detecting hand gestures.
+  \item \textbf{Stereo cameras} \\
+    Using two cameras whose positions are known to each other, the cameras' output can calculate an approximate 3D representation. A positioning reference such as a lexian-stripe or an infrared emitter can be used to get the distance between the cameras.
+  \item \textbf{Gesture based controllers} \\
+    These controllers function as a an extension of the body so that most of their movement can be easily recorded by software while gestures are made. An instance of developing gesture-based movement recording is skeletal hand tracking, created for apps of virtual reality and augmented reality.
+\end{enumerate}
+
+One of the more popular and accessible gesture detection devices is the Leap Motion controller, which is presented in the following section. 
+
 \section{Leap Motion}
 
 The \textit{Leap Motion Controller} is a tiny peripheral USB device intended to be facing upwards on a physical desktop, but can also be mounted on a VR headset.
@@ -591,7 +692,7 @@ This raw data is then stored in the device's local memory and then sent via USB 
 
 It's time for some heavy mathematical lifting once the picture information is streamed to the computer. The \textit{Leap Motion Controller} does not produce depth maps despite common misconceptions - instead it applies sophisticated algorithms to the raw sensor information.
 
-\begin{wrapfigure}[9]{l}{0.4\textwidth}
+\begin{wrapfigure}[8]{l}{0.4\textwidth}
   \includegraphics[width=0.37\textwidth]{img/Leap_capsule_hands.png}
   \caption{Capsule hands}
   \label{fig:leap_capsule}
@@ -601,7 +702,73 @@ The Leap Motion Service first compensates background objects (e.g. head) and lig
 
 Though a transport layer, the results(frames) are fed to the \textit{Leap Motion Control Panel} or to native and web clients. These orgaize the data into an object-orietented structure.
 
-\section{Reactive Extensions}
+Although the device itself has been the same since it's launch in 2013, the software has undergone several do-overs and upgrades. Their SDK started with desktop-only tracking capabilities for its first two major versions. In 2014, they added a VR tracking mode to it and in 2016 they released Orion, Leap Motion's VR-dedicated SDK.
+
+\subsection{Gestures and detectors}
+
+The Leap Motion API \cite{LMAPI} defines mappings for four human body parts:\cite{LMAPI}
+
+\begin{enumerate}
+  \item \textbf{Arm} \\
+    The name of this data structure is a bit misleading because it actually represents the forearm - the lower part of the arm, from elbow downto wrist. There are a maximum of two arms in the scene, each with only one \textbf{Hand} attached to it.
+  \item \textbf{Hand} \\
+    There can be a maximum of two hands in the scene at any given time. Hands have a special attribute called \textit{handedness}, which determines if the hand is \textit{left} or \textit{right}. Each hand has exactly five fingers attached to it. If the Leap Motion controller cannot see one of the fingers (because it is obscured by the hand or by another object), it will try to determine its pose based on past data.
+  \item \textbf{Finger} \\
+    Each finger has three joints that can be used to attach new visual models to the hands (e.g. different colour capsule hands, natural looking hands). Fingers only have data about their tip position and direction, and the four bones inside them. Fingers can be of one of five types - \textit{thumb, index, middle, ring} or \textit{pinky}.
+  \item \textbf{Bone} \\
+    Bones can be of one of four type - \textit{metacarpal, proximal phalange, intermediate phalange} or \textit{distal phalange}. Even though the thumb does not have a \textit{metacarpal} bone in it in the real world, Leap Motion decided to add a \textit{zero length metacarpal bone} to the thumb, so that the fingers are kept consistent regardless of their type (see figure \ref{fig:leap_bones}).
+\end{enumerate}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\linewidth]{img/Leap_bones.png}
+  \caption{Leap Motion bones}
+  \label{fig:leap_bones}
+\end{figure}
+
+Leap Motion offers a variety of gesture detectors already implemented, which can also be combined by the use of a Logic Gate. The logic gate is a higher level detector, combining two or more basic detectors.
+
+As an example, a "thumbs up" gesture would be detected as combination of the following detectors:
+
+\begin{itemize}
+  \item \textbf{Finger Extended Detector} - configured to detect a thumb extended and other fingers not extended (figure \ref{fig:thumb_ext})
+  \item \textbf{Finger Pointing Detector} - configured to detect that the thumb is pointing up (\textit{Vector3(0, 0, 1)}) relative to the horizon (figure \ref{fig:thumb_pntup})
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\linewidth}
+      \includegraphics[width=0.9\linewidth]{img/ThumbExtendedDetector.PNG}
+      \caption{Leap Thumb extended detector}
+      \label{fig:thumb_ext}
+    \end{subfigure}
+    \begin{subfigure}{0.45\linewidth}
+        \includegraphics[width=0.9\linewidth]{img/ThumbPointingUpDetector.PNG}
+        \caption{Leap Thumb pointing up detector}
+        \label{fig:thumb_pntup}
+    \end{subfigure}
+    \caption{Leap Motion basic detectors for the "thumbs-up" gesture}
+    \label{mfig:thumb_base_det}
+  \end{figure}
+  
+  \item \textbf{And Logic Gate} - to combine the other two detectors and have callbacks (C\# scripts) attached to it (figure ref \ref{fig:thumb_up})
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\linewidth]{img/ThumbsUpDtector.PNG}
+  \caption{Leap Thumb pointing up detector by combining the detectors \ref{fig:thumb_ext} and \ref{fig:thumb_pntup}}
+  \label{fig:thumb_up}
+\end{figure}
+
+This approach requires adding three components to a game object and referencing the first two detectors (Finger Extended Detector and Finger Pointing Detector) from the Logic Gate. This can quickly get out of hand when requiring a high number of combined gestures. The logic gate detector is also highly coupled to the other two detectors, and any change in the base detectors (conditions, renaming or, the worse, moving) will come with a change in the logic gate detector. Even though, with this approach, the basic detectors are reusable, the logic gates usually are not.
+
+This issues fuel the need for a higher level API that is flexible and easily extendable, and which has high reusability. The API should adhere to a programming model which reacts to change rather than query components for changes so that is gives high performance.
+
+\section{Reactive programming}
+Reactive programming is a declarative programming paradigm concerned with asynchronous data streams and the propagation of change. With this paradigm it is feasible to easily express static (e.g. lists) or dynamic (e.g. events) information streams and to also indicate that an implied dependency remains within the related implementation model, which promotes the automatic propagation of the altered information stream.
+
+Examples of Reactive Programming include hardware description languages (HDLs), such as VHDL or Verilog, in which changes are modeled as they propagate through a circuit. As a manner to optimize the development of dynamic user interfaces and virtually-real-time system animation, reactive programming has been suggested.
+
+\subsection{Reactive Extensions}
 
 ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences. \cite{RX_intro}
 
@@ -632,6 +799,7 @@ RX Observables also offer three methods for of flow control - \textit{OnNext}, \
   \caption{Iterable vs Observable}
   \label{fig:rx_obs_it}
 \end{figure}
+
 
 
 \chapter{Analysis and Theoretical Foundation}

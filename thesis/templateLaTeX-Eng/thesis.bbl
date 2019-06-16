@@ -30,6 +30,14 @@
 \bibitem{TheatreAndItsDouble}
 A.~Artaud, \emph{The Threatre and its Double}, 1938.
 
+\bibitem{VRAR}
+``Virtual and augmented reality: The next big computing platform?''
+  \emph{Goldman Sachs}.
+
+\bibitem{Parkinsons}
+K.~D. et~al., ``Virtual reality for rehabilitation in parkinson's disease,''
+  \emph{Cochrane Database of SYstematic Reviews}, vol. 2016, pp. 1--50, 2016.
+
 \bibitem{Gestures}
 K.~Adam, \emph{Gesture: Visible Action as Utterance}.\hskip 1em plus 0.5em
   minus 0.4em\relax Cambridge University Press, 2004.
@@ -46,9 +54,16 @@ A.~Colgan, ``How does the leap motion controller work?'' 2014. [Online].
   \url{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{LMAPI}
+\BIBentryALTinterwordspacing
+L.~M. Inc., ``Leapmotion developer - using the tracking api,'' 2019. [Online].
+  Available:
+  \url{https://developer-archive.leapmotion.com/documentation/python/devguide/Leap\_Guides2.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{RX_intro}
 \BIBentryALTinterwordspacing
-2019. [Online]. Available: \url{\url{http://reactivex.io/intro.html}}
+2019. [Online]. Available: \url{http://reactivex.io/intro.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
