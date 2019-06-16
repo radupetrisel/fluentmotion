@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  16 JUN 2019 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  16 JUN 2019 21:42
 entering extended mode
 **c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
 (c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
@@ -435,16 +435,16 @@ Package pdftex.def Info: img/tucn.jpg  used on input line 196.
 (pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
  [4] (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.toc [5
 
-])
+] [6])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [6]
+ [7]
 Chapter 1.
 [1
 
 ]
-<img/Sony_morpheus.jpg, id=28, 170.6375pt x 227.85126pt>
+<img/Sony_morpheus.jpg, id=31, 170.6375pt x 227.85126pt>
 File: img/Sony_morpheus.jpg Graphic file (type jpg)
 <use img/Sony_morpheus.jpg>
 Package pdftex.def Info: img/Sony_morpheus.jpg  used on input line 259.
@@ -464,7 +464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \T1/aer/m/n/12 Mor-pheus (PlaySta-
  []
 
-<img/GestRecog_child.jpg, id=29, 219.82124pt x 143.53625pt>
+<img/GestRecog_child.jpg, id=32, 219.82124pt x 143.53625pt>
 File: img/GestRecog_child.jpg Graphic file (type jpg)
 <use img/GestRecog_child.jpg>
 Package pdftex.def Info: img/GestRecog_child.jpg  used on input line 275.
@@ -533,7 +533,7 @@ Overfull \hbox (21.08464pt too wide) in paragraph at lines 413--424
  [][] 
  []
 
-<img/Product_arch.png, id=40, 185.19188pt x 173.89969pt>
+<img/Product_arch.png, id=43, 185.19188pt x 173.89969pt>
 File: img/Product_arch.png Graphic file (type png)
 <use img/Product_arch.png>
 Package pdftex.def Info: img/Product_arch.png  used on input line 432.
@@ -543,55 +543,55 @@ Chapter 3.
 [9
 
 ] [10]
-<img/Vive_controllers.jpg, id=62, 599.99156pt x 399.74344pt>
+<img/Vive_controllers.jpg, id=65, 599.99156pt x 399.74344pt>
 File: img/Vive_controllers.jpg Graphic file (type jpg)
 <use img/Vive_controllers.jpg>
 Package pdftex.def Info: img/Vive_controllers.jpg  used on input line 594.
 (pdftex.def)             Requested size: 206.5486pt x 137.61275pt.
-<img/Oculus_controllers.jpg, id=63, 722.7pt x 483.30562pt>
+<img/Oculus_controllers.jpg, id=66, 722.7pt x 483.30562pt>
 File: img/Oculus_controllers.jpg Graphic file (type jpg)
 <use img/Oculus_controllers.jpg>
 Package pdftex.def Info: img/Oculus_controllers.jpg  used on input line 599.
 (pdftex.def)             Requested size: 206.5486pt x 138.12701pt.
-<img/Gesture_navy.jpg, id=64, 589.20125pt x 570.13pt>
+<img/Gesture_navy.jpg, id=67, 589.20125pt x 570.13pt>
 File: img/Gesture_navy.jpg Graphic file (type jpg)
 <use img/Gesture_navy.jpg>
 Package pdftex.def Info: img/Gesture_navy.jpg  used on input line 610.
 (pdftex.def)             Requested size: 165.23634pt x 159.88759pt.
  [11 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Vive_controllers.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Oculus_controllers.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Gesture_navy.jpg>] [12] [13]
-<img/Algorithms_hand_original.png, id=76, 803.0pt x 562.1pt>
+<img/Algorithms_hand_original.png, id=79, 803.0pt x 562.1pt>
 File: img/Algorithms_hand_original.png Graphic file (type png)
 <use img/Algorithms_hand_original.png>
 Package pdftex.def Info: img/Algorithms_hand_original.png  used on input line 672.
 (pdftex.def)             Requested size: 206.5486pt x 144.58154pt.
-<img/Algorithms_hand_3d.png, id=77, 602.25pt x 421.575pt>
+<img/Algorithms_hand_3d.png, id=80, 602.25pt x 421.575pt>
 File: img/Algorithms_hand_3d.png Graphic file (type png)
 <use img/Algorithms_hand_3d.png>
 Package pdftex.def Info: img/Algorithms_hand_3d.png  used on input line 676.
 (pdftex.def)             Requested size: 206.5486pt x 144.58154pt.
-<img/Algorithms_hand_skeletal.png, id=78, 602.25pt x 421.575pt>
+<img/Algorithms_hand_skeletal.png, id=81, 602.25pt x 421.575pt>
 File: img/Algorithms_hand_skeletal.png Graphic file (type png)
 <use img/Algorithms_hand_skeletal.png>
 Package pdftex.def Info: img/Algorithms_hand_skeletal.png  used on input line 680.
 (pdftex.def)             Requested size: 206.5486pt x 144.58154pt.
-<img/Algorithms_hand_2d.png, id=79, 803.0pt x 562.1pt>
+<img/Algorithms_hand_2d.png, id=82, 803.0pt x 562.1pt>
 File: img/Algorithms_hand_2d.png Graphic file (type png)
 <use img/Algorithms_hand_2d.png>
 Package pdftex.def Info: img/Algorithms_hand_2d.png  used on input line 684.
 (pdftex.def)             Requested size: 206.5486pt x 144.58154pt.
  [14 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Algorithms_hand_original.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Algorithms_hand_3d.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Algorithms_hand_skeletal.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Algorithms_hand_2d.png>]
-<img/Leap_motion.jpg, id=87, 1284.8pt x 857.2025pt>
+<img/Leap_motion.jpg, id=90, 1284.8pt x 857.2025pt>
 File: img/Leap_motion.jpg Graphic file (type jpg)
 <use img/Leap_motion.jpg>
 Package pdftex.def Info: img/Leap_motion.jpg  used on input line 714.
 (pdftex.def)             Requested size: 206.5486pt x 137.79611pt.
-<img/Leap_interaction.png, id=88, 1027.84pt x 682.55pt>
+<img/Leap_interaction.png, id=91, 1027.84pt x 682.55pt>
 File: img/Leap_interaction.png Graphic file (type png)
 <use img/Leap_interaction.png>
 Package pdftex.def Info: img/Leap_interaction.png  used on input line 719.
 (pdftex.def)             Requested size: 206.5486pt x 137.1533pt.
  [15 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_motion.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_interaction.png>]
-<img/Leap_raw.jpg, id=93, 650.43pt x 277.035pt>
+<img/Leap_raw.jpg, id=96, 650.43pt x 277.035pt>
 File: img/Leap_raw.jpg Graphic file (type jpg)
 <use img/Leap_raw.jpg>
 Package pdftex.def Info: img/Leap_raw.jpg  used on input line 736.
@@ -601,13 +601,13 @@ Overfull \hbox (4.06825pt too wide) in paragraph at lines 743--744
 []\T1/aer/m/n/12 It's time for some heavy math-e-mat-i-cal lift-ing once the pic-ture in-for-ma-tion is streamed
  []
 
-<img/Leap_capsule_hands.png, id=94, 321.2pt x 220.825pt>
+<img/Leap_capsule_hands.png, id=97, 321.2pt x 220.825pt>
 File: img/Leap_capsule_hands.png Graphic file (type png)
 <use img/Leap_capsule_hands.png>
 Package pdftex.def Info: img/Leap_capsule_hands.png  used on input line 746.
 (pdftex.def)             Requested size: 169.82776pt x 116.76038pt.
 [16 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_raw.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Leap_capsule_hands.png>]
-<img/Leap_bones.png, id=100, 435.12563pt x 295.85532pt>
+<img/Leap_bones.png, id=103, 435.12563pt x 295.85532pt>
 File: img/Leap_bones.png Graphic file (type png)
 <use img/Leap_bones.png>
 Package pdftex.def Info: img/Leap_bones.png  used on input line 774.
@@ -622,18 +622,18 @@ File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 784.
-<img/ThumbExtendedDetector.PNG, id=101, 294.34969pt x 321.45094pt>
+<img/ThumbExtendedDetector.PNG, id=104, 294.34969pt x 321.45094pt>
 File: img/ThumbExtendedDetector.PNG Graphic file (type png)
 <use img/ThumbExtendedDetector.PNG>
 Package pdftex.def Info: img/ThumbExtendedDetector.PNG  used on input line 789.
 (pdftex.def)             Requested size: 185.89247pt x 203.01056pt.
-<img/ThumbPointingUpDetector.PNG, id=102, 292.09125pt x 316.93407pt>
+<img/ThumbPointingUpDetector.PNG, id=105, 292.09125pt x 316.93407pt>
 File: img/ThumbPointingUpDetector.PNG Graphic file (type png)
 <use img/ThumbPointingUpDetector.PNG>
 Package pdftex.def Info: img/ThumbPointingUpDetector.PNG  used on input line 794.
 (pdftex.def)             Requested size: 185.89247pt x 201.71031pt.
  [17]
-<img/ThumbsUpDtector.PNG, id=107, 292.09125pt x 252.19218pt>
+<img/ThumbsUpDtector.PNG, id=110, 292.09125pt x 252.19218pt>
 File: img/ThumbsUpDtector.PNG Graphic file (type png)
 <use img/ThumbsUpDtector.PNG>
 Package pdftex.def Info: img/ThumbsUpDtector.PNG  used on input line 807.
@@ -647,7 +647,7 @@ Overfull \hbox (0.32422pt too wide) in paragraph at lines 819--820
 []\T1/aer/m/n/12 Examples of Re-ac-tive Pro-gram-ming in-clude hard-ware de-scrip-tion lan-guages (HDLs),
  []
 
-<img/RX_filter.JPG, id=114, 566.115pt x 205.5178pt>
+<img/RX_filter.JPG, id=118, 566.115pt x 205.5178pt>
 File: img/RX_filter.JPG Graphic file (type jpg)
 <use img/RX_filter.JPG>
 Package pdftex.def Info: img/RX_filter.JPG  used on input line 825.
@@ -661,7 +661,7 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 846.
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ) [20 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/RX_filter.JPG>] [21]
 Chapter 4.
-<img/Thesis_conceptual_arch.png, id=129, 663.47874pt x 442.65375pt>
+<img/Thesis_conceptual_arch.png, id=132, 663.47874pt x 442.65375pt>
 File: img/Thesis_conceptual_arch.png Graphic file (type png)
 <use img/Thesis_conceptual_arch.png>
 Package pdftex.def Info: img/Thesis_conceptual_arch.png  used on input line 898.
@@ -669,31 +669,32 @@ Package pdftex.def Info: img/Thesis_conceptual_arch.png  used on input line 898.
 [22
 
 ] [23 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Thesis_conceptual_arch.png>] [24]
-<img/UC_create.png, id=140, 210.03468pt x 354.57469pt>
+<img/UC_create.png, id=144, 210.03468pt x 354.57469pt>
 File: img/UC_create.png Graphic file (type png)
 <use img/UC_create.png>
 Package pdftex.def Info: img/UC_create.png  used on input line 962.
 (pdftex.def)             Requested size: 183.5972pt x 309.9437pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
-
- []
-
-[25 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/UC_create.png>] [26]
+ [25 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/UC_create.png>] [26]
+<img/UC_simple_gesture.png, id=152, 183.68625pt x 425.59pt>
+File: img/UC_simple_gesture.png Graphic file (type png)
+<use img/UC_simple_gesture.png>
+Package pdftex.def Info: img/UC_simple_gesture.png  used on input line 1010.
+(pdftex.def)             Requested size: 137.7014pt x 319.06831pt.
+ [27 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/UC_simple_gesture.png>] [28]
 Chapter 5.
-[27
-
-]
-Chapter 6.
-[28
-
-]
-Chapter 7.
 [29
 
 ]
+Chapter 6.
+[30
+
+]
+Chapter 7.
+[31
+
+]
 Chapter 8.
-(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [30
+(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [32
 
 ]
 Underfull \hbox (badness 1881) in paragraph at lines 59--63
@@ -710,23 +711,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--69
 []\T1/aer/m/n/12 Untiy, ``Monobe-haviour script.'' [On-line]. Avail-able:
  []
 
-) [31
+) [33
 
 ]
 \openout2 = `apendix.aux'.
 
  (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
 Appendix A.
-[32
+[34
 
 
 ]
 Appendix B.
-[33
+[35
 
 ]
 Appendix C.
-) [34
+) [36
 
 ] (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
 
@@ -734,17 +735,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8388 strings out of 492895
- 114624 string characters out of 3133479
+ 8398 strings out of 492895
+ 114846 string characters out of 3133479
  391865 words of memory out of 3000000
- 12063 multiletter control sequences out of 15000+200000
+ 12072 multiletter control sequences out of 15000+200000
  42554 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,40p,898b,1260s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (40 pages, 1116527 bytes).
+Output written on c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (43 pages, 1127702 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
+ 224 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

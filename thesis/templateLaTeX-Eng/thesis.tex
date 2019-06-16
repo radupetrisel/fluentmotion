@@ -965,22 +965,22 @@ Developer using FluentMotion – interested in detecting a new gesture in order 
 \end{figure}
 
 \begin{enumerate}
-  \item \textbf{Basic flow} \\
+  \item \textbf{Basic flow}
     \begin{enumerate}
       \item \textbf{Use case start} - this use case starts when the actor wants to add a new gesture to his/her application.
-      \item The actor sets the object to be tracked for this gesture (Hand(s)/Finger(s)).
-      \item The actor sets the criteria for detecting this part of the gesture.
+      \item The actor sets the object to be tracked for this gesture (Hand(s)/Finger(s)). \label{step:set_object}
+      \item The actor sets the criteria for detecting this part of the gesture. \label{step:set_criteria}
       \item The actor adds a flow to be called when the gesture was detected successfully.
-      \item \textbf{Use-Case End} - the actor ends the creation operation 2.1.4.
+      \item \label{step:create_end} \textbf{Use-Case End} - the actor ends the creation operation at step \ref{step:create_end}
     \end{enumerate}
   \item \textbf{Alternate flows} \\
-    This flow can occur at step 2.1.2 i.e. the actor wants to add another step to the gesture. When this happens, go to step 2.1.1.
+    This flow can occur at step \ref{step:set_criteria} i.e. the actor wants to add another step to the gesture. When this happens, go to step \ref{step:set_object}.
 \end{enumerate}
 
 \subsection{Preconditions}
 
 \begin{enumerate}
-  \item The actor has a Unity project with the FluentMotion asset referenced
+  \item The actor has a Unity project with the FluentMotion asset referenced.
   \item The new gesture conforms to the Reactive Gesture Detector component's interface.
 \end{enumerate}
 
@@ -992,7 +992,55 @@ Developer using FluentMotion – interested in detecting a new gesture in order 
   \item When the gesture is successfully detected, its associated callback is correctly invoked as described in its own flow.
 \end{enumerate}
 
+\section{Add Simple Gesture Detector}
+
+\subsection{Brief description}
+The purpose of this section is to capture the flow of events that an actor must follow in order to manage adding a simple gesture detector in a custom scenario.
+
+\subsection{Primary actor}
+Developer using Fluent Motion.
+
+\subsection{Stakeholders and interests}
+Developer using Fluent Motion - interested in performing an action when a simple gesture is detected.
+
+\subsection{Flow of events}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\linewidth]{img/UC_simple_gesture.png}
+  \caption{Add Simple Gesture Detector flow}
+  \label{fig:uc_simple}
+\end{figure}
+
+
+\begin{enumerate}
+  \item \textbf{Basic flow}
+    \begin{enumerate}
+      \item \textbf{Use case start} - this use case starts when the actor wants to add a simple gesture detector to his/her application.
+      \item The actor creates an empty class.
+      \item The actor extends the Simple Detector class he/she needs.
+      \item The actor overrides the OnComplete method in the new class.
+      \item \label{step:add_end} \textbf{Use-Case End} - the actor ends the addition operation \ref{step:add_end}.
+    \end{enumerate}
+  \item \textbf{Alternate flows} \\
+    There are no alternative flows.
+\end{enumerate}
+
+\subsection{Preconditions}
+
+\begin{enumerate}
+  \item The actor has a Unity project with the FluentMotion asset referenced.
+\end{enumerate}
+
+\subsection{Postconditions}
+
+\begin{enumerate}
+  \item When the gesture is successfully detected, its associated callback is correctly invoked as described in its own flow.
+\end{enumerate}
+
 \chapter{Detailed Design and Implementation}
+
+Ye boy
 
 \chapter{Testing and Validation}
 
