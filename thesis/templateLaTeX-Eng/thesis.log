@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  16 JUN 2019 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  17 JUN 2019 16:47
 entering extended mode
 **c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
 (c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/thesis.tex
@@ -684,17 +684,119 @@ Package pdftex.def Info: img/UC_simple_gesture.png  used on input line 1010.
 Chapter 5.
 [29
 
-]
+] [30]
 Chapter 6.
-[30
+<img/thumbs-up.png, id=167, 256.96pt x 256.96pt>
+File: img/thumbs-up.png Graphic file (type png)
+<use img/thumbs-up.png>
+Package pdftex.def Info: img/thumbs-up.png  used on input line 1084.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/thumb-index-extended.png, id=168, 256.96pt x 256.96pt>
+File: img/thumb-index-extended.png Graphic file (type png)
+<use img/thumb-index-extended.png>
+Package pdftex.def Info: img/thumb-index-extended.png  used on input line 1085.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/fist.png, id=169, 192.72pt x 192.72pt>
+File: img/fist.png Graphic file (type png)
+<use img/fist.png>
+Package pdftex.def Info: img/fist.png  used on input line 1086.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/pinch.png, id=170, 256.96pt x 256.96pt>
+File: img/pinch.png Graphic file (type png)
+<use img/pinch.png>
+Package pdftex.def Info: img/pinch.png  used on input line 1087.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/swipe-up.png, id=171, 256.96pt x 256.96pt>
+File: img/swipe-up.png Graphic file (type png)
+<use img/swipe-up.png>
+Package pdftex.def Info: img/swipe-up.png  used on input line 1088.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/swipe-down.png, id=172, 256.96pt x 256.96pt>
+File: img/swipe-down.png Graphic file (type png)
+<use img/swipe-down.png>
+Package pdftex.def Info: img/swipe-down.png  used on input line 1089.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/swipe-left.png, id=173, 256.96pt x 256.96pt>
+File: img/swipe-left.png Graphic file (type png)
+<use img/swipe-left.png>
+Package pdftex.def Info: img/swipe-left.png  used on input line 1090.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
+<img/swipe-right.png, id=174, 256.96pt x 256.96pt>
+File: img/swipe-right.png Graphic file (type png)
+<use img/swipe-right.png>
+Package pdftex.def Info: img/swipe-right.png  used on input line 1091.
+(pdftex.def)             Requested size: 41.31084pt x 41.31047pt.
 
-]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/Demo_not_detected.jpg, id=175, 1154.81438pt x 566.115pt>
+File: img/Demo_not_detected.jpg Graphic file (type jpg)
+<use img/Demo_not_detected.jpg>
+Package pdftex.def Info: img/Demo_not_detected.jpg  used on input line 1101.
+(pdftex.def)             Requested size: 413.0972pt x 202.51414pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31
+
+ <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/Demo_not_detected.jpg>] [32 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/thumbs-up.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/thumb-index-extended.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/fist.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/pinch.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/swipe-up.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/swipe-down.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/swipe-left.png> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/swipe-right.png>] [33]
 Chapter 7.
-[31
+<img/FluentMotion_setup.jpg, id=193, 147.55125pt x 35.38219pt>
+File: img/FluentMotion_setup.jpg Graphic file (type jpg)
+<use img/FluentMotion_setup.jpg>
+Package pdftex.def Info: img/FluentMotion_setup.jpg  used on input line 1127.
+(pdftex.def)             Requested size: 413.0972pt x 99.07213pt.
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1130
+
+ []
+
+<img/FluentMotion_reactive_hand.jpg, id=194, 284.56313pt x 147.55125pt>
+File: img/FluentMotion_reactive_hand.jpg Graphic file (type jpg)
+<use img/FluentMotion_reactive_hand.jpg>
+Package pdftex.def Info: img/FluentMotion_reactive_hand.jpg  used on input line 1135.
+(pdftex.def)             Requested size: 413.0972pt x 214.22073pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/FluentMotion_script.jpg, id=195, 271.76532pt x 130.23656pt>
+File: img/FluentMotion_script.jpg Graphic file (type jpg)
+<use img/FluentMotion_script.jpg>
+Package pdftex.def Info: img/FluentMotion_script.jpg  used on input line 1147.
+(pdftex.def)             Requested size: 413.0972pt x 197.97552pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/FluentMotion_script_alternative.jpg, id=196, 268.00125pt x 104.64093pt>
+File: img/FluentMotion_script_alternative.jpg Graphic file (type jpg)
+<use img/FluentMotion_script_alternative.jpg>
+Package pdftex.def Info: img/FluentMotion_script_alternative.jpg  used on input line 1156.
+(pdftex.def)             Requested size: 413.0972pt x 161.2928pt.
+[34
+
+ <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_setup.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/FluentMotion_onDetect.jpg, id=200, 283.81032pt x 76.03406pt>
+File: img/FluentMotion_onDetect.jpg Graphic file (type jpg)
+<use img/FluentMotion_onDetect.jpg>
+Package pdftex.def Info: img/FluentMotion_onDetect.jpg  used on input line 1171.
+(pdftex.def)             Requested size: 413.0972pt x 110.68161pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/FluentMotion_script_attached.jpg, id=201, 284.56313pt x 221.32687pt>
+File: img/FluentMotion_script_attached.jpg Graphic file (type jpg)
+<use img/FluentMotion_script_attached.jpg>
+Package pdftex.def Info: img/FluentMotion_script_attached.jpg  used on input line 1182.
+(pdftex.def)             Requested size: 413.0972pt x 321.3311pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_reactive_hand.jpg>] [36 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_script.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_script_alternative.jpg> <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_onDetect.jpg>] [37 <c:/Users/radup/fluentmotion/thesis/templateLaTeX-Eng/img/FluentMotion_script_attached.jpg>]
 Chapter 8.
-(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [32
+(c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.bbl [38
 
 ]
 Underfull \hbox (badness 1881) in paragraph at lines 59--63
@@ -711,23 +813,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--69
 []\T1/aer/m/n/12 Untiy, ``Monobe-haviour script.'' [On-line]. Avail-able:
  []
 
-) [33
+) [39
 
 ]
 \openout2 = `apendix.aux'.
 
  (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.tex
 Appendix A.
-[34
+[40
 
 
 ]
 Appendix B.
-[35
+[41
 
 ]
 Appendix C.
-) [36
+) [42
 
 ] (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.aux (c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\apendix.aux))
 
@@ -735,17 +837,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8398 strings out of 492895
- 114846 string characters out of 3133479
+ 8481 strings out of 492895
+ 116998 string characters out of 3133479
  391865 words of memory out of 3000000
- 12072 multiletter control sequences out of 15000+200000
+ 12140 multiletter control sequences out of 15000+200000
  42554 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,40p,898b,1260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,40p,951b,1260s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (43 pages, 1127702 bytes).
+Output written on c:/Users\radup\fluentmotion\thesis\templateLaTeX-Eng\thesis.pdf (49 pages, 1418744 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

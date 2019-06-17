@@ -1040,36 +1040,161 @@ Developer using Fluent Motion - interested in performing an action when a simple
 
 \chapter{Detailed Design and Implementation}
 
-Ye boy
+\section{Fluent Motion simple gestures}
+
+Fluent Motion defines a total of ten simple gestures that can be detected by the Leap Motion controller. The methods presented below each have multiple implementations, so as not to put too much pressure on the user regarding the syntax he or she should use.
+
+\subsection{Finger Gestures}
+\begin{enumerate}
+  \item \textbf{IsExtended} - selected finger is extended
+  \item \textbf{IsPointingTo} - selected finger is pointing to a given target (Unity Gameobject or a hand)
+  \item \textbf{AreExtended} - selected fingers are extended (the others are marked as \textit{don't care}, so they could be extended or not)
+\end{enumerate}
+
+\subsection{Hand Gestures - single hand}
+
+\begin{enumerate}
+  \item \textbf{IsPinching} - hand is pinching (as of Orion 4.4, i.e. \textit{when PinchStrenght > 0.8})
+  \item \textbf{PalmIsFacing} - palm is facing a given target (can be any object that has a mapping to a Unity \textit{Vector3}) with a given angle tolerance
+  \item  \textbf{IsFist} - hand is making a fist (i.e. \textit{FistStrenght > 0.8})
+  \item \textbf{IsMoving} - hand is moving in a given direction (expressed as a Unity \textit{Vector3}) with a given speed (in millimeters per second) and angle tolerance (for the direction) 
+\end{enumerate}
+
+\subsection{Hand Gestures - both hands}
+\begin{enumerate}
+  \item \textbf{PalmsAreFacing} - both palms are facing a target object or, if no object is given, facing each other with a given angle tolerance
+  \item \textbf{AreMakingFists} - both hands are making fists
+  \item \textbf{AreMoving} - both hands are moving in a given direction (\textit{Vector3}) and with a given angle tolerance
+\end{enumerate}
+
+Besides the enumerated gestures, several simple detectors are present in the form of \textit{abstract} classes, which only need the \textit{OnDetect} callback to be implemented in order to make use of the detector.
+
+\section{}
 
 \chapter{Testing and Validation}
 
-About 5\% of the paper
-\section{Title}
-\section{Other title}
+For testing purposes, a simple application with 8 possible gestures was created. In the application the is a cube with an icon on it. The icon represents the gesture the cube expects from the player. Once that gesture is detected, the icon (and expected gesture) changes to another random gesture from the pool. The 8 possible gestures and their icon representation are shown in table \ref{tab:gestures}.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ m{0.3\linewidth} m{0.3\linewidth} }
+    Gesture & Icon \\
+    \hline
+    \\
+    Thumbs-up & \includegraphics[width=0.3\linewidth]{img/thumbs-up.png} \\
+    "L" & \includegraphics[width=0.3\linewidth]{img/thumb-index-extended.png} \\
+    Fist & \includegraphics[width=0.3\linewidth]{img/fist.png} \\
+    Pinch & \includegraphics[width=0.3\linewidth]{img/pinch.png} \\ 
+    Swipe-up & \includegraphics[width=0.3\linewidth]{img/swipe-up.png} \\
+    Swipe-down & \includegraphics[width=0.3\linewidth]{img/swipe-down.png} \\
+    Swipe-left & \includegraphics[width=0.3\linewidth]{img/swipe-left.png} \\
+    Swipe-right & \includegraphics[width=0.3\linewidth]{img/swipe-right.png} \\    
+  \end{tabular}
+  \caption{Gesture to icon mappings}
+  \label{tab:gestures}
+\end{table}
+
+All the gestures are expected to be done by either the left or the right hand. In figure \ref{fig:testing_nochange}, a pinch gesture is made with the right hand, but the cube expects a "L" gesture, so it does nothing.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/Demo_not_detected.jpg}
+  \caption{Cube not changing when an incorrect gesture is made}
+  \label{fig:testing_nochange}
+\end{figure}
+
+\section{Performance}
+
+ReactiveX operators have varying performance, depending not only on the used operator, but also on the mapping or condition given to that operator. FluentMotion uses only the simpler operators from the RX environment, like \textit{Select, Where, Subscribe} and \textit{Sample}.
+
+Chained operators do not add too big a performance penalty over the simpler ones. This is due to short circuiting in ReactiveX operators. That is, if the first operator in a chain fails (the gesture was not detected), all the operators after it aren't hit.
+
+The short circuiting also means that chaining should be done in a careful way. The \textit{IsMoving} operator has a much higher computational cost than the \textit{IsPinching} operator. This means that moving the latter operator higher up the chain greatly impacts the overall performance of the application.
+
+For better performance gains, more than one thread can be used. The user can take advantage of the ReactiveX's \textit{ObserveOn(Scheduler.ThereadPool)} operator to schedule a detection chain on a different thread from the RX Pool. 
+
+One minor drawback of the \textit{ObserveOn} is that the thread must be switched back to the main thread before doing any operations on the scene by calling the \textit{ObserveOnMainThread} operator before the \textit{Subscribe} call.
 
 \chapter{User's manual}
 
-In the installation description section your should detail the hardware and software resources needed for installing and running the application, and a step by step description of how your application can be deployed/installed. An administrator should be able to perform the installation/deployment based on your instructions.
+\section{Unity integration}
+After having the Leap Motion and SteamVR assets set up, adding Fluent Motion to your application is done in two simple steps:
 
-In the user manual section you describe how to use the application from the point of view of a user with no inside technical information; this should be done with screen shots and a stepwize explanation of the interaction. Based on user's manual, a person should be able to use your product.
+\begin{enumerate}
+  \item Add three new empty game objects anywhere in the scene. It is recommended, but not mandatory, to make two of the objects children to the 3\textsuperscript{rd} (as in figure \ref{fig:fm_setup}) \\
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/FluentMotion_setup.jpg}
+    \caption{Setting up Fluent Motion game objects}
+    \label{fig:fm_setup}
+  \end{figure}
 
-\section{Title}
-\section{Other title}
+  \item Attach a \textit{ReactiveHand} script to two of the objects, referencing either the left or the right hand from the LeapRig, and attach a \textit{ReactiveHands} script to the 3\textsuperscript{rd}, referencing the other two \textit{ReactiveHand}s \\
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/FluentMotion_reactive_hand.jpg}
+    \caption{The \textit{ReactiveHand} script attached to the game object}
+    \label{fig:fm_rh_attached}
+  \end{figure}
+\end{enumerate}
+
+\subsection{Creating Detectors}
+
+To create a detector, extend the \textit{ReactiveHandDetector} class in your own script. As an example, a possible implementation for the "L" gesture - thumb and index are extended, and the others are not - is shows in figure \ref{fig:fm_rh_start}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/FluentMotion_script.jpg}
+  \caption{The \textit{ReactiveHand} script start function}
+  \label{fig:fm_rh_start}
+\end{figure}
+
+The code in figure \ref{fig:fm_rh_start} is one of the many ways for expressing this detector. Another option is presented in figure \ref{fig:fm_when}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/FluentMotion_script_alternative.jpg}
+  \caption{The \textit{ReactiveHand} script start function, using the \textit{When} operator}
+  \label{fig:fm_when}
+\end{figure}
+
+The \textit{When} operator is a very powerful construct available in \textit{FluentMotion}. The first argument to this operator is an optional reduction (combination) lambda function which takes two boolean values as input and returns one boolean value. The default value for this reduction function is the AND operator (the returned boolean value is the logical "and" between the two inputs). Then comes a variable number of predicates, lambda expressions that take as input one value (of the same type as the underlying data stream) and return a boolean value. The combination lambda is applied to each of the predicates' outputs, left to right. If one of the values changes the result of the reduction from \textit{true} to \textit{false}, the reduction process stops (due to the \textit{shortcircuit} property of boolean operators) and the whole data stream cancels.
+
+
+Of course, a mix of the two methods described in figures \ref{fig:fm_rh_start} and \ref{fig:fm_when} can be used - say, for when you also want the thumb to point upwards.
+
+
+The next step is to implement the \textit{OnDetect} method. A possible implementation is shown in figure \ref{fig:fm_onDetect}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/FluentMotion_onDetect.jpg}
+  \caption{\textit{OnDetect} function}
+  \label{fig:fm_onDetect}
+\end{figure}
+
+The \textit{params object[] others} are variable arguments - you can pass any extra parameters to this function.
+
+Last, add the script to one of the \textit{ReactiveHand}s in the scene - for example, the right hand - as shown in figure \ref{fig:fm_script_righthand}. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/FluentMotion_script_attached.jpg}
+  \caption{Script attached to the right \textit{ReactiveHand}}
+  \label{fig:fm_script_righthand}
+\end{figure}
+
+The \textit{Interval} field represents the sampling rate expressed in seconds. The sampling rate means how often the same gesture should be detected. The field is of type \textbf{double}, so values less than 1 second can be set. The default value is 500ms (0.5 seconds).
 
 \chapter{Conclusions}
 
-About. 5\% of the whole
+Virtual Reality, even though a new, is a galloping technology whose tendencies are to become closer and closer to the actual reality. This tendency has fueled companies like Leap Motion to invent new and more natural means of interacting with the VR world.
 
-Here your write:
-\begin{itemize}
-\item a summary of your contributions/achievements,
-\item a critical analysis of the achieved results,
-\item a description of the possibilities of improving/further development.
-\end{itemize}
-\section{Title}
-\section{Other title}
+Their basic API, though powerful on its own, does not offer much flexibility and readability. This missing features created the need for a new, modern API.
 
+In an attempt to answer this call, Fluent Motion could be the needed replacement. This document presented the features of this new API, which features a flexible way of defining new gestures, Unity Game Engine integration and increased readability.
+
+Future improvements include continuous gestures (like detecting letters drawn in the air) and the detection of "negated gestures" (\textit{detect when *this* does not occur}).
 
 %\addcontentsline {toc}{chapter}{Bibliography} 
 \bibliographystyle{IEEEtran} 

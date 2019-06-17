@@ -1,0 +1,160 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{rx}
+ 2019.
+\newblock ReactiveX.
+\newblock   (2019).
+\newblock
+\showURL{%
+\url{http://reactivex.io}}
+
+
+\bibitem{3149}
+{Daniel Bachmann}, {Frank Weichert}, {and} {Gerhard Rinkenauer}. 2015.
+\newblock \showarticletitle{Evaluation of the Leap Motion Controller as a New
+  Contact-Free Pointing Device}.
+\newblock {\em Sensors\/}  {15} (2015), 214--233.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.3390/s150100214}}
+\newblock
+\shownote{Publikation.}
+
+
+\bibitem{ReactiveUI}
+{K. Boogaart}. 2018.
+\newblock {\em You, I, and ReactiveUI}.
+\newblock Blurb, Incorporated.
+\newblock
+\showISBNx{9781388578367}
+\showURL{%
+\url{https://kent-boogaart.com/you-i-and-reactiveui/}}
+
+
+\bibitem{LeapArticle}
+{Alex Colgan}. 2014.
+\newblock How does the Leap Motion Controller Work?
+\newblock   (2014).
+\newblock
+\showURL{%
+\url{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/}}
+
+
+\bibitem{DPEROOS}
+{Ralph~Johnson Erich~Gamma, Richard~Helm} {and} {John Vlissides}. 1994.
+\newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock 293.
+\newblock
+\showISBNx{0-201-63361-2}
+
+
+\bibitem{zuhlke}
+{Jewgeni Horn}. 2014.
+\newblock Gesture recognition with Leap Motion controller and Reactive
+  Extensions.
+\newblock   (9 04 2014).
+\newblock
+\showURL{%
+\url{https://www.zuehlke.com/blog/en/gesture-recognition-with-leap-motion-controller-and-reactive-extensions/}}
+
+
+\bibitem{LMUAPI}
+{Leap~Motion Inc.} 2019a.
+\newblock LeapMotion Developer - Unity.
+\newblock   (2019).
+\newblock
+\showURL{%
+\url{https://developer.leapmotion.com/unity/}}
+
+
+\bibitem{LMAPI}
+{Leap~Motion Inc.} 2019b.
+\newblock LeapMotion Developer - Using the Tracking API.
+\newblock   (2019).
+\newblock
+\showURL{%
+\url{https://developer-archive.leapmotion.com/documentation/python/devguide/Leap_Guides2.html}}
+
+
+\bibitem{Kerefeyn}
+{Stoyan Kerefeyn} {and} {Stoyan Maleshkov}. 2015.
+\newblock \showarticletitle{Manipulation of virtual objects through a
+  LeapMotion optical sensor}.
+\newblock {\em International Journal of Computer Science Issues\/}  {12} (10
+  2015), 52--57.
+\newblock
+
+
+\bibitem{Khundam}
+{C. {Khundam}}. 2015.
+\newblock \showarticletitle{First person movement control with palm normal and
+  hand gesture interaction in virtual reality}. In {\em 2015 12th International
+  Joint Conference on Computer Science and Software Engineering (JCSSE)}.
+  325--330.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.1109/JCSSE.2015.7219818}}
+
+
+\bibitem{Pop}
+{Mihai Pop} {and} {Adrian Sabou}. 2017.
+\newblock \showarticletitle{Gesture-based Visual Analytics in Virtual Reality}.
+\newblock {\em Revista Romana de Interactiune Om-Calculator\/}  {10} (2017),
+  216--230.
+\newblock
+Issue 3.
+
+
+\bibitem{Vaitkevicius}
+{Aurelijus Vaitkevičius}, {Mantas Taroza}, {Tomas Blažauskas}, {Robertas
+  Damaševičius}, {Rytis Maskeliūnas}, {and} {Marcin Woźniak}. 2019.
+\newblock \showarticletitle{Recognition of American Sign Language Gestures in a
+  Virtual Reality Using Leap Motion}.
+\newblock {\em Applied Sciences\/} {9}, 3 (2019).
+\newblock
+\showISSN{2076-3417}
+\showDOI{%
+\url{http://dx.doi.org/10.3390/app9030445}}
+
+
+\bibitem{Orion}
+{VRFocus}. 2016.
+\newblock   (18 04 2016).
+\newblock
+\showURL{%
+\url{https://www.vrfocus.com/2016/02/leap-motion-announces-orion-for-faster-more-accurate-vr-hand-tracking}}
+
+
+\end{thebibliography}
