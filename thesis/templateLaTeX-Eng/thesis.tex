@@ -8,21 +8,17 @@
 \usepackage[matrix,arrow]{xy}
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
-%\usepackage{shortcut} %definitii pentru diacritice; 
 \usepackage{amstext}
 \usepackage{graphics}
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
 \usepackage{algorithm}
-%\usepackage{algorithmic}
 \usepackage{color}
 \usepackage{color}
 \usepackage{wrapfig}
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage[table]{xcolor}
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
 \usepackage{listings}
 
 \definecolor{bluekeywords}{rgb}{0,0,1}
@@ -1069,7 +1065,854 @@ Fluent Motion defines a total of ten simple gestures that can be detected by the
 
 Besides the enumerated gestures, several simple detectors are present in the form of \textit{abstract} classes, which only need the \textit{OnDetect} callback to be implemented in order to make use of the detector.
 
-\section{}
+\section{When<TInput, TResult> method}
+
+Applies a filter which is the result of multiple combined conditions to an observable.
+
+\subsection{Syntax}
+
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<TInput> When<TInput, TResult>(this IObservable<TInput> observable,
+        Func<bool, bool, bool> reducer,
+        Func<TInput, TResult> selector,
+        params Func<TResult, bool>[] conditions) 
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.When((a, b) => a && b, //reducer
+              hand => hand.GetThumb(), //selector
+              finger => finger.IsExtended,
+              finger => IsPointingTo(finger, someTarget))
+        .Subscribe(x => DoSomething(x));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+    \item \textbf{TInput} \\
+        The type of the input and output observables.
+    \item \textbf{TResult} \\
+        The type of the predicates' input and selector output. 
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{System.IObservable<TInput>}\\
+        An observable sequence whose elements to filter.
+    \item \textbf{reducer} \\
+        Type: \textit{System.Func<bool, bool, bool>} \\
+        A reduction function that combines the predicates of \textit{conditions} to a single value.
+    \item \textbf{selector} \\
+        Type: \textit{System.Func<TInput, TResult>}\\
+        A function that is applied to each element of the source observable before being tested against the \textit{conditions}.
+    \item \textbf{conditions} \\
+        Type: \textit{Func<TResult, bool>[]} \\
+        One or more functions to test each source element for conditions.
+\end{itemize}
+
+\subsection{Return Value}
+Type: \textit{System.IObservable<TInput>}\\
+An observable sequence that contains elements from the input sequence that satisfy the combined conditions.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<TInput>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+
+\begin{enumerate}
+    \item \textbf{When<TInput, TResult>(IObservable<TInput>, Func<TInput, TResult>, params Func<TResult, bool>[])} \\
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<TInput> When<TInput, TResult>(
+        this IObservable<TInput> observable,
+        Func<TInput, TResult> selector,
+        params Func<TResult, bool>[] conditions
+        )
+\end{lstlisting}
+        This method replaces the \textit{Func<bool, bool, bool> reducer} parameter from the original \textit{When} with the AND boolean operator.
+    
+    \item \textbf{When<T>(IObservable<T>, params Func<T, bool>[])} \\
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<T> When<T>(
+        this IObservable<T> observable,
+        params Func<T, bool>[] conditions
+        )
+\end{lstlisting}
+        This method replaces the \textit{Func<bool, bool, bool> reducer} parameter from the originla \textit{When} with the AND boolean operator and the \textit{Func<T, T> selector} with the identity mapping. (see code snipper \ref{code:id})
+        \\
+\begin{lstlisting}[caption=Identity mapping, label=code:id]
+    public static T Identity<T>(T t){
+        return t;
+    }
+\end{lstlisting}
+\end{enumerate}
+
+\section{Fingers method}
+Projects each hand element from an observable to the list of specified fingers.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<IList<Finger>> Fingers(
+        this IObservable<Hand> observable,
+        params Finger.FingerType[] fingerTypes
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Fingers(
+            Finger.FingerType.TYPE_THUMB,
+            Finger.FingerType.TYPE_INDEX)
+        .Subscribe(list => DoSomething(list));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable} \\
+        Type: \textit{System.IObservable<Leap.Hand>} \\
+        An observable sequence of hand states.
+    \item \textbf{fingerTypes} \\
+        Type: \textit{Leap.Finger.FingerType[]} \\
+        One or more finger types to select.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<IList<Leap.Finger>{}>}
+
+An observable sequence containing fingers' states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+\begin{enumerate}
+    \item \textbf{Fingers(IObservable<Hand>)}\\
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<IList<Finger>> Fingers(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+This method returns an observable containing the states of \textbf{ALL} the fingers on the hand.
+\end{enumerate}
+
+\newpage
+
+\section{GetFinger method}
+Projects each hand element from an observable sequence to one specified finger.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+     public static IObservable<Finger> Finger(
+        this IObservable<Hand> observable,
+        Finger.FingerType fingerType
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+     Hand.Finger(Finger.FingerType.TYPE_THUMB)
+                .Subscribe(finger => DoSomething(finger));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{fingerType}\\
+        Type: \textit{Leap.Finger.FingerType}\\
+        The finger type of the required finger.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence containing a finger's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{AreExtended method}
+Filters the hand states in which the specified fingers are extended.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+     public static IObservable<Hand> AreExtended(
+        this IObservable<Hand> observable,
+        params Finger.FingerType[] fingerTypes
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.AreExtended(
+                    Finger.FingerType.TYPE_THUMB,
+                    Finger.FingerType.TYPE_RING)
+        .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+    
+    \item \textbf{fingerTypes}\\
+    Type: \textit{Leap.Finger.FingerType[]}\\
+    The finger types of the tested fingers.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand's states when the specified fingers are extended.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Thumb method (selector)}
+Projects a hand state observable sequence to a thumb state observable sequence.
+
+\subsection{Syntax}
+
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Finger> Thumb(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Thumb()
+        .Subscribe(thumb => DoSomething(thumb));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence containing the thumb's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Thumb method (filter)}
+Filters a hand state observable by conditions on the thumb.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Thumb(
+        this IObservable<Hand> observable,
+        params Func<Finger, bool>[] conditions
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Thumb(
+            thumb => thumb.IsExtended)
+        .Subscribe(thumb => DoSomething(thumb));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{conditions}\\
+        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
+        One or more conditions to test the thumb against.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand states which satisfy the conditions on the thumb.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\section{Index method (selector)}
+Projects a hand state observable sequence to a thumb state observable sequence.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Index(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Index()
+        .Subscribe(index => DoSomething(index));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence containing the index's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Index method (filter)}
+Filters a hand state observable by conditions on the index.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Index(
+        this IObservable<Hand> observable,
+        params Func<Finger, bool>[] conditions
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Index(
+            index => index.IsExtended)
+        .Subscribe(index => DoSomething(index));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{conditions}\\
+        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
+        One or more conditions to test the index against.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand states which satisfy the conditions on the index.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\section{Middle method (selector)}
+Projects a hand state observable sequence to a middle finger state observable sequence.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Middle(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Middle()
+        .Subscribe(middle => DoSomething(middle));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence containing the middle finger's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Middle method (filter)}
+Filters a hand state observable by conditions on the middle finger.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Middle(
+        this IObservable<Hand> observable,
+        params Func<Finger, bool>[] conditions
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Middle(
+            middle => middle.IsExtended)
+        .Subscribe(middle => DoSomething(middle));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{conditions}\\
+        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
+        One or more conditions to test the middle finger against.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand states which satisfy the conditions on the middle finger.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\section{Ring method (selector)}
+Projects a hand state observable sequence to a ring finger state observable sequence.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Ring(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Ring()
+        .Subscribe(ring => DoSomething(ring));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Finger>{}>}\\
+
+An observable sequence containing the ring finger's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Ring method (filter)}
+Filters a hand state observable by conditions on the ring finger.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Ring(
+        this IObservable<Hand> observable,
+        params Func<Finger, bool>[] conditions
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Ring(
+            ring => ring.IsExtended)
+        .Subscribe(ring => DoSomething(ring));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{conditions}\\
+        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
+        One or more conditions to test the ring finger against.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand states which satisfy the conditions on the ring finger.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\section{Pinky method (selector)}
+Projects a hand state observable sequence to a pinky finger state observable sequence.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Pinky(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Pinky()
+        .Subscribe(pinky => DoSomething(pinky));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+An observable sequence containing the pinky finger's states.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{Pinky method (filter)}
+Filters a hand state observable by conditions on the pinky finger.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> Pinky(
+        this IObservable<Hand> observable,
+        params Func<Finger, bool>[] conditions
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.Pinky(
+            pinky => pinky.IsExtended)
+        .Subscribe(pinky => DoSomething(pinky));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{conditions}\\
+        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
+        One or more conditions to test the pinky finger against.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing the hand states which satisfy the conditions on the pinky finger.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{IsPinching method}
+Filters an observable hand state sequence based on the \textit{pinching} gesture.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> IsPinching(
+        this IObservable<Hand> observable
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.IsPinching()
+        .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return values}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence containing hand states which are pinching.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{PalmIsFacing<TPlayer, TTarget> method}
+Filters the hand state observable based on the palm normal direction.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(
+        this IObservable<Hand> observable,
+        TPlayer player,
+        Func<TPlayer, Vector4> positionSelector,
+        TTarget target,
+        Func<TTarget, Vector4> targetPositionSelector,
+        Func<float> tolerance
+        )
+\end{lstlisting}
+\begin{lstlisting}[caption=Usage example]
+    Hand.PalmIsFacing(
+                    Player.instance,
+                    player => player.hmdTransform.position,
+                    gameObject,
+                    target => target.transform.position
+                    )
+                .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+    \item \textbf{TPlayer}\\
+        The type of the player reference object. For Virtual Reality applications, this is generally \textit{Valve.VR.InteractionSystem.Player}, and for desktop applications \textit{UnityEngine.Camera}.
+        
+    \item \textbf{TTarget}\\
+        The type of the target game object.
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable} \\
+    Type: \textit{System.IObservable<Leap.Hand>}\\
+    An observable sequence of hand states.
+    
+    \item \textbf{player}\\
+    Type: \textit{TPlayer}\\
+    The player instance.
+    
+    \item \textbf{positionSelector}\\
+    Type: \textit{System.Func<TPlayer, UnityEngine.Vector4>}\\
+    A function mapping the player instance to a position in the scene.
+    
+    \item \textbf{target}\\
+    Type: \textit{TTarget}\\
+    The target object.
+    
+    \item \textbf{targetPositionSelector}\\
+    Type: \textit{System.Func<TTarget, UnityEngine.Vector4>}\\
+    A function mapping the target object to a position in the scene.
+    
+    \item \textbf{tolerance}\\
+    Type: \textit{System.Func<float>}\\
+    A function supplying the value of the tolerance between the palm direction and the target direction. The tolerance can thus change over time.
+
+\end{itemize}
+
+\section{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence of hand states where the palm faces the target object with the given tolerance.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+\begin{enumerate}
+    \item \textbf{PalmIsFacing<TPlayer, TTarget>(IObservable<Hand>, TPlayer, Func<TPlayer, Vector4>, TTarget, Func<TTarget, Vector4>, float)}
+\begin{lstlisting}[caption=Declaration]
+     public static IObservable<Hand> PalmIsFacing<TPlayer, TTarget>(
+        this IObservable<Hand> observable,
+        TPlayer player,
+        Func<TPlayer, Vector4> positionSelector,
+        TTarget target,
+        Func<TTarget, Vector4> targetPositionSelector,
+        float tolerance = 0.075f
+        )
+\end{lstlisting}
+    This method takes a \textit{float} for the \textbf{tolerance} parameter instead of a function returning a floating point value. Useful for cases when the tolerance should be constant.
+
+    \item \textbf{PalmIsFacing<TTarget>(IObservable<Hand>, TTarget, Func<TTarget, Vector4>, Func<float>)}
+\begin{lstlisting}[caption=Declaration]
+   public static IObservable<Hand> PalmIsFacing<TTarget>(
+       this IObservable<Hand> observable,
+       TTarget target,
+       Func<TTarget, Vector4> selector,
+       Func<float> tolerance
+       )
+\end{lstlisting}
+    This method uses the \textit{Valve.VR.InteractionEngine.Player} instance for the \textbf{player} parameter and selects the head-mounted display position for the \textbf{positionSelector} parameter. Useful for VR applications.
+    
+    \item \textbf{PalmIsFacing<TTarget>(IObservable<Hand>, TTarget, Func<TTarget, Vector4>, float)}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> PalmIsFacing<TTarget>(
+        this IObservable<Hand> observable,
+        TTarget target,
+        Func<TTarget, Vector4> selector,
+        float tolerance = 0.075f)
+\end{lstlisting}
+    This method uses the \textit{Valve.VR.InteractionEngine.Player} instance for the \textbf{player} parameter, selects the head-mounted display position for the \textbf{positionSelector} parameter and accepts a \textit{float} parameter for the tolerance. Useful for VR applications in which the tolerance is constant.
+\end{enumerate}
+
+\newpage
+
+\section{IsFist method}
+Filters the hand state observable based on the \textit{fist} gesture.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> IsFist(
+     this IObservable<Hand> observable
+     )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.IsFist()
+        .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence of hand states where the hand is making a fist gesture.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
+instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{IsMoving method}
+Filters the hand state observable based on the moving speed. By default, in order to detect the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> IsMoving(
+        this IObservable<Hand> observable,
+        float speed = 0.1f
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.IsMoving(1.0f) //optional parameter
+        .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Parameters}
+
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+        An observable sequence of hand states.
+    \item \textbf{speed}\\
+        Type: \textit{float}\\
+        A floating point value representing the minimum speed required to detect a movement. Defaults to
+        \textit{0.1}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+An observable sequence of hand states where the hand is moving.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{IsMoving<TReference> method}
+Filters the hand state observable based on the moving direction and speed. By default, in order to detect the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+    public static IObservable<Hand> IsMoving<TReference>(
+        this IObservable<Hand> observable,
+        TReference reference,
+        Func<TReference, Vector4> to,
+        float speed = 0.1f,
+        float tolerance = 0.0.75f
+        )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+    Hand.IsMoving(
+            Player.instance,
+            player => player.hmdTransform.right)
+        .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+    \item \textbf{TReference}\\
+    The type of the movement direction reference object (e.g. main camera, player, HMD, etc).
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+        Type: \textit{System.IObservable<Leap.Hand>}\\
+        An observable sequence of hand states.
+    \item \textbf{reference}\\
+        Type: \textit{TReference}\\
+        The movement direction reference coordinate axes.
+    \item \textbf{to}\\
+        Type: \textit{System.Func<TReference, UnityEngine.Vector4>}\\
+        A function which maps the \textit{reference} to a position in the scene.
+    \item \textbf{speed}\\
+        Type: \textit{float}\\
+        A floating point value representing the minimum speed required to detect a movement. Defaults to
+        \textit{0.1}.
+        
+    \item \textbf{tolerance}\\
+        Type: \textit{float}
+        A floating point value representing the tolerance between the actual movement direction and the target movement direction. Defaults to \textit{0.075}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence of hand states where the hand is moving in the target direction.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+\begin{enumerate}
+    \item \textbf{IsMoving<TReference>(IObservable<Hand>, TReference, SwipeDirection, float, float) where TReference : Component}
+\begin{lstlisting}[caption=Declaration]
+     public static IObservable<Hand> IsMoving<TReference>(
+        this IObservable<Hand> observable,
+        TReference reference,
+        SwipeDirection direction,
+        float speed = 0.1f,
+        float tolerance = 0.075f
+        ) 
+        where TReference : Component
+\end{lstlisting}
+    This method accepts as parameter a \textit{SwipeDirection} to select the target direction of the movement.
+\end{enumerate}
+
+\newpage
+
 
 \chapter{Testing and Validation}
 

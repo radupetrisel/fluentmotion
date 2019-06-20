@@ -13,12 +13,12 @@ namespace Demo.Detectors
     {
         private void Start()
         {
-            Hand.When(Thumb.IsExtended,
-                     Index.IsExtended,
-                     Middle.IsNotExtended,
-                     Ring.IsNotExtended,
-                     Pinky.IsNotExtended
-                     )
+            Hand.Thumb(It.IsExtended)
+                .Index(It.IsExtended)
+                .Middle(It.IsNotExtended)
+                .Ring(It.IsNotExtended)
+                .Pinky(It.IsNotExtended)
+                .When(Thumb.IsPointingTo(Vector3.up))
                 .Subscribe(hand => OnDetect(hand, GestureType.ThumbIndexExtended));
         }
 
