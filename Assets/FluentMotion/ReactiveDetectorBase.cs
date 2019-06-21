@@ -4,7 +4,7 @@ namespace FluentMotion
 {
     public abstract class ReactiveDetectorBase<TInput> : MonoBehaviour, IReactiveDetector<TInput>
     {
-        public double interval = 3;
+        public double interval = 0.5;
 
         public virtual object[] Parameters => null;
 

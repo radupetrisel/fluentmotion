@@ -10,7 +10,6 @@ namespace FluentMotion.hand
 {
     public sealed class ReactiveHand : MonoBehaviour, IReactiveObject<HandModelBase, Hand>
     {
-        [FormerlySerializedAs("Hand")]
         public HandModelBase hand;
         
         private readonly Subject<Hand> _subject = new Subject<Hand>();

@@ -253,9 +253,11 @@ The modern, consumer version of headsets started developing in the early 2010s. 
 
 \begin{wrapfigure}[16]{r}{0.25\textwidth}
   \includegraphics[width=1.1\linewidth]{img/Sony_morpheus.jpg}
-  \caption{Project Morpheus (PlayStation VR) at gamescom in 2015}
+  \caption[]{Project Morpheus (PlayStation VR) at gamescom in 2015 \footnotemark}
   \label{fig:morpheus}
 \end{wrapfigure}
+
+\footnotetext{Image from \cite{Figure11}}
 
 This discovery was quickly adopted by the other companies on the market, with Sony announcing \textit{Project Morpheus} in 2014 and Google announcing \textit{Cardboard} in 2015. In 2016, HTC released and shipped the first units of \textit{Vive SteamVR}, the first major commercial headset for average users.
 
@@ -269,9 +271,11 @@ Special input devices are required for interaction with the virtual world, such 
 
 \begin{wrapfigure}[14]{l}{0.45\linewidth}
   \includegraphics[width=\linewidth]{img/GestRecog_child.jpg}
-  \caption{A child being recognized by a simple gesture detection algorithm}
+  \caption[]{A child being recognized by a simple gesture detection algorithm \footnotemark }
   \label{fig:child}
 \end{wrapfigure}
+
+\footnotetext{Image from \cite{Figure12}}
 
 Gesture recognition is an active research field with the objective of comprehending human gestures through mathematical models. Gestures can come from any posture or position of the body, but they typically come from the hand. Without actually touching them, users can use simple motions to command or communicate with machines.
 
@@ -588,25 +592,30 @@ So, how would one improve the issue of VR interaction? As of now, there are two 
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\linewidth]{img/Vive_controllers.jpg}
-    \caption{HTC Vive controllers}
+    \caption[]{HTC Vive controllers \footnotemark[1]}
     \label{fig:vive_controllers}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\linewidth]{img/Oculus_controllers.jpg}
-    \caption{Oculus Rift controllers}
+    \caption[]{Oculus Rift controllers \footnotemark[2]}
     \label{fig:leap_interaction}
   \end{subfigure}
   \caption{The two types of VR controllers available on the market}
   \label{mfig:vive_occulus}
 \end{figure}
 
+\footnotetext[1]{Image from \cite{VIVECONTROLLERS}}
+\footnotetext[2]{Image from \cite{OCCULUSTOUCH}}
+
 \section{Gestures}
 
-\begin{wrapfigure}[17]{r}{0.4\textwidth}
+\begin{wrapfigure}[13]{r}{0.4\textwidth}
   \includegraphics[width=0.9\linewidth]{img/Gesture_navy.jpg}
-  \caption{Military air marshallers use hand and body gestures to direct flight operations aboard aircraft carriers}
+  \caption[]{Military air marshallers use hand and body gestures to direct flight operations aboard aircraft carriers \footnotemark[3]}
   \label{fig:air_marshallers}
 \end{wrapfigure}
+
+\footnotetext[3]{Image from https://en.wikipedia.org/wiki/Gesture}
 
 A gesture is a type of non-verbal communication in which real physical movements transmit specific messages, both in place or in combination with speech. Gestures include movement of the hands, face, or other parts of the body. Gestures differ from physical non-verbal communication that does not communicate specific messages, such as purely expressive displays, proxemics, or displays of joint attention. \cite{Gestures}
 
@@ -680,9 +689,10 @@ Gesture detectiona algorithms can be split in three major categories, based on t
       \includegraphics[width=\linewidth]{img/Algorithms_hand_2d.png}
       \caption{2D representation (appearance)}  
     \end{subfigure}  
-  \caption{The different digital representations of a hand}
+  \caption[]{The different digital representations of a hand \footnotemark}
   \label{mfig:hands}
 \end{figure}
+\footnotetext{Images courtesy of \cite{HANDS}}
 
 \subsection{Input devices}
 While there is a big quantity of studies conducted in gesture recognition focusing on image/video, there is a certain variation among applications within the instruments and implementations used.
@@ -708,12 +718,12 @@ The \textit{Leap Motion Controller} is a tiny peripheral USB device intended to 
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\linewidth]{img/Leap_motion.jpg}
-    \caption{The LeapMotion controller}
+    \caption[]{The LeapMotion controller \footnotemark[1]}
     \label{fig:leap_controller}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\linewidth]{img/Leap_interaction.png}
-    \caption{The interaction area}
+    \caption[]{The interaction area \footnotemark[2]}
     \label{fig:leap_interaction}
   \end{subfigure}
   \caption{The LeapMotion system}
@@ -727,10 +737,13 @@ The unit has a big interaction room of 0.22 m\textsuperscript{3} thanks to its w
 
 This raw data is then stored in the device's local memory and then sent via USB to the \textit{Leap Motion tracking software}. As the cameras work with near-infrared light, the data is in the form of grayscale stereo images, as shown in figure \ref{fig:leap_raw}.
 
+\footnotetext[1]{Image from \cite{LEAPCTRL}}
+\footnotetext[2]{Image from \cite{LeapArticle}}
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{img/Leap_raw.jpg}
-  \caption{Leap Motion raw data}
+  \caption[]{Leap Motion raw data \footnotemark[2]}
   \label{fig:leap_raw}
 \end{figure}
 
@@ -738,9 +751,9 @@ This raw data is then stored in the device's local memory and then sent via USB 
 
 It's time for some heavy mathematical lifting once the picture information is streamed to the computer. The \textit{Leap Motion Controller} does not produce depth maps despite common misconceptions - instead it applies sophisticated algorithms to the raw sensor information.
 
-\begin{wrapfigure}[8]{l}{0.4\textwidth}
+\begin{wrapfigure}[11]{l}{0.4\textwidth}
   \includegraphics[width=0.37\textwidth]{img/Leap_capsule_hands.png}
-  \caption{Capsule hands}
+  \caption[]{Capsule hands \footnotemark}
   \label{fig:leap_capsule}
 \end{wrapfigure}
 
@@ -749,6 +762,8 @@ The Leap Motion Service first compensates background objects (e.g. head) and lig
 Though a transport layer, the results(frames) are fed to the \textit{Leap Motion Control Panel} or to native and web clients. These orgaize the data into an object-orietented structure.
 
 Although the device itself has been the same since it's launch in 2013, the software has undergone several do-overs and upgrades. Their SDK started with desktop-only tracking capabilities for its first two major versions. In 2014, they added a VR tracking mode to it and in 2016 they released Orion, Leap Motion's VR-dedicated SDK.
+
+\footnotetext{Image from \cite{CAPSULE_HANDS}}
 
 \subsection{Gestures and detectors}
 
@@ -768,9 +783,11 @@ The Leap Motion API \cite{LMAPI} defines mappings for four human body parts:\cit
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\linewidth]{img/Leap_bones.png}
-  \caption{Leap Motion bones}
+  \caption[]{Leap Motion bones \footnotemark}
   \label{fig:leap_bones}
 \end{figure}
+
+\footnotetext{Image from \cite{LEAP_BONES}}
 
 Leap Motion offers a variety of gesture detectors already implemented, which can also be combined by the use of a Logic Gate. The logic gate is a higher level detector, combining two or more basic detectors.
 
@@ -819,9 +836,11 @@ Examples of Reactive Programming include hardware description languages (HDLs), 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{img/RX_filter.JPG}
-  \caption{Example of a RX operator}
+  \caption[]{Example of a RX operator \footnotemark}
   \label{fig:rx_filter}
 \end{figure}
+
+\footnotetext{Image from \cite{RX_FILTER}}
   
 ReactiveX is a powerful library for asynchronous and event-based programming. It is an implementation of the observer pattern meant for event-driven programming. It also extends the observer pattern with operators that allow the user to compose sequences declaratively without worrying about low-level concerts (such as mutlithreading and the problems that come with it).
 
@@ -1111,7 +1130,8 @@ Applies a filter which is the result of multiple combined conditions to an obser
 \end{itemize}
 
 \subsection{Return Value}
-Type: \textit{System.IObservable<TInput>}\\
+Type: \textit{System.IObservable<TInput>}
+
 An observable sequence that contains elements from the input sequence that satisfy the combined conditions.
 
 \subsection{Remarks}
@@ -1196,8 +1216,6 @@ instance method syntax to call this method, omit the first parameter.
 This method returns an observable containing the states of \textbf{ALL} the fingers on the hand.
 \end{enumerate}
 
-\newpage
-
 \section{GetFinger method}
 Projects each hand element from an observable sequence to one specified finger.
 
@@ -1232,8 +1250,6 @@ An observable sequence containing a finger's states.
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
-
-\newpage
 
 \section{AreExtended method}
 Filters the hand states in which the specified fingers are extended.
@@ -1273,8 +1289,6 @@ An observable sequence containing the hand's states when the specified fingers a
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
 
-\newpage
-
 \section{Thumb method (selector)}
 Projects a hand state observable sequence to a thumb state observable sequence.
 
@@ -1307,7 +1321,8 @@ An observable sequence containing the thumb's states.
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
 
-\newpage
+\subsection{Variants}
+There are methods like the above method for each finger type - \textit{thumb, index, middle, ring} and \textit{pinky}. Each method has the same syntax like the \textit{Thumb} method presented above and they do the same detection for the corresponding finger type.
 
 \section{Thumb method (filter)}
 Filters a hand state observable by conditions on the thumb.
@@ -1346,286 +1361,8 @@ An observable sequence containing the hand states which satisfy the conditions o
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
 
-\section{Index method (selector)}
-Projects a hand state observable sequence to a thumb state observable sequence.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Index(
-        this IObservable<Hand> observable
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Index()
-        .Subscribe(index => DoSomething(index));
-\end{lstlisting}
-
-\subsection{Parameters}
-\begin{itemize}
-    \item \textbf{observable}\\
-    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
-    An observable sequence of hand states.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Finger>{}>}
-
-An observable sequence containing the index's states.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\newpage
-
-\section{Index method (filter)}
-Filters a hand state observable by conditions on the index.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Index(
-        this IObservable<Hand> observable,
-        params Func<Finger, bool>[] conditions
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Index(
-            index => index.IsExtended)
-        .Subscribe(index => DoSomething(index));
-\end{lstlisting}
-
-\subsection{Parameters}
-
-\begin{itemize}
-    \item \textbf{observable}\\
-        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
-        An observable sequence of hand states.
-    \item \textbf{conditions}\\
-        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
-        One or more conditions to test the index against.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Hand>{}>}
-
-An observable sequence containing the hand states which satisfy the conditions on the index.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\section{Middle method (selector)}
-Projects a hand state observable sequence to a middle finger state observable sequence.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Middle(
-        this IObservable<Hand> observable
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Middle()
-        .Subscribe(middle => DoSomething(middle));
-\end{lstlisting}
-
-\subsection{Parameters}
-\begin{itemize}
-    \item \textbf{observable}\\
-    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
-    An observable sequence of hand states.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Finger>{}>}
-
-An observable sequence containing the middle finger's states.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\newpage
-
-\section{Middle method (filter)}
-Filters a hand state observable by conditions on the middle finger.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Middle(
-        this IObservable<Hand> observable,
-        params Func<Finger, bool>[] conditions
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Middle(
-            middle => middle.IsExtended)
-        .Subscribe(middle => DoSomething(middle));
-\end{lstlisting}
-
-\subsection{Parameters}
-
-\begin{itemize}
-    \item \textbf{observable}\\
-        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
-        An observable sequence of hand states.
-    \item \textbf{conditions}\\
-        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
-        One or more conditions to test the middle finger against.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Hand>{}>}
-
-An observable sequence containing the hand states which satisfy the conditions on the middle finger.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\section{Ring method (selector)}
-Projects a hand state observable sequence to a ring finger state observable sequence.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Ring(
-        this IObservable<Hand> observable
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Ring()
-        .Subscribe(ring => DoSomething(ring));
-\end{lstlisting}
-
-\subsection{Parameters}
-\begin{itemize}
-    \item \textbf{observable}\\
-    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
-    An observable sequence of hand states.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Finger>{}>}\\
-
-An observable sequence containing the ring finger's states.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\newpage
-
-\section{Ring method (filter)}
-Filters a hand state observable by conditions on the ring finger.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Ring(
-        this IObservable<Hand> observable,
-        params Func<Finger, bool>[] conditions
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Ring(
-            ring => ring.IsExtended)
-        .Subscribe(ring => DoSomething(ring));
-\end{lstlisting}
-
-\subsection{Parameters}
-
-\begin{itemize}
-    \item \textbf{observable}\\
-        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
-        An observable sequence of hand states.
-    \item \textbf{conditions}\\
-        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
-        One or more conditions to test the ring finger against.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Hand>{}>}
-
-An observable sequence containing the hand states which satisfy the conditions on the ring finger.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\section{Pinky method (selector)}
-Projects a hand state observable sequence to a pinky finger state observable sequence.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Pinky(
-        this IObservable<Hand> observable
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Pinky()
-        .Subscribe(pinky => DoSomething(pinky));
-\end{lstlisting}
-
-\subsection{Parameters}
-\begin{itemize}
-    \item \textbf{observable}\\
-    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
-    An observable sequence of hand states.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Finger>{}>}
-An observable sequence containing the pinky finger's states.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\newpage
-
-\section{Pinky method (filter)}
-Filters a hand state observable by conditions on the pinky finger.
-
-\subsection{Syntax}
-\begin{lstlisting}[caption=Declaration]
-    public static IObservable<Hand> Pinky(
-        this IObservable<Hand> observable,
-        params Func<Finger, bool>[] conditions
-        )
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Usage example]
-    Hand.Pinky(
-            pinky => pinky.IsExtended)
-        .Subscribe(pinky => DoSomething(pinky));
-\end{lstlisting}
-
-\subsection{Parameters}
-
-\begin{itemize}
-    \item \textbf{observable}\\
-        Type: \textit{Systemn.IObservable<Leap.Hand>{}>}\\
-        An observable sequence of hand states.
-    \item \textbf{conditions}\\
-        Type: \textit{System.Func<Leap.Finger, bool>[]}\\
-        One or more conditions to test the pinky finger against.
-\end{itemize}
-
-\subsection{Return values}
-Type: \textit{System.IObservable<Leap.Hand>{}>}
-
-An observable sequence containing the hand states which satisfy the conditions on the pinky finger.
-
-\subsection{Remarks}
-You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
-instance method syntax to call this method, omit the first parameter.
-
-\newpage
+\subsection{Variants}
+There are methods like the above method for each finger type - \textit{thumb, index, middle, ring} and \textit{pinky}. Each method has the same syntax like the \textit{Thumb} method presented above and they do the same detection for the corresponding finger type.
 
 \section{IsPinching method}
 Filters an observable hand state sequence based on the \textit{pinching} gesture.
@@ -1657,8 +1394,6 @@ An observable sequence containing hand states which are pinching.
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
-
-\newpage
 
 \section{PalmIsFacing<TPlayer, TTarget> method}
 Filters the hand state observable based on the palm normal direction.
@@ -1767,8 +1502,6 @@ instance method syntax to call this method, omit the first parameter.
     This method uses the \textit{Valve.VR.InteractionEngine.Player} instance for the \textbf{player} parameter, selects the head-mounted display position for the \textbf{positionSelector} parameter and accepts a \textit{float} parameter for the tolerance. Useful for VR applications in which the tolerance is constant.
 \end{enumerate}
 
-\newpage
-
 \section{IsFist method}
 Filters the hand state observable based on the \textit{fist} gesture.
 
@@ -1799,8 +1532,6 @@ An observable sequence of hand states where the hand is making a fist gesture.
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use 
 instance method syntax to call this method, omit the first parameter.
-
-\newpage
 
 \section{IsMoving method}
 Filters the hand state observable based on the moving speed. By default, in order to detect the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
@@ -1837,8 +1568,6 @@ An observable sequence of hand states where the hand is moving.
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use instance method syntax to call this method, omit the first parameter.
 
-\newpage
-
 \section{IsMoving<TReference> method}
 Filters the hand state observable based on the moving direction and speed. By default, in order to detect the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
 
@@ -1873,7 +1602,7 @@ Filters the hand state observable based on the moving direction and speed. By de
         An observable sequence of hand states.
     \item \textbf{reference}\\
         Type: \textit{TReference}\\
-        The movement direction reference coordinate axes.
+        The movement direction reference object.
     \item \textbf{to}\\
         Type: \textit{System.Func<TReference, UnityEngine.Vector4>}\\
         A function which maps the \textit{reference} to a position in the scene.
@@ -1910,8 +1639,6 @@ You can call this method as an instance method on any object of type \textit{IOb
 \end{lstlisting}
     This method accepts as parameter a \textit{SwipeDirection} to select the target direction of the movement.
 \end{enumerate}
-
-\newpage
 
 \section{IsMovingRight<TReference> method}
 Filters the hand state observable to detect the \textit{moving right} gesture. By default, in order to the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
@@ -1980,8 +1707,6 @@ You can call this method as an instance method on any object of type \textit{IOb
 \subsection{Similar methods}
 There are two methods for each of the six recognizable directions - \textit{right, left, up, down, backwards} and \textit{forward}. All methods have similar signatures to the \textit{IsMovingRight} methods described above.
 
-\newpage
-
 \section{IsExtended method}
 Filters the finger state observable to detect the \textit{finger extended} gesture.
 
@@ -2011,8 +1736,6 @@ An observable sequence of fingers states where the finger is extended.
 
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<Finger>}. When you use instance method syntax to call this method, omit the first parameter.
-
-\newpage
 
 \section{IsPointingTo<TTarget> method}
 Filters the finger state observable to detect the \textit{is pointing to} gesture.
@@ -2150,8 +1873,6 @@ You can call this method as an instance method on any object of type \textit{IOb
 
 \end{enumerate}
 
-\newpage
-
 \section{AreMakingFists method}
 Filters the hands state observable sequence to detect the \textit{fist} gesture for both hands. The difference between using this method and using two \textit{IsMakingFist} methods is that this method requires both hands to make a \textit{fist} gesture at the same time, while using two separate methods for each hand results in at least one hand making a \textit{fist} gestuer at any given time.
 
@@ -2181,8 +1902,6 @@ An observable sequence of hands states where the hands are making a \textit{fist
 
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
-
-\newpage
 
 \section{AreMoving method}
 Filters the hands state observable sequence to detect when both hands are moving. The difference between using this method and using two \textit{IsMoving} methods is that this method requires both hands to move at the same time, while using two separate methods for each hand results in at least one hand moving at any given time.
@@ -2272,6 +1991,59 @@ An observable sequence of hands states where the hands are both moving in the re
 
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\section{IReactiveObject interface}
+This is one of the two major interfaces in \textit{FluentMotion}. It's purpose is to abstract the transition from a non-ReactiveX type to a ReactiveX type. The interface looks as follows:
+
+\begin{lstlisting}[caption=IReactiveObject interface]
+  public interface IReactiveObject<in TTrackedObject, out TReactiveObject>
+  {
+      TReactiveObject Selector(TTrackedObject reactiveObject);
+      bool IsValid(TTrackedObject reactiveObject);
+      IObservable<TReactiveObject> AsObservable();
+  }
+\end{lstlisting}
+
+\subsection{Selector}
+The selector functions maps a Unity object to the type of the observable that the interface represents. The mapping can be as simple as the identity function, but its presence increases the flexibility of this interface. For instance, one could map a hand tracked by Leap Motion to select only a finger (or more) in order to reduce the size of the overall code.
+
+\subsection{IsValid}
+The IsValid predicate indicates when the tracked data is valid. There are certain cases when data becomes invalid, such as when the tracked hand leaves the viewing area of the Leap Motion controller.
+
+\subsection{AsObservable}
+Generally, the user would implement this interface by means of a \textit{Subject} on which to call \textit{OnNext} whenever the input data is valid. The \textit{Subject} class does not have the LINQ methods defined against it, so it should be mapped to a \textit{Observable} instance instead. This method offers a convenient way of converting the \textit{Subject} to a \textit{Observable}.
+
+\section{IReactiveDetector interface and the ReactiveDetectorBase abstract class}
+The other maximum importance part of the \textit{FluentMotion} API is gesture detection. The \textit{IReactiveDetector} and \textit{ReactiveDetectorBase} come with two basic abstractions of methods used for detection. Their declarations look as follows:
+
+\begin{lstlisting}[caption=IReactiveDetector interface]
+  public interface IReactiveDetector<in TInput>
+  {
+      void OnDetect(TInput input, params object[] others);
+
+      TimeSpan TimeSpan { get; }
+  }
+\end{lstlisting}
+
+\begin{lstlisting}[caption=ReactiveDetectorBase abstract class]
+  public abstract class ReactiveDetectorBase<TInput> : MonoBehaviour, IReactiveDetector<TInput>
+  {
+      public double interval = 0.5;
+
+      public virtual object[] Parameters => null;
+
+      public abstract void OnDetect(TInput input, params object[] others);
+      public TimeSpan TimeSpan => TimeSpan.FromSeconds(interval);
+  }
+\end{lstlisting}
+
+The advantage of having the interface is that it is not coupled to the Unity Game Engine, since all its methods and parameters are found in the system namespace. One might notice the abscence of a \textit{Detect}-like method. The abscence is intentional. In the Unity Game Engine, detection starts when the game object lifecycle starts. In a different environment, it might need to happen every frame update or maybe after a frame update. As such, the user is free to implement the detection based on his/her needs.
+
+\subsection{}{OnDetect}
+The \textit{OnDetect} method is called when a gesture is detected. It receives as input the object from the underlying observable stream and it can also get multiple variable parameters for various use cases. In the \textit{ReactiveDetectorBase} class, there is also a \textit{Parameters} property which can be used for cases when the user does not want or cannot pass parameters directly to the method itself.
+
+\subsection{TimeSpan}
+Performance is a very important astept in VR applications. The \textit{TimeSpan} property determines how often the system attempts to detect gestures so that it does not affect performance. In the \textit{ReactiveDetectorBase} class, the interval default to half a second and it accepts being set directly from the Unity Game Editor interface, rather than from the code behind.
 
 \chapter{Testing and Validation}
 
@@ -2394,9 +2166,20 @@ Virtual Reality, even though a new, is a galloping technology whose tendencies a
 
 Their basic API, though powerful on its own, does not offer much flexibility and readability. This missing features created the need for a new, modern API.
 
-In an attempt to answer this call, Fluent Motion could be the needed replacement. This document presented the features of this new API, which features a flexible way of defining new gestures, Unity Game Engine integration and increased readability.
+In an attempt to answer this call, Fluent Motion could be the needed replacement. The goals of FluentMotion were:
 
-Future improvements include continuous gestures (like detecting letters drawn in the air) and the detection of "negated gestures" (\textit{detect when *this* does not occur}).
+\begin{enumerate}
+  \item easy to use
+  \item fluent (in terms of code readability)
+  \item adhere to the reactive programming paradigm
+  \item available on Unity's asset store
+\end{enumerate}
+
+The fourth goal is yet to be completed, as the process requires more time to pass, but all the others have been reached successfully.
+
+Furthermore, a new feature has been added in the development process - independence from the Unity Game Engine. Even though the Leap Motion part of the project is coupled to Unity, the interfaces defining a reactive object and a detector are not, so they can be used even outside this environment.
+
+A future improvement would be to include more complex gestures in the default API and to integrate them in the Unity Game Engine. Another big improvement would be to be able to set extra parameters to the detect methods directly from the Untiy editor, not only from code. The cherry on the cake improvement is to include continuous gestures (such as drawing letters in the air) and "negative" gestures (detect when some gesture is \textbf{not} happening).
 
 %\addcontentsline {toc}{chapter}{Bibliography} 
 \bibliographystyle{IEEEtran} 
