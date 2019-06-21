@@ -322,6 +322,21 @@ namespace FluentMotion.extensions
             @this.Where(It.IsPointingTo(Direction.From(player, positionSelector).To(target, targetPositionSelector))
                           .WithTolerance(tolerance));
 
+        private static void foo(IObservable<Finger> Finger)
+        {
+            GameObject targetObject = new GameObject();
+            Finger.IsPointingTo(Player.instance,
+                                player => player.hmdTransform.position,
+                                targetObject,
+                                target => target.transform.position
+                                )
+                  .Subscribe(finger => DoSomething(finger));
+        }
+
+        private static void DoSomething<T>(T t)
+        {
+        }
+
         public static IObservable<Finger> IsPointingTo<TTarget>(this IObservable<Finger> @this,
                                                                 [NotNull] TTarget target,
                                                                 Func<TTarget, Vector4> selector,

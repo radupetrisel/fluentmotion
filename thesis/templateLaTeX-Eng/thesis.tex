@@ -1913,6 +1913,365 @@ You can call this method as an instance method on any object of type \textit{IOb
 
 \newpage
 
+\section{IsMovingRight<TReference> method}
+Filters the hand state observable to detect the \textit{moving right} gesture. By default, in order to the hand as moving, it must have a speed greater than 1 millimeter per second (mm/s).
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<Hand> IsMovingRight<TReference>(
+    this IObservable<Hand> observable,
+    TReference reference,
+    float speed = 0.1f,
+    float tolerance = 0.075f
+    )
+    where TReference : Component
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Hand.IsMovingRight(
+        Player.instance)
+      .Subscribe(hand => DoSomething(hand));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+  \item TReference\\
+    The type of the movement direction reference object (e.g. main camera, player, HMD, etc). Must extend \textit{UnityEngine.Component}.
+\end{enumerate}
+
+\subsection{Paramters}
+\begin{itemize}
+  \item \textbf{observable} \\
+    Type: \textit{System.IObservable<Leap.Hand>{}>}\\
+    An observable sequence of hand states.
+  \item \textbf{reference} \\
+    Type: \textit{TReference}\\
+    The movement direction reference component.
+  \item \textbf{speed}\\
+    Type: \textit{float}\\
+    A floating point value representing the minimum speed required to detect a movement. Defaults to \textit{0.1}.
+  \item \textbf{tolerance}\\
+    Type: \textit{float}\\
+    A floating point value representing the tolerance between the actual movement direction and the \textit{reference}'s right direction. Defaults to \textit{0.075}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Hand>{}>}
+
+An observable sequence of hand states where the hand is moving in the right direction.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Hand>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+\begin{enumerate}
+  \item \textbf{IsMovingRight(IObservable<Hand>, Player, float, float)}
+\begin{lstlisting}
+  public static IObservable<Hand> IsMovingRight(
+    this IObservable<Hand> observable,
+    Player player,
+    float speed = 0.1f,
+    float tolerance = 0.075f
+    )
+\end{lstlisting}
+  This method accepts a \textit{Valve.VR.InteractionEngine.Player} instance as the reference object. The difference is that the \textit{right} direction here is based on the HMD (Head mounted display) right direction, not on the component's right direction. Useful for VR applications.
+\end{enumerate}
+
+\subsection{Similar methods}
+There are two methods for each of the six recognizable directions - \textit{right, left, up, down, backwards} and \textit{forward}. All methods have similar signatures to the \textit{IsMovingRight} methods described above.
+
+\newpage
+
+\section{IsExtended method}
+Filters the finger state observable to detect the \textit{finger extended} gesture.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<Finger> IsExtended(
+    this IObservable<Finger> observable
+    )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Finger.IsExtended()
+        .Subscribe(finger => DoSomething(finger));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{enumerate}
+  \item \textbf{observable}\\
+    Type: \textit{System.IObservable<Leap.Finger>{}>}\\
+    An observable sequence of finger states.
+\end{enumerate}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence of fingers states where the finger is extended.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Finger>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{IsPointingTo<TTarget> method}
+Filters the finger state observable to detect the \textit{is pointing to} gesture.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<Finger> IsPointingTo<TPlayer, TTarget>(
+    this IObservable<Finger> observable,
+    TTarget target,
+    Func<TTarget, Vector4> targetPositionSelector,
+    float tolerance = 0.075f
+    )  
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Finger.IsPointingTo(
+          targetObject,
+          target => target.transform.position)
+        .Subscribe(finger => DoSomething(finger));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+  \item \textbf{TTarget}\\
+    The type of the target object.
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+    \item \textbf{observable}\\
+      Type: \textit{System.IObservable<Leap.Finger>{}>}\\
+      An observable seuqnce of finger states.
+    \item \textbf{target}\\
+      Type: \textit{TTarget}\\
+      The target object.
+    \item \textbf{targetPositionSelector}\\
+      Type: \textit{System.Func<TTarget, UnityEngine.Vector4>}\\
+      A function which maps the target object to a position in the scene.
+    \item \textbf{tolerance}\\
+      Type: \textit{float}
+      A floating point value representing the tolerance between the actual pointing direction and the direction between the finger's tip position and position returned by the \textit{targetPositionSelector}. Defaults to \textit{0.075}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<Leap.Finger>{}>}
+
+An observable sequence of finger states where the finger is pointing to the target object.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<Finger>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\section{PalmsAreFacing<TLeftTarget, TRightTarget> method}
+Filters the hands state observable to detect the \textit{palms facing} gesture. The difference between using this method and using two \textit{PalmIsFacing} methods is that this method requires both palms to face their target objects at the same time, while using two separate methods for each hand results in at least one hand facing its target at any given time.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing<TLeftTarget, TRightTarget>(
+    this IObservable<ReactiveHandsHelper<Hand>> observable,
+    TLeftTarget leftTarget,
+    Func<TLeftTarget, Vector4> selectorLeft,
+    TRightTarget rightTarget,
+    Func<TRightTarget, Vector4> selectorRight,
+    float tolerance = 0.075f
+    )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Hands.PalmsAreFacing(
+          leftTarget,
+          lt => lt.transform.position,
+          rightTarget,
+          rt => rt.transform.position)
+       .Subscribe(hands => DoSomething(hands));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+  \item \textbf{TLeftTarget}\\
+    The type of the left palm's target object.
+  \item \textbf{TRightTarget}\\
+    The type of the right palm's target object.
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+  \item \textbf{observable}\\
+    Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}\\
+    An observable sequence of hands states.
+  \item \textbf{leftTarget}\\
+    Type: \textit{TLeftTarget}\\
+    The target object of the left hand's palm.
+  \item \textbf{selectorLeft}\\
+    Type: \textit{System.Func<TLeftTarget, UnityEngine.Vector4>}\\
+    A function mapping the left hand's palm's target object to a position in the scene.
+  \item \textbf{rigthTarget}\\
+    Type: \textit{TRightTarget}\\
+    The target object of the right hand's palm.
+  \item \textbf{selectorRight}\\
+    Type: \textit{System.Func<TRightTarget, UnityEngine.Vector4>}\\
+    A function mapping the right hand's palm's target object to a position in the scene.
+  \item \textbf{tolerance}\\
+    Type: \textit{float}\\
+    A floating point value representing the tolerance between the actual left hand's palm's normal and the left target object, and the actual right hand's palm's normal and the right target object. Defaults to \textit{0.075}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}
+
+An observable sequence of hands states where the hands' palms are facing the target objects.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\subsection{Overloads}
+\begin{enumerate}
+  \item \textbf{PalmsAreFacing<TTarget>(IObservable<ReactiveHandsHelper<Hand>{}>, TTarget, Func<TTarget, Vector4>, float)}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing<TTarget>(
+    this IObservable<ReactiveHandsHelper<Hand>> observable,
+    TTarget target,
+    Func<TTarget, Vector4> selector,
+    float tolerance = 0.075f
+    )
+\end{lstlisting}
+  This method accepts only one target that both palms' normals must face.
+
+  \item \textbf{PalmsAreFacing(IObservable<ReactiveHandsHelper<Hand>{}>, float)}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> PalmsAreFacing(
+    this IObservable<ReactiveHandsHelper<Hand>> observable,
+    float tolerance = 0.075f
+    )
+\end{lstlisting}
+  This method detects when the palms are facing eachother.
+
+\end{enumerate}
+
+\newpage
+
+\section{AreMakingFists method}
+Filters the hands state observable sequence to detect the \textit{fist} gesture for both hands. The difference between using this method and using two \textit{IsMakingFist} methods is that this method requires both hands to make a \textit{fist} gesture at the same time, while using two separate methods for each hand results in at least one hand making a \textit{fist} gestuer at any given time.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> AreMakingFists(
+    this IObservable<ReactiveHandsHelper<Hand>> observable
+    )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Hands.AreMakingFists()
+       .Subscribe(hands => DoSomething(hands));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+  \item \textbf{observable}\\
+    Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}\\
+    An observable sequence of hands states.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}
+
+An observable sequence of hands states where the hands are making a \textit{fist} gesture.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\newpage
+
+\section{AreMoving method}
+Filters the hands state observable sequence to detect when both hands are moving. The difference between using this method and using two \textit{IsMoving} methods is that this method requires both hands to move at the same time, while using two separate methods for each hand results in at least one hand moving at any given time.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> AreMoving(
+    this IObservable<ReactiveHandsHelper<Hand>> observable,
+    float speed = 0.1f
+    )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Hands.AreMoving()
+       .Subscribe(hands => DoSomething(hands));
+\end{lstlisting}
+
+\subsection{Parameters}
+\begin{itemize}
+  \item \textbf{observable}\\
+    Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}\\
+    An observable sequence of hands states.
+  \item \textbf{speed}\\
+    Type: \textit{float}\\
+    A floating point value representing the minimum speed required to detect a movement. Defaults to \textit{0.1}.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}
+
+An observable sequence of hands states where the hands are both moving.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
+
+\section{AreMoving<TReference> method}
+Filters the hands state observable sequence to detect when both hands are moving in a given direction. The difference between using this method and using two \textit{IsMoving} methods is that this method requires both hands to move in the same direction at the same time, while using two separate methods for each hand results in at least one hand moving in the given direction at any given time.
+
+\subsection{Syntax}
+\begin{lstlisting}[caption=Declaration]
+  public static IObservable<ReactiveHandsHelper<Hand>> AreMoving<TReference>(
+    this IObservable<ReactiveHandsHelper<Hand>> observable,
+    TReference reference,
+    Func<TReference, Vector4> selector,
+    float speed = 0.1f,
+    float tolerance = 0.075f
+    )
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Usage example]
+  Hands.AreMoving(
+          Player.instance,
+          player => player.hmdTransform.right)
+       .Subscribe(hands => DoSomething(hands));
+\end{lstlisting}
+
+\subsection{Type parameters}
+\begin{enumerate}
+  \item \textbf{TReference}\\
+    The type of the reference object.
+\end{enumerate}
+
+\subsection{Parameters}
+\begin{itemize}
+  \item \textbf{observable}\\
+    Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}\\
+    An observable sequence of hands states.
+
+  \item \textbf{reference}\\
+    Type: \textit{TReference}\\
+    The object the movement is relative to.
+  \item \textbf{selector}\\
+    Type: \textit{System.Func<TReference, UnityEngine.Vector4>}\\
+    A function mapping the reference object to a direction in the scene.
+  \item \textbf{speed}\\
+    Type: \textit{float}\\
+    A floating point value representing the minimum speed required to detect a movement. Defaults to \textit{0.1}.
+  \item \textbf{tolerance}\\
+    Type: \textit{float} \\
+    A floating point value representing the tolerance between the actual movement direction of the left and right hand and the target direction.  Defaults to 0.075.
+\end{itemize}
+
+\subsection{Return value}
+Type: \textit{System.IObservable<FluentMotion.ReactiveHandsHelper<Leap.Hand>{}>}
+
+An observable sequence of hands states where the hands are both moving in the required direction.
+
+\subsection{Remarks}
+You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
 
 \chapter{Testing and Validation}
 
