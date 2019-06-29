@@ -1,5 +1,5 @@
-%\documentclass{sigchi}
-\documentclass[chi_draft]{sigchi}
+\documentclass{sigchi}
+%\documentclass[chi_draft]{sigchi}
 
 % Load basic packages
 \usepackage{balance}       % to better equalize the last page
@@ -156,21 +156,15 @@ While excellent results were obtained in all cases from integrating \leap{} in v
 
 \begin{figure}[b]
 \centering
-  \includegraphics[width=0.9\columnwidth]{figures/LeapMotion_controller}
+  \includegraphics[width=0.7\columnwidth]{figures/LeapMotion_controller}
   \caption{The leapmotion controller}~\label{fig:figure1}
 \end{figure}
 
-The \leap{} controller is a device that consists of two stereo cameras which track infrared light with a wavelength of 850 nanometers (allowing it to work even in dark rooms) \cite{LeapArticle}.
-
-
-The device has a large interaction space, about 0.37 $m^3$. Its range is limited by LED light propagation through space, which is roughly 60cm from the sensor \cite{LeapArticle}.
-
+The \leap{} controller (Figure \ref{fig:figure1}) is a device that consists of two stereo cameras which track infrared light with a wavelength of 850 nanometers (allowing it to work even in dark rooms) \cite{LeapArticle}. The device has a large interaction space, about 0.37 $m^3$. Its range is limited by LED light propagation through space, which is roughly 60cm from the sensor \cite{LeapArticle}.
 
 After the hardware does its job of recording the images, the software starts doing some heavy mathematical lifting. Despite what most users think, the \leap{} controller uses raw sensor data for tracking, not depth maps.
 
-
-The \leap{} service is responsible for processing this sensor data. Every application that uses \leap{} has a reference to an implementation of this service, either for \vr or for desktop mode. First, the service removes background objects and compensates for ambient lightning, and then reconstructs a 3D representation of the raw device data.
-
+The \leap{} service is responsible for processing this sensor data. Every application that uses \leap{} has a reference to an implementation of this service, either for \vr{} or for desktop mode. First, the service removes background objects and compensates for ambient lightning, and then reconstructs a 3D representation of the raw device data.
 
 The tracking layer then extracts information from the 3D representation and feeds these results as frames to a transport protocol. From thereon, each application uses this frames as input.
 
@@ -184,58 +178,63 @@ On June 11, 2018, \leap{} released the latest generation of Orion - version 4. I
   \item more accurate shape and scale for hands
 \end{itemize}
 
-However, the core of the \leap{} API remains the same and, even though it is straightforward, extensible and very well integrated with the Unity game engine, it still lacks flexibility, complex compositions and natural, human-readable description \cite{LMAPI}.
+However, the core of the \leap{} API remains the same and, even though it is straightforward, extensible to a certain degree and very well integrated with the Unity game engine, it still lacks flexibility, complex compositions and natural, human-readable description \cite{LMAPI}.
 
 \section{LEAPMOTION GESTURES}
 
-The \leap{} API \cite{LMAPI} defines mappings for four human body parts:\cite{LMAPI}
+The \leap{} API \cite{LMAPI} defines mappings for four human body parts:
 
 \begin{itemize}
   \item \textbf{arm} (from elbow to wrist) - has one hand attached
   \item \textbf{hand} - has five fingers attached
   \item \textbf{finger} - has three joints (for attaching objects) and four bones
-  \item \textbf{bone}
+  \item \textbf{bone} - different types of bones in a finger
 \end{itemize}
 
-\leap{} offers a variety of gesture detectors already implemented, which can also be combined by the use of a Logic Gate. The logic gate is a higher level detector, combining two or more basic detectors.
+The \leap{} API notifies client applications with updates on the position, direction and velocity of hand elements detected by the controller on average every 10-14 milliseconds. It is thus the task of the client application to detect patterns which constitute the desired gestures in this stream of events, which can lead to highly complex detection logic.
+
+The \leap{} SDK for Unity offers a variety of gesture detectors already implemented, which can also be combined by the use of a Logic Gate. The logic gate is a higher level detector, combining two or more basic detectors.
+
+\begin{figure}[!t]
+      \centering
+      \includegraphics[width=0.7\columnwidth]{figures/ThumbExtendedDetector.png}
+      \caption{Leap Thumb extended detector}~\label{fig:figure2}
+\end{figure}
 
 As an example, a "thumbs up" gesture would be detected as combination of the following detectors:
 
 \begin{itemize}
-  \item Finger Extended Detector - configured to detect a thumb extended and other fingers not extended
-    \begin{figure}[h]
-      \centering
-      \includegraphics[width=0.7\columnwidth]{figures/ThumbExtendedDetector.png}
-      \caption{Leap Thumb extended detector}~\label{fig:figure2}
-    \end{figure}
-  \item Finger Pointing Detector - configured to detect that the thumb is pointing up (\textit{Vector3(0, 0, 1)}) relative to the horizon
-    \begin{figure}[h]
+  \item Finger Extended Detector - configured to detect a thumb extended and other fingers not extended (Figure \ref{fig:figure2})
+    \begin{figure}[!b]
       \centering
       \includegraphics[width=0.7\columnwidth]{figures/ThumbPointingUpDetector.PNG}
       \caption{Leap Thumb pointing up detector}~\label{fig:figure3}
-    \end{figure}
-  \item And Logic Gate - to combine the other two detectors and have callbacks (C\# scripts) attached to it
-    \begin{figure}[h]
+\end{figure}
+  \item Finger Pointing Detector - configured to detect that the thumb is pointing up (\textit{Vector3(0, 0, 1)}) relative to the horizon (Figure \ref{fig:figure3})
+    
+  \item And Logic Gate - to combine the other two detectors and have callbacks (C\# scripts) attached to it (Figure \ref{fig:figure4})
+    
+\end{itemize}
+
+
+\begin{figure}[!t]
       \centering
       \includegraphics[width=0.7\columnwidth]{figures/ThumbsUpDtector.PNG}
       \caption{Leap Thumb pointing up detector}~\label{fig:figure4}
-    \end{figure}
-\end{itemize}
-
+\end{figure}
 This approach requires adding three components to a game object and referencing the first two detectors (Finger Extended Detector and Finger Pointing Detector) from the Logic Gate. This can quickly get out of hand when requiring a high number of combined gestures.
 
 \section{REACTIVE EXTENSIONS}
 
-\begin{figure}[H]
+\begin{figure}[!b]
   \centering
   \includegraphics[width=0.9\columnwidth]{figures/RX_filter}
   \caption{Example of a RX operator}~\label{fig:figure5}
 \end{figure}
   
-ReactiveX is a powerful library for asynchronous and event-based programming. It is an implementation of the observer pattern meant for event-driven programming. It also extends the observer pattern with operators that allow the user to compose sequences declaratively without worrying about low-level concerts (such as mutlithreading and the problems that come with it).
+ReactiveX is a powerful library for asynchronous and event-based programming, which allows expressing complex event handling logic using functional programming concepts. It is an implementation of the observer pattern meant for event-driven programming. It also extends the observer pattern with operators that allow the user to compose sequences declaratively without worrying about low-level concepts (such as multithreading and the problems that come with it).
 
-
-Figure \ref{fig:figure2} shows how an operator works on an observable. In the example, the operator is \textit{filter}. \textit{Filter} takes as input a predicate, a function that maps a value to a boolean (true or false). So, from the source observable [2, 30, 22, 5, 60, 1], by filtering the elemnts greater than 10, we are left with only [30, 22, 60]. Note that the elements are emitted in the same order that they were in the source, almost instantly. The vertical line at the end represents the end of the observable stream. One can attach a callback to that, called \textit{OnComplete}.
+Figure \ref{fig:figure5} shows how an operator works on an observable. In the example, the operator is \textit{filter}. \textit{Filter} takes as input a predicate, a function that maps a value to a boolean (true or false). So, from the source observable [2, 30, 22, 5, 60, 1], by filtering the elements greater than 10, we are left with only [30, 22, 60]. Note that the elements are emitted in the same order that they were in the source, almost instantly. The vertical line at the end represents the end of the observable stream. One can attach a callback to that, called \textit{OnComplete}.
 
 
 The main data structure used by ReactiveX is \textit{Observables}. As stated on their intro page:
@@ -299,7 +298,7 @@ From \leap{}'s human body parts, \fluentmotion{} makes use only of \textbf{hands
 \subsection{Finger Gestures}
 \begin{itemize}
   \item \textit{IsExtended} - selected finger is extended
-  \item \textit{IsPointingTo} - selected finger is pointing to a given target (Unity Gameobject or a hand)
+  \item \textit{IsPointingTo} - selected finger is pointing to a given target (Unity Game object or a hand)
   \item \textit{AreExtended} - selected fingers are extended (the others are marked as \textit{don't care}, so they could be extended or not)
 \end{itemize}
 
@@ -328,37 +327,35 @@ Besides the already defined gestures, users can create their own gesture detecto
 The main advantage of \fluentmotion{} is that all gestures - basic and user defined - can be chained indefinitely. Through chaining, more complex gestures can be defined, like swiping right with your left hand while your thumb is up and your index is pointing towards some game object or towards the sky.
 
 \subsection{Unity integration}
-After having the \leap{} and \steamvr{} set up, adding \fluentmotion{} to your application is done in two simple steps:
 
-\begin{enumerate}
-  \item Add three new empty game objects anywhere in the scene. It is recommended, but not mandatory, to make two of the objects children to the 3\textsuperscript{rd} (as in figure \ref{fig:figure6})
-  \begin{figure}[H]
+\fluentmotion{} integrates easily with Unity through attaching \textit{ReactiveHand} and \textit{ReactiveHands} scripts to three new empty game objects as illustrated in figures \ref{fig:figure6} and \ref{fig:figure7}. The parent-children hierarchy is recommended, though not mandatory.
+
+
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_setup}
     \caption{Setting up \fluentmotion{} game objects}~\label{fig:figure6}
   \end{figure}
 
-  \item Attach a \textit{ReactiveHand} script to two of the objects, referencing either the left or the right hand from the LeapRig, and attach a \textit{ReactiveHands} script to the 3\textsuperscript{rd}, referencing the other two \textit{ReactiveHand}s
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_reactive_hand}
-    \caption{The \textit{ReactiveHand} script attached to the game object}~\label{fig:figure7}
-  \end{figure}
-\end{enumerate}
-
-\subsection{Creating Detectors}
-
-To create a detector, extend the \textit{ReactiveHandDetector} class in your own script. As an example, a possible implementation for the "L" gesture - thumb and index are extended, and the others are not - is shows in figure \ref{fig:figure8}.
-
 \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_script_attached}
+  \caption{Script attached to the right \textit{ReactiveHand}}~\label{fig:figure7}
+\end{figure}
+
+\subsection{Creating Gesture Detectors}
+
+Detectors can be created by simply extending the \textit{ReactiveHandDetector} class in a script. As an example, a possible implementation for the "L" gesture - thumb and index are extended, while the others are not (table \ref{tab:table1}) - is shown in Figure \ref{fig:figure8}.
+
+\begin{figure}[!b]
   \centering
   \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_script}
   \caption{The \textit{ReactiveHand} script start function}~\label{fig:figure8}
 \end{figure}
 
-The code in figure \ref{fig:figure8} is one of the many ways for expressing this detector. Another option is presented in figure \ref{fig:figure9}.
+The code in Figure \ref{fig:figure8} is one of many ways for composing this gesture. Alternatively, an implementation using the \textit{When} construct is shown in Figure \ref{fig:figure9}
 
-\begin{figure}[H]
+\begin{figure}[!b]
   \centering
   \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_script_alternative}
   \caption{The \textit{ReactiveHand} script start function, using the \textit{When} operator}~\label{fig:figure9}
@@ -366,11 +363,15 @@ The code in figure \ref{fig:figure8} is one of the many ways for expressing this
 
 The \textit{When} operator is a very powerful construct available in \fluentmotion{}. The first argument to this operator is an optional reduction (combination) lambda function which takes two boolean values as input and returns one boolean value. The default value for this reduction function is the AND operator (the returned boolean value is the logical "and" between the two inputs). Then comes a variable number of predicates, lambda expressions that take as input one value (of the same type as the underlying data stream) and return a boolean value. The combination lambda is applied to each of the predicates' outputs, left to right. If one of the values changes the result of the reduction from \textit{true} to \textit{false}, the reduction process stops (due to the \textit{shortcircuit} property of boolean operators) and the whole data stream cancels.
 
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{figures/Alternate_script}
+  \caption{Mixing gesture composition methods}~\label{fig:mix}
+\end{figure}
 
-Of course, a mix of the two methods described in figures \ref{fig:figure8} and \ref{fig:figure9} can be used - say, for when you also want the thumb to point upwards.
+Of course, a mix of the two methods described in figures \ref{fig:figure8} and \ref{fig:figure9} can be used - say, for when you also want the thumb to point upwards (Figure \ref{fig:mix}).
 
-
-The next step is to implement the \textit{OnDetect} method. A possible implementation is shown in figure \ref{fig:figure10}.
+Adding callback functions to be executed when a gesture is correctly recognized is as easy as implementing the \textit{OnDetect} method. One possible implementation is shown in Figure \ref{fig:figure10}. The \textit{params object[] others} are variable arguments - you can pass any extra parameters to this function.
 
 \begin{figure}[h]
   \centering
@@ -378,22 +379,17 @@ The next step is to implement the \textit{OnDetect} method. A possible implement
   \caption{\textit{OnDetect} function}~\label{fig:figure10}
 \end{figure}
 
-The \textit{params object[] others} are variable arguments - you can pass any extra parameters to this function.
-
-
-Last, add the script to one of the \textit{ReactiveHand}s in the scene - for example, the right hand - as shown in figure \ref{fig:figure11}. 
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.9\columnwidth]{figures/FluentMotion_script_attached}
-  \caption{Script attached to the right \textit{ReactiveHand}}~\label{fig:figure11}
-\end{figure}
-
-The \textit{Interval} field represents the sampling rate expressed in seconds. The sampling rate means how often the same gesture should be detected. The field is of type \textbf{double}, so values less than 1 second can be set. The default value is 500ms (0.5 seconds).
+These custom scripts can then be added to one of the \textit{ReactiveHand}s in the scene - for example, the right hand - as shown in Figure \ref{fig:figure7}. The \textit{Interval} field represents the sampling rate expressed in seconds. The sampling rate means how often the same gesture should be detected. The field is of type \textbf{double}, so values less than 1 second can be set. The default value is 500ms (0.5 seconds).
 
 \section{Testing}
 
-For testing purposes, a simple application with 8 possible gestures was created. In the application the is a cube with an icon on it. The icon represents the gesture the cube expects from the player. Once that gesture is detected, the icon (and expected gesture) changes to another random gesture from the pool. The 8 possible gestures and their icon representation are shown in table \ref{tab:table1}.
+For testing purposes, a simple application with 8 possible gestures was created, each gesture having an associated icon. The icon represents the gesture the application expects from the player. Once that gesture is detected, the icon (and expected gesture) changes to another random gesture from the pool. The 8 possible gestures and their icon representation are shown in table \ref{tab:table1}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{figures/Demo_not_detected.jpg}
+  \caption{Icon not changing when an incorrect gesture is made}~\label{fig:figure12}
+\end{figure}
 
 \begin{table}[h]
   \centering
@@ -414,13 +410,7 @@ For testing purposes, a simple application with 8 possible gestures was created.
   \label{tab:table1}
 \end{table}
 
-All the gestures are expected to be done by either the left or the right hand. In figure \ref{fig:figure12}, a pinch gesture is made with the right hand, but the cube expects a "L" gesture, so it does nothing.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.9\columnwidth]{figures/Demo_not_detected.jpg}
-  \caption{Cube not changing when an incorrect gesture is made}~\label{fig:figure12}
-\end{figure}
+All the gestures are expected to be done by either the left or the right hand. In Figure \ref{fig:figure12}, a pinch gesture is made with the right hand, but the application expects an "L" gesture, so it does nothing.
 
 \section{Performance}
 
@@ -463,16 +453,11 @@ Hardware requirements are set by \textbf{SteamVR}, as it is the most demanding o
 The hardware requirements apply only to the applications developed using \fluentmotion{}, not to first hand API users (developers).
 
 \section{Conclusions}
-\vr{}, even though a new, is a galloping technology whose tendencies are to become closer and closer to the actual reality. This tendency has fueled companies like \leap{} to invent new and more natural means of interacting with the \vr{} world.
+\vr{}, even though relatively new, is a galloping technology whose tendency is to become closer and closer to the actual reality. This tendency has fueled companies like \leap{} to invent new and more natural means of interacting with the \vr{} world.
 
+Their basic API, though powerful on its own, lacked flexibility and readability. This missing features drove the development of \fluentmotion{}, a human readable, flexible and extendable API for gesture-based interaction in Virtual Reality using the \leap{} controller. Based on Microsoft's \rx{}, this API has the potential to greatly simplify the gesture composing and detection in \leap{} enabled VR applications. It provides easy integration with \unity{}, allowing the definition of new, custom gestures using a human readable description (based on already existing ones) and creating interaction callbacks. \fluentmotion{} works on \vive{} and \oculus{} for VR-enabled application and can also be used in desktop mode. This work improved the rudimentary API offered by \leap{} and offers a more natural, powerful and flexible way of detecting and composing hand and finger gestures.
 
-Their basic API, though powerful on its own, does not offer much flexibility and readability. This missing features created the need for a new, modern API.
-
-In an attempt to answer this call, \fluentmotion{} could be the needed replacement.
-
-This paper presented the features of this new API, which features a flexible way of defining new gestures, Unity Game Engine integration and increased readability.
-
-Future improvements include continuous gestures (like detecting letters drawn in the air) and the detection of "negated gestures" (\textit{detect when *this* does not occur}).
+Future improvements include further refinement of continuous gestures (like detecting letters drawn in the air) and the detection of "negated gestures" (\textit{detect when *this* does not occur}).
 
 % BALANCE COLUMNS
 \balance{}

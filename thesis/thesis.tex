@@ -80,8 +80,8 @@ basicstyle=\ttfamily\small,
 \renewcommand{\thesisauthor}{Radu PETRI\c{S}EL}    %% Your name.
 \renewcommand{\thesismonth}{June}     %% Your month of graduation.
 \renewcommand{\thesisyear}{2019}      %% Your year of graduation.
-\renewcommand{\thesistitle}{REACTIVE PROGRAMMING BASED GESTURE DETECTION IN VIRTUAL REALITY USING LEAPMOTION} 
-\renewcommand{\thesissupervisor}{Assist. Prof. Dr. Eng. Adrian SABOU}
+\renewcommand{\thesistitle}{GESTURE-BASED INTERACTION IN VIRTUAL REALITY USING LEAP MOTION AND REACTIVE PROGRAMMING} 
+\renewcommand{\thesissupervisor}{S.l. Dr. Eng. Adrian SABOU}
 \newcommand{\department}{\bf FACULTY OF AUTOMATION AND COMPUTER SCIENCE\\
 COMPUTER SCIENCE DEPARTMENT}
 \newcommand{\thesis}{LICENSE THESIS}
@@ -155,15 +155,15 @@ Graduate: {\bf \thesisauthor}
 {\bf \thesistitle}
 \end{center}
 
-\vspace{1cm}
+\vspace{0.75cm}
 
 \begin{enumerate}
   \item {\bf Project proposal:} {\it A Reactive Programming oriented Unity asset for gesture detection using the LeapMotion controller}
-  \item {\bf Project contents:} {\it (enumerate the main component parts) Presentation page, advisor's evaluation, title of chapter 1, title of chapter 2, ..., title of chapter n, bibliography, appendices.}
+  \item {\bf Project contents:} {\it Introduction - Project Context, Project Objectives and Specifications, Bibliographic research, Analysis and Theoretical Foundation, Detailed Design and Implementation, Testing and Validation, User's Manual, Conclusions, Bibliography}
   \item {\bf Place of documentation:} {\it Technical University of Cluj-Napoca, Computer Science Department}
   \item {\bf Consultants:} \thesissupervisor{}
   \item {\bf Date of issue of the proposal:} November 1, 2018
-  \item {\bf Date of  delivery:} June 14, 2019
+  \item {\bf Date of  delivery:} July 8, 2019
 \end{enumerate}
 
 \vspace{1.2cm}
@@ -257,7 +257,7 @@ The modern, consumer version of headsets started developing in the early 2010s. 
   \label{fig:morpheus}
 \end{wrapfigure}
 
-\footnotetext{Image from \cite{Figure11}}
+\footnotetext{Image from https://bit.ly/2LqT2DG}
 
 This discovery was quickly adopted by the other companies on the market, with Sony announcing \textit{Project Morpheus} in 2014 and Google announcing \textit{Cardboard} in 2015. In 2016, HTC released and shipped the first units of \textit{Vive SteamVR}, the first major commercial headset for average users.
 
@@ -269,13 +269,13 @@ Special input devices are required for interaction with the virtual world, such 
 
 \section{Gesture recognition}
 
-\begin{wrapfigure}[14]{l}{0.45\linewidth}
+\begin{wrapfigure}[13]{l}{0.45\linewidth}
   \includegraphics[width=\linewidth]{img/GestRecog_child.jpg}
   \caption[]{A child being recognized by a simple gesture detection algorithm \footnotemark }
   \label{fig:child}
 \end{wrapfigure}
 
-\footnotetext{Image from \cite{Figure12}}
+\footnotetext{Image from https://bit.ly/2XC60VG}
 
 Gesture recognition is an active research field with the objective of comprehending human gestures through mathematical models. Gestures can come from any posture or position of the body, but they typically come from the hand. Without actually touching them, users can use simple motions to command or communicate with machines.
 
@@ -564,10 +564,10 @@ Virtual Reality has a variety of uses in a multitude of domains, such as:
 
 \begin{enumerate}
   \item \textbf{Education and training} \\
-    VR is used to provide a virtual world for trainees to improve their abilities without the risk of failure in the real world. Applications such as flight simulators, surgery training and spacewalk training have been used for decades in strongly technologised countries.
+    VR is used to provide a virtual world for trainees to improve their abilities without the risk of failure in the real world. Applications such as flight simulators, surgery training and spacewalk training have been used for decades in strongly technologised countries. \cite{FlightSim}
 
   \item \textbf{Engineering and robotics} \\
-    The use of 3D computer-aided design (CAD) data was limited by 2D monitors and paper printouts until the mid-to-late 1990s, when video projectors, 3D tracking, and computer technology enabled a renaissance in the use of 3D CAD data in virtual reality environments. Innovative VR engineering systems allow engineers to visualize virtual prototypes before any physical models are available.
+    The use of 3D computer-aided design (CAD) data was limited by 2D monitors and paper printouts until the mid-to-late 1990s, when video projectors, 3D tracking, and computer technology enabled a renaissance in the use of 3D CAD data in virtual reality environments. Innovative VR engineering systems allow engineers to visualize virtual prototypes before any physical models are available. \cite{Bridges}
 
   \item \textbf{Entertainment} \\
     During the early to mid 1990s, several vanilla commercial virtual reality headsets have been released for gaming, such as the \textit{Virtual Boy} developed by Nintendo or \textit{VFX1 Headgear} developed by Forte Technologies. Films produced for VR permit the audience to view a 360-degree environment. This can involve the use of VR cameras to produce films and series that are interactive in VR. VR may help people attend concerts without effectively being there.
@@ -576,7 +576,7 @@ Virtual Reality has a variety of uses in a multitude of domains, such as:
     A 2017 report by Goldman Sachs investigated healthcare applications of VR and AR. \cite{VRAR}. Some companies are adapting VR for fitness by using gamification concepts to encourage exercise. Since the 2000s, virtual reality has been used for rehabilitation. Despite countless research, there is a lack of excellent quality proof of its effectiveness compared to other techniques of rehabilitation without advanced and costly facilities for Parkinson's disease therapy. \cite{Parkinsons}
 
   \item \textbf{Heritage and archaeology} \\
-    Virtual reality allows highly accurate recreation of historic locations so that artistic renderings can be published in different media. The initial sites are very often unavailable to the public or difficult to portray due mainly to the bad condition of their conservation. Using this technology, virtual replicas of grottoes, environment, ancient cities and monuments, sculptures and archaeological components can be developed.
+    Virtual reality allows highly accurate recreation of historic locations so that artistic renderings can be published in different media. The initial sites are very often unavailable to the public or difficult to portray due mainly to the bad condition of their conservation. Using this technology, virtual replicas of grottoes, environment, ancient cities and monuments, sculptures and archaeological components can be developed. \cite{Heritage}
 
   \item \textbf{Occupational safety} \\
     VR simulates real workplaces for occupational safety and health purposes. Perspective, viewing angle, and acoustic and tactile characteristics alter depending on where the individual is standing and how they move relative to the setting. VR enables all phases of a product life cycle, from design, through use, up to disposal, to be simulated, analyzed and optimized. 
@@ -604,8 +604,8 @@ So, how would one improve the issue of VR interaction? As of now, there are two 
   \label{mfig:vive_occulus}
 \end{figure}
 
-\footnotetext[1]{Image from \cite{VIVECONTROLLERS}}
-\footnotetext[2]{Image from \cite{OCCULUSTOUCH}}
+\footnotetext[1]{Image from https://bit.ly/2xmVRgN}
+\footnotetext[2]{Image from https://bit.ly/321nXMw}
 
 \section{Gestures}
 
@@ -692,18 +692,18 @@ Gesture detectiona algorithms can be split in three major categories, based on t
   \caption[]{The different digital representations of a hand \footnotemark}
   \label{mfig:hands}
 \end{figure}
-\footnotetext{Images courtesy of \cite{HANDS}}
+\footnotetext{Images courtesy of https://bit.ly/2XC60VG}
 
 \subsection{Input devices}
 While there is a big quantity of studies conducted in gesture recognition focusing on image/video, there is a certain variation among applications within the instruments and implementations used.
 
 \begin{enumerate}
   \item \textbf{Wired gloves} \\
-    Using magnetic or inertial monitoring devices, wired gloves can provide information to the computer about the hands' position and rotation. In addition, some gloves can sense the curling of fingers with a high degree of precision (5-10 degrees) or even provide the user with haptic feedback, which is a model of touch sensation.
+    Using magnetic or inertial monitoring devices, wired gloves can provide information to the computer about the hands' position and rotation. In addition, some gloves can sense the curling of fingers with a high degree of precision (5-10 degrees) or even provide the user with haptic feedback, which is a model of touch sensation. \cite{Zimmerman:1986:HGI:1165387.275628}
   \item \textbf{Depth-aware cameras} \\
-    Using dedicated cameras like structured light or time-of-flight cameras, one may create a depth map of what one sees through the camera in a limited range and use this information to approximate a 3D model of what one sees. Due to their limited range capacities, these can be efficient in detecting hand gestures.
+    Using dedicated cameras like structured light or time-of-flight cameras, one may create a depth map of what one sees through the camera in a limited range and use this information to approximate a 3D model of what one sees. Due to their limited range capacities, these can be efficient in detecting hand gestures. \cite{DepthCamera}
   \item \textbf{Stereo cameras} \\
-    Using two cameras whose positions are known to each other, the cameras' output can calculate an approximate 3D representation. A positioning reference such as a lexian-stripe or an infrared emitter can be used to get the distance between the cameras.
+    Using two cameras whose positions are known to each other, the cameras' output can calculate an approximate 3D representation. A positioning reference such as a lexian-stripe or an infrared emitter can be used to get the distance between the cameras. \cite{StereoCamera}
   \item \textbf{Gesture based controllers} \\
     These controllers function as a an extension of the body so that most of their movement can be easily recorded by software while gestures are made. An instance of developing gesture-based movement recording is skeletal hand tracking, created for apps of virtual reality and augmented reality.
 \end{enumerate}
@@ -737,7 +737,7 @@ The unit has a big interaction room of 0.22 m\textsuperscript{3} thanks to its w
 
 This raw data is then stored in the device's local memory and then sent via USB to the \textit{Leap Motion tracking software}. As the cameras work with near-infrared light, the data is in the form of grayscale stereo images, as shown in figure \ref{fig:leap_raw}.
 
-\footnotetext[1]{Image from \cite{LEAPCTRL}}
+\footnotetext[1]{Image from https://bit.ly/321EbVR}
 \footnotetext[2]{Image from \cite{LeapArticle}}
 
 \begin{figure}[h]
@@ -763,7 +763,7 @@ Though a transport layer, the results(frames) are fed to the \textit{Leap Motion
 
 Although the device itself has been the same since it's launch in 2013, the software has undergone several do-overs and upgrades. Their SDK started with desktop-only tracking capabilities for its first two major versions. In 2014, they added a VR tracking mode to it and in 2016 they released Orion, Leap Motion's VR-dedicated SDK.
 
-\footnotetext{Image from \cite{CAPSULE_HANDS}}
+\footnotetext{Image from https://bit.ly/2xuGnHL}
 
 \subsection{Gestures and detectors}
 
@@ -787,7 +787,7 @@ The Leap Motion API \cite{LMAPI} defines mappings for four human body parts:\cit
   \label{fig:leap_bones}
 \end{figure}
 
-\footnotetext{Image from \cite{LEAP_BONES}}
+\footnotetext{Image from https://bit.ly/2XcDOJz}
 
 Leap Motion offers a variety of gesture detectors already implemented, which can also be combined by the use of a Logic Gate. The logic gate is a higher level detector, combining two or more basic detectors.
 
@@ -824,6 +824,10 @@ As an example, a "thumbs up" gesture would be detected as combination of the fol
 
 This approach requires adding three components to a game object and referencing the first two detectors (Finger Extended Detector and Finger Pointing Detector) from the Logic Gate. This can quickly get out of hand when requiring a high number of combined gestures. The logic gate detector is also highly coupled to the other two detectors, and any change in the base detectors (conditions, renaming or, the worse, moving) will come with a change in the logic gate detector. Even though, with this approach, the basic detectors are reusable, the logic gates usually are not.
 
+Kerefeyn and Maleshkov \cite{Kerefeyn} used Leap Motion to control and manipulate objects in a VR scenario. Their solution splits the VR logic and the interaction logic and, while the overall interaction style proved to be a success, programming the interaction logic was cumbersome and strictly hard-coded for their application.
+
+Khundam \cite{Khundam} use Leap Motion to control the movement of a first-person avatar in a VR scene. Movement is controlled by predefined gestures through Leap Motion's SDK for Unity, detected through complex composition of basic detectors using logic gates. The same gesture composition and detection approach is employed by Pop and Sabou in their work on dynamic data visualization and manipulation in VR \cite{Pop}.
+
 This issues fuel the need for a higher level API that is flexible and easily extendable, and which has high reusability. The API should adhere to a programming model which reacts to change rather than query components for changes so that is gives high performance.
 
 \section{Reactive programming}
@@ -835,16 +839,16 @@ Examples of Reactive Programming include hardware description languages (HDLs), 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.9\linewidth]{img/RX_filter.JPG}
+  \includegraphics[width=0.95\linewidth]{img/RX_filter.JPG}
   \caption[]{Example of a RX operator \footnotemark}
   \label{fig:rx_filter}
 \end{figure}
-
-\footnotetext{Image from \cite{RX_FILTER}}
   
 ReactiveX is a powerful library for asynchronous and event-based programming. It is an implementation of the observer pattern meant for event-driven programming. It also extends the observer pattern with operators that allow the user to compose sequences declaratively without worrying about low-level concerts (such as mutlithreading and the problems that come with it).
 
 Figure \ref{fig:rx_filter} shows how an operator works on an observable. In the example, the operator is \textit{filter}. \textit{Filter} takes as input a predicate, a function that maps a value to a boolean (true or false). So, from the source observable [2, 30, 22, 5, 60, 1], by filtering the elemnts greater than 10, we are left with only [30, 22, 60]. Note that the elements are emitted in the same order that they were in the source, almost instantly. The vertical line at the end represents the end of the observable stream. One can attach a callback to that, called \textit{OnComplete}.
+
+\footnotetext{Image from https://bit.ly/2IXzy80}
 
 The main data structure used by ReactiveX is \textit{Observables}. As stated on their intro page:
 
@@ -857,6 +861,8 @@ Code snippets \ref{alg:iterable} and \ref{alg:observable} show the resemblance b
 In the \textit{forEach} example, the thread is blocked until 15 elements arrive from the \textit{getDataFromNetwork} call (first 10 are skipped, then only 5 are processed by the \textit{map}).
 
 In the \textit{subscribe} example, the only delay in the thread's execution is the creation of the observable stream, after which other instructions are executed. When data arrives from the \textit{getDataFromNetwork}, the thread which created the observable is interrupted and data is processed.
+
+\newpage
 
 \begin{lstlisting}[caption=Iterable, label=alg:iterable]
   GetDataFromLocalMemory()
@@ -889,6 +895,8 @@ RX Observables also offer three methods for of flow control - \textit{OnNext}, \
   \caption{Observable position in multiple items and asynchronous world}
   \label{table:rx}
 \end{table}
+
+Reactive Extensions seem to offer a good solution to the problem of Leap Motion's unfriendly Unity SDK,yet no other implementations were found combining the two technologies. Jewgeni Horn \cite{zuhlke} attempted to integrate the two technologies at Zühlke Emerging Technologies Center, but he only implemented a stub of the API, namely the \textit{knock} gesture.
 
 \chapter{Analysis and Theoretical Foundation}
 
@@ -1055,9 +1063,11 @@ Developer using Fluent Motion - interested in performing an action when a simple
 
 \chapter{Detailed Design and Implementation}
 
-\section{Fluent Motion simple gestures}
+\section{Fluent Motion predefined gestures}
 
-Fluent Motion defines a total of ten simple gestures that can be detected by the Leap Motion controller. The methods presented below each have multiple implementations, so as not to put too much pressure on the user regarding the syntax he or she should use.
+Fluent Motion defines a total of ten predefined gestures that can be detected by the Leap Motion controller. The methods presented below each have multiple implementations, so as not to put too much pressure on the user regarding the syntax he or she should use.
+
+In the following paragraphs, the lowest-level building blocks of gesture recognition and composition for FluentMotion are presented. They try to cover as many distinct gestures as possible without being too complex.
 
 \subsection{Finger Gestures}
 \begin{enumerate}
@@ -1083,6 +1093,60 @@ Fluent Motion defines a total of ten simple gestures that can be detected by the
 \end{enumerate}
 
 Besides the enumerated gestures, several simple detectors are present in the form of \textit{abstract} classes, which only need the \textit{OnDetect} callback to be implemented in order to make use of the detector.
+
+
+\section{IReactiveObject interface}
+This is one of the two major interfaces in \textit{FluentMotion}. It's purpose is to abstract the transition from a non-ReactiveX type to a ReactiveX type. The interface looks as follows:
+
+\begin{lstlisting}[caption=IReactiveObject interface]
+  public interface IReactiveObject<in TTrackedObject, out TReactiveObject>
+  {
+      TReactiveObject Selector(TTrackedObject reactiveObject);
+      bool IsValid(TTrackedObject reactiveObject);
+      IObservable<TReactiveObject> AsObservable();
+  }
+\end{lstlisting}
+
+\subsection{Selector}
+The selector functions maps a Unity object to the type of the observable that the interface represents. The mapping can be as simple as the identity function, but its presence increases the flexibility of this interface. For instance, one could map a hand tracked by Leap Motion to select only a finger (or more) in order to reduce the size of the overall code.
+
+\subsection{IsValid}
+The IsValid predicate indicates when the tracked data is valid. There are certain cases when data becomes invalid, such as when the tracked hand leaves the viewing area of the Leap Motion controller.
+
+\subsection{AsObservable}
+Generally, the user would implement this interface by means of a \textit{Subject} on which to call \textit{OnNext} whenever the input data is valid. The \textit{Subject} class does not have the LINQ methods defined against it, so it should be mapped to a \textit{Observable} instance instead. This method offers a convenient way of converting the \textit{Subject} to a \textit{Observable}.
+
+\section{IReactiveDetector interface and the ReactiveDetectorBase abstract class}
+The other maximum importance part of the \textit{FluentMotion} API is gesture detection. The \textit{IReactiveDetector} and \textit{ReactiveDetectorBase} come with two basic abstractions of methods used for detection. Their declarations look as follows:
+
+\begin{lstlisting}[caption=IReactiveDetector interface]
+  public interface IReactiveDetector<in TInput>
+  {
+      void OnDetect(TInput input, params object[] others);
+
+      TimeSpan TimeSpan { get; }
+  }
+\end{lstlisting}
+
+\begin{lstlisting}[caption=ReactiveDetectorBase abstract class]
+  public abstract class ReactiveDetectorBase<TInput> : MonoBehaviour, IReactiveDetector<TInput>
+  {
+      public double interval = 0.5;
+
+      public virtual object[] Parameters => null;
+
+      public abstract void OnDetect(TInput input, params object[] others);
+      public TimeSpan TimeSpan => TimeSpan.FromSeconds(interval);
+  }
+\end{lstlisting}
+
+The advantage of having the interface is that it is not coupled to the Unity Game Engine, since all its methods and parameters are found in the system namespace. One might notice the abscence of a \textit{Detect}-like method. The abscence is intentional. In the Unity Game Engine, detection starts when the game object lifecycle starts. In a different environment, it might need to happen every frame update or maybe after a frame update. As such, the user is free to implement the detection based on his/her needs.
+
+\subsection{}{OnDetect}
+The \textit{OnDetect} method is called when a gesture is detected. It receives as input the object from the underlying observable stream and it can also get multiple variable parameters for various use cases. In the \textit{ReactiveDetectorBase} class, there is also a \textit{Parameters} property which can be used for cases when the user does not want or cannot pass parameters directly to the method itself.
+
+\subsection{TimeSpan}
+Performance is a very important astept in VR applications. The \textit{TimeSpan} property determines how often the system attempts to detect gestures so that it does not affect performance. In the \textit{ReactiveDetectorBase} class, the interval default to half a second and it accepts being set directly from the Unity Game Editor interface, rather than from the code behind.
 
 \section{When<TInput, TResult> method}
 
@@ -1992,59 +2056,6 @@ An observable sequence of hands states where the hands are both moving in the re
 \subsection{Remarks}
 You can call this method as an instance method on any object of type \textit{IObservable<ReactiveHandsHelper<Hand>{}>}. When you use instance method syntax to call this method, omit the first parameter.
 
-\section{IReactiveObject interface}
-This is one of the two major interfaces in \textit{FluentMotion}. It's purpose is to abstract the transition from a non-ReactiveX type to a ReactiveX type. The interface looks as follows:
-
-\begin{lstlisting}[caption=IReactiveObject interface]
-  public interface IReactiveObject<in TTrackedObject, out TReactiveObject>
-  {
-      TReactiveObject Selector(TTrackedObject reactiveObject);
-      bool IsValid(TTrackedObject reactiveObject);
-      IObservable<TReactiveObject> AsObservable();
-  }
-\end{lstlisting}
-
-\subsection{Selector}
-The selector functions maps a Unity object to the type of the observable that the interface represents. The mapping can be as simple as the identity function, but its presence increases the flexibility of this interface. For instance, one could map a hand tracked by Leap Motion to select only a finger (or more) in order to reduce the size of the overall code.
-
-\subsection{IsValid}
-The IsValid predicate indicates when the tracked data is valid. There are certain cases when data becomes invalid, such as when the tracked hand leaves the viewing area of the Leap Motion controller.
-
-\subsection{AsObservable}
-Generally, the user would implement this interface by means of a \textit{Subject} on which to call \textit{OnNext} whenever the input data is valid. The \textit{Subject} class does not have the LINQ methods defined against it, so it should be mapped to a \textit{Observable} instance instead. This method offers a convenient way of converting the \textit{Subject} to a \textit{Observable}.
-
-\section{IReactiveDetector interface and the ReactiveDetectorBase abstract class}
-The other maximum importance part of the \textit{FluentMotion} API is gesture detection. The \textit{IReactiveDetector} and \textit{ReactiveDetectorBase} come with two basic abstractions of methods used for detection. Their declarations look as follows:
-
-\begin{lstlisting}[caption=IReactiveDetector interface]
-  public interface IReactiveDetector<in TInput>
-  {
-      void OnDetect(TInput input, params object[] others);
-
-      TimeSpan TimeSpan { get; }
-  }
-\end{lstlisting}
-
-\begin{lstlisting}[caption=ReactiveDetectorBase abstract class]
-  public abstract class ReactiveDetectorBase<TInput> : MonoBehaviour, IReactiveDetector<TInput>
-  {
-      public double interval = 0.5;
-
-      public virtual object[] Parameters => null;
-
-      public abstract void OnDetect(TInput input, params object[] others);
-      public TimeSpan TimeSpan => TimeSpan.FromSeconds(interval);
-  }
-\end{lstlisting}
-
-The advantage of having the interface is that it is not coupled to the Unity Game Engine, since all its methods and parameters are found in the system namespace. One might notice the abscence of a \textit{Detect}-like method. The abscence is intentional. In the Unity Game Engine, detection starts when the game object lifecycle starts. In a different environment, it might need to happen every frame update or maybe after a frame update. As such, the user is free to implement the detection based on his/her needs.
-
-\subsection{}{OnDetect}
-The \textit{OnDetect} method is called when a gesture is detected. It receives as input the object from the underlying observable stream and it can also get multiple variable parameters for various use cases. In the \textit{ReactiveDetectorBase} class, there is also a \textit{Parameters} property which can be used for cases when the user does not want or cannot pass parameters directly to the method itself.
-
-\subsection{TimeSpan}
-Performance is a very important astept in VR applications. The \textit{TimeSpan} property determines how often the system attempts to detect gestures so that it does not affect performance. In the \textit{ReactiveDetectorBase} class, the interval default to half a second and it accepts being set directly from the Unity Game Editor interface, rather than from the code behind.
-
 \chapter{Testing and Validation}
 
 For testing purposes, a simple application with 8 possible gestures was created. In the application the is a cube with an icon on it. The icon represents the gesture the cube expects from the player. Once that gesture is detected, the icon (and expected gesture) changes to another random gesture from the pool. The 8 possible gestures and their icon representation are shown in table \ref{tab:gestures}.
@@ -2184,7 +2195,5 @@ A future improvement would be to include more complex gestures in the default AP
 %\addcontentsline {toc}{chapter}{Bibliography} 
 \bibliographystyle{IEEEtran} 
 \bibliography{thesis}%same file name as for .bib
-
-\include{apendix}
 
 \end{document}

@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: IEEEtran.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "Virtual"
+Warning--I didn't find a database entry for "TheatreAndItsDouble"
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in Bridges
+Warning--empty author in VRAR
+Warning--empty year in VRAR
+Warning--empty booktitle in DepthCamera
+Warning--empty booktitle in StereoCamera
+
+Done.
+(There were 7 warnings)

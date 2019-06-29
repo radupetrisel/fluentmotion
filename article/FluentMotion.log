@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  17 JUN 2019 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.29)  29 JUN 2019 18:18
 entering extended mode
 **c:/Users/radup/fluentmotion/article/FluentMotion.tex
 (c:/Users/radup/fluentmotion/article/FluentMotion.tex
@@ -1022,145 +1022,131 @@ Non-PDF special ignored!
 File: figures/LeapMotion_controller.jpg Graphic file (type jpg)
 <use figures/LeapMotion_controller.jpg>
 Package pdftex.def Info: figures/LeapMotion_controller.jpg  used on input line 159.
-(pdftex.def)             Requested size: 219.58264pt x 146.4942pt.
+(pdftex.def)             Requested size: 170.78691pt x 113.93848pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 160.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 194.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 188.
  [2 <c:/Users/radup/fluentmotion/article/figures/LeapMotion_controller.jpg>]
 <figures/ThumbExtendedDetector.png, id=153, 294.34969pt x 321.45094pt>
 File: figures/ThumbExtendedDetector.png Graphic file (type png)
 <use figures/ThumbExtendedDetector.png>
-Package pdftex.def Info: figures/ThumbExtendedDetector.png  used on input line 208.
+Package pdftex.def Info: figures/ThumbExtendedDetector.png  used on input line 200.
 (pdftex.def)             Requested size: 170.78691pt x 186.51033pt.
-<figures/ThumbPointingUpDetector.PNG, id=155, 292.09125pt x 316.93407pt>
+<figures/ThumbPointingUpDetector.PNG, id=156, 292.09125pt x 316.93407pt>
 File: figures/ThumbPointingUpDetector.PNG Graphic file (type png)
 <use figures/ThumbPointingUpDetector.PNG>
-Package pdftex.def Info: figures/ThumbPointingUpDetector.PNG  used on input line 214.
+Package pdftex.def Info: figures/ThumbPointingUpDetector.PNG  used on input line 210.
 (pdftex.def)             Requested size: 170.78691pt x 185.31621pt.
-<figures/ThumbsUpDtector.PNG, id=156, 292.09125pt x 252.19218pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/ThumbsUpDtector.PNG, id=159, 292.09125pt x 252.19218pt>
 File: figures/ThumbsUpDtector.PNG Graphic file (type png)
 <use figures/ThumbsUpDtector.PNG>
-Package pdftex.def Info: figures/ThumbsUpDtector.PNG  used on input line 220.
+Package pdftex.def Info: figures/ThumbsUpDtector.PNG  used on input line 222.
 (pdftex.def)             Requested size: 170.78691pt x 147.46063pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/RX_filter.jpg, id=157, 566.115pt x 205.5178pt>
+<figures/RX_filter.jpg, id=160, 566.115pt x 205.5178pt>
 File: figures/RX_filter.jpg Graphic file (type jpg)
 <use figures/RX_filter.jpg>
 Package pdftex.def Info: figures/RX_filter.jpg  used on input line 231.
 (pdftex.def)             Requested size: 219.58264pt x 79.71571pt.
-[3 <c:/Users/radup/fluentmotion/article/figures/ThumbExtendedDetector.png> <c:/Users/radup/fluentmotion/article/figures/ThumbPointingUpDetector.PNG> <c:/Users/radup/fluentmotion/article/figures/ThumbsUpDtector.PNG> <c:/Users/radup/fluentmotion/article/figures/RX_filter.jpg>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 252.
-<figures/FluentMotion_setup.jpg, id=176, 147.55125pt x 35.38219pt>
+ [3 <c:/Users/radup/fluentmotion/article/figures/ThumbExtendedDetector.png> <c:/Users/radup/fluentmotion/article/figures/ThumbPointingUpDetector.PNG> <c:/Users/radup/fluentmotion/article/figures/ThumbsUpDtector.PNG> <c:/Users/radup/fluentmotion/article/figures/RX_filter.jpg>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 251.
+<figures/FluentMotion_setup.jpg, id=180, 147.55125pt x 35.38219pt>
 File: figures/FluentMotion_setup.jpg Graphic file (type jpg)
 <use figures/FluentMotion_setup.jpg>
-Package pdftex.def Info: figures/FluentMotion_setup.jpg  used on input line 337.
+Package pdftex.def Info: figures/FluentMotion_setup.jpg  used on input line 336.
 (pdftex.def)             Requested size: 219.58264pt x 52.65634pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 338.
-<figures/FluentMotion_reactive_hand.jpg, id=177, 284.56313pt x 147.55125pt>
-File: figures/FluentMotion_reactive_hand.jpg Graphic file (type jpg)
-<use figures/FluentMotion_reactive_hand.jpg>
-Package pdftex.def Info: figures/FluentMotion_reactive_hand.jpg  used on input line 344.
-(pdftex.def)             Requested size: 219.58264pt x 113.86246pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/FluentMotion_script.jpg, id=179, 271.76532pt x 130.23656pt>
-File: figures/FluentMotion_script.jpg Graphic file (type jpg)
-<use figures/FluentMotion_script.jpg>
-Package pdftex.def Info: figures/FluentMotion_script.jpg  used on input line 355.
-(pdftex.def)             Requested size: 219.58264pt x 105.23466pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/FluentMotion_script_alternative.jpg, id=182, 268.00125pt x 104.64093pt>
-File: figures/FluentMotion_script_alternative.jpg Graphic file (type jpg)
-<use figures/FluentMotion_script_alternative.jpg>
-Package pdftex.def Info: figures/FluentMotion_script_alternative.jpg  used on input line 363.
-(pdftex.def)             Requested size: 219.58264pt x 85.73584pt.
-
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [4 <c:/Users/radup/fluentmotion/article/figures/FluentMotion_setup.jpg>]
-<figures/FluentMotion_onDetect.jpg, id=206, 283.81032pt x 76.03406pt>
-File: figures/FluentMotion_onDetect.jpg Graphic file (type jpg)
-<use figures/FluentMotion_onDetect.jpg>
-Package pdftex.def Info: figures/FluentMotion_onDetect.jpg  used on input line 377.
-(pdftex.def)             Requested size: 219.58264pt x 58.82947pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/FluentMotion_script_attached.jpg, id=208, 284.56313pt x 221.32687pt>
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 337.
+<figures/FluentMotion_script_attached.jpg, id=181, 284.56313pt x 221.32687pt>
 File: figures/FluentMotion_script_attached.jpg Graphic file (type jpg)
 <use figures/FluentMotion_script_attached.jpg>
-Package pdftex.def Info: figures/FluentMotion_script_attached.jpg  used on input line 388.
+Package pdftex.def Info: figures/FluentMotion_script_attached.jpg  used on input line 342.
 (pdftex.def)             Requested size: 219.58264pt x 170.79369pt.
-<figures/thumbs-up.png, id=210, 256.96pt x 256.96pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/FluentMotion_script.jpg, id=184, 271.76532pt x 130.23656pt>
+File: figures/FluentMotion_script.jpg Graphic file (type jpg)
+<use figures/FluentMotion_script.jpg>
+Package pdftex.def Info: figures/FluentMotion_script.jpg  used on input line 352.
+(pdftex.def)             Requested size: 219.58264pt x 105.23466pt.
+<figures/FluentMotion_script_alternative.jpg, id=187, 268.00125pt x 104.64093pt>
+File: figures/FluentMotion_script_alternative.jpg Graphic file (type jpg)
+<use figures/FluentMotion_script_alternative.jpg>
+Package pdftex.def Info: figures/FluentMotion_script_alternative.jpg  used on input line 360.
+(pdftex.def)             Requested size: 219.58264pt x 85.73584pt.
+[4 <c:/Users/radup/fluentmotion/article/figures/FluentMotion_setup.jpg>]
+<figures/Alternate_script.png, id=208, 759.83875pt x 255.45438pt>
+File: figures/Alternate_script.png Graphic file (type png)
+<use figures/Alternate_script.png>
+Package pdftex.def Info: figures/Alternate_script.png  used on input line 368.
+(pdftex.def)             Requested size: 243.98238pt x 82.0238pt.
+
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+<figures/FluentMotion_onDetect.jpg, id=213, 283.81032pt x 76.03406pt>
+File: figures/FluentMotion_onDetect.jpg Graphic file (type jpg)
+<use figures/FluentMotion_onDetect.jpg>
+Package pdftex.def Info: figures/FluentMotion_onDetect.jpg  used on input line 378.
+(pdftex.def)             Requested size: 219.58264pt x 58.82947pt.
+<figures/Demo_not_detected.jpg, id=216, 1154.81438pt x 566.115pt>
+File: figures/Demo_not_detected.jpg Graphic file (type jpg)
+<use figures/Demo_not_detected.jpg>
+Package pdftex.def Info: figures/Demo_not_detected.jpg  used on input line 390.
+(pdftex.def)             Requested size: 219.58264pt x 107.6407pt.
+<figures/thumbs-up.png, id=217, 256.96pt x 256.96pt>
 File: figures/thumbs-up.png Graphic file (type png)
 <use figures/thumbs-up.png>
-Package pdftex.def Info: figures/thumbs-up.png  used on input line 404.
+Package pdftex.def Info: figures/thumbs-up.png  used on input line 400.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
-<figures/thumb-index-extended.png, id=211, 256.96pt x 256.96pt>
+<figures/thumb-index-extended.png, id=218, 256.96pt x 256.96pt>
 File: figures/thumb-index-extended.png Graphic file (type png)
 <use figures/thumb-index-extended.png>
-Package pdftex.def Info: figures/thumb-index-extended.png  used on input line 405.
+Package pdftex.def Info: figures/thumb-index-extended.png  used on input line 401.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
-<figures/fist.png, id=212, 192.72pt x 192.72pt>
+<figures/fist.png, id=219, 192.72pt x 192.72pt>
 File: figures/fist.png Graphic file (type png)
 <use figures/fist.png>
-Package pdftex.def Info: figures/fist.png  used on input line 406.
+Package pdftex.def Info: figures/fist.png  used on input line 402.
 (pdftex.def)             Requested size: 48.79573pt x 48.79446pt.
-<figures/pinch.png, id=213, 256.96pt x 256.96pt>
+<figures/pinch.png, id=220, 256.96pt x 256.96pt>
 File: figures/pinch.png Graphic file (type png)
 <use figures/pinch.png>
-Package pdftex.def Info: figures/pinch.png  used on input line 407.
+Package pdftex.def Info: figures/pinch.png  used on input line 403.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
-<figures/swipe-up.png, id=214, 256.96pt x 256.96pt>
+<figures/swipe-up.png, id=221, 256.96pt x 256.96pt>
 File: figures/swipe-up.png Graphic file (type png)
 <use figures/swipe-up.png>
-Package pdftex.def Info: figures/swipe-up.png  used on input line 408.
+Package pdftex.def Info: figures/swipe-up.png  used on input line 404.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
 []|\T1/ptm/m/n/10 (+20) Swipe-
  []
 
-<figures/swipe-down.png, id=215, 256.96pt x 256.96pt>
+<figures/swipe-down.png, id=222, 256.96pt x 256.96pt>
 File: figures/swipe-down.png Graphic file (type png)
 <use figures/swipe-down.png>
-Package pdftex.def Info: figures/swipe-down.png  used on input line 409.
+Package pdftex.def Info: figures/swipe-down.png  used on input line 405.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
-<figures/swipe-left.png, id=216, 256.96pt x 256.96pt>
+<figures/swipe-left.png, id=223, 256.96pt x 256.96pt>
 File: figures/swipe-left.png Graphic file (type png)
 <use figures/swipe-left.png>
-Package pdftex.def Info: figures/swipe-left.png  used on input line 410.
+Package pdftex.def Info: figures/swipe-left.png  used on input line 406.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
-<figures/swipe-right.png, id=217, 256.96pt x 256.96pt>
+<figures/swipe-right.png, id=224, 256.96pt x 256.96pt>
 File: figures/swipe-right.png Graphic file (type png)
 <use figures/swipe-right.png>
-Package pdftex.def Info: figures/swipe-right.png  used on input line 411.
+Package pdftex.def Info: figures/swipe-right.png  used on input line 407.
 (pdftex.def)             Requested size: 48.79573pt x 48.79546pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Demo_not_detected.jpg, id=219, 1154.81438pt x 566.115pt>
-File: figures/Demo_not_detected.jpg Graphic file (type jpg)
-<use figures/Demo_not_detected.jpg>
-Package pdftex.def Info: figures/Demo_not_detected.jpg  used on input line 421.
-(pdftex.def)             Requested size: 219.58264pt x 107.6407pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <c:/Users/radup/fluentmotion/article/figures/FluentMotion_reactive_hand.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script_alternative.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_onDetect.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script_attached.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <c:/Users/radup/fluentmotion/article/figures/thumbs-up.png> <c:/Users/radup/fluentmotion/article/figures/thumb-index-extended.png> <c:/Users/radup/fluentmotion/article/figures/fist.png> <c:/Users/radup/fluentmotion/article/figures/pinch.png> <c:/Users/radup/fluentmotion/article/figures/swipe-up.png> <c:/Users/radup/fluentmotion/article/figures/swipe-down.png> <c:/Users/radup/fluentmotion/article/figures/swipe-left.png> <c:/Users/radup/fluentmotion/article/figures/swipe-right.png> <c:/Users/radup/fluentmotion/article/figures/Demo_not_detected.jpg>] (c:/Users\radup\fluentmotion\article\FluentMotion.bbl
+[5 <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script_attached.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script.jpg> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_script_alternative.jpg> <c:/Users/radup/fluentmotion/article/figures/Alternate_script.png> <c:/Users/radup/fluentmotion/article/figures/FluentMotion_onDetect.jpg> <c:/Users/radup/fluentmotion/article/figures/Demo_not_detected.jpg>] [6 <c:/Users/radup/fluentmotion/article/figures/thumbs-up.png> <c:/Users/radup/fluentmotion/article/figures/thumb-index-extended.png> <c:/Users/radup/fluentmotion/article/figures/fist.png> <c:/Users/radup/fluentmotion/article/figures/pinch.png> <c:/Users/radup/fluentmotion/article/figures/swipe-up.png> <c:/Users/radup/fluentmotion/article/figures/swipe-down.png> <c:/Users/radup/fluentmotion/article/figures/swipe-left.png> <c:/Users/radup/fluentmotion/article/figures/swipe-right.png>] (c:/Users\radup\fluentmotion\article\FluentMotion.bbl
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 41.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/txfonts\t1txtt.fd"
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1189,27 +1175,27 @@ Overfull \hbox (67.81741pt too wide) in paragraph at lines 153--158
  []
 
 ) [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 483.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 483.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
  (c:/Users\radup\fluentmotion\article\FluentMotion.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 483.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 483.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 468.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
 Package rerunfilecheck Info: File `FluentMotion.out' has not changed.
-(rerunfilecheck)             Checksum: 1AD6543D1DC2AF765E79A6F10C32FBF2;980.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 483.
+(rerunfilecheck)             Checksum: 8DE388215B25A5DD43CA7695CDC14830;988.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
  ) 
 Here is how much of TeX's memory you used:
- 20976 strings out of 492895
- 381490 string characters out of 3133479
- 480537 words of memory out of 3000000
- 24115 multiletter control sequences out of 15000+200000
- 88949 words of font info for 249 fonts, out of 3000000 for 9000
+ 20977 strings out of 492895
+ 381434 string characters out of 3133479
+ 481499 words of memory out of 3000000
+ 24112 multiletter control sequences out of 15000+200000
+ 87755 words of font info for 252 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,81p,1100b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\radup\fluentmotion\article\FluentMotion.pdf (7 pages, 568743 bytes).
+Output written on c:/Users\radup\fluentmotion\article\FluentMotion.pdf (7 pages, 740650 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 28505 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 27993 words of extra memory for PDF output out of 29859 (max. 10000000)
 
